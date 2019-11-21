@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import MainNavBar from './MainNavBar'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../App.css'
+<<<<<<< HEAD
+=======
+import OpsNotif1 from './OpsNotif1'
+>>>>>>> a3636765d6b3829aafc0d38591f52a81defeff54
 
 class DashboardMain extends Component {
   render() {
@@ -207,6 +211,7 @@ class DashboardMain extends Component {
             </Col>
           </Row>
         </Container>
+        <OpsNotif1 />
       </div>
     )
   }

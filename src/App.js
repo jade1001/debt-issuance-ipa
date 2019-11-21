@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import DashboardMain from './components/DashboardMain'
+import DebtIssuance from './components/DebtIssuance'
 
 function App() {
   return (
     <div className='App'>
-      <DashboardMain />
+      <DebtIssuance />
     </div>
   )
 }
