@@ -7,7 +7,8 @@ import DashboardMain from './components/DashboardMain'
 function App() {
   return (
     <div className='App'>
-      <DebtIssuance />
+      {/* <DebtIssuance /> */}
+      <MainNavBar />
     </div>
   )
 }
