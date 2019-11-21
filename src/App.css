@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-/* .App {
-  text-align: center;
-=======
 #pHead {
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 11px;
   color: #a2a2a2;
->>>>>>> 68eb6f2140c93ed53a49a6c9a6854e7b899a0dd5
 }
 #pHead1 {
   margin-top: 5px;
@@ -27,7 +22,8 @@
 
 .App-link {
   color: #09d3ac;
-} */
+}
+*/
 /* Main Nav CSS **/
 .navHover:hover {
   color: #192f59;
