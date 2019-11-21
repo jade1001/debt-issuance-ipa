@@ -25,17 +25,17 @@
 }
 */
 /* Main Nav CSS **/
-.navHover:hover {
+.nav {
+  color: #a2a2a2;
+  text-decoration-style: none;
+  background-color: rgb(245, 245, 245);
+  border: 4px solid rgb(245, 245, 245);
+}
+.nav:hover {
   color: #192f59;
   background-color: rgb(245, 245, 245);
   text-decoration-line: none;
   border-bottom: 3px solid #192f59;
-}
-.navHover {
-  color: #a2a2a2;
-  text-decoration-style: none;
-  background-color: rgb(245, 245, 245);
-  border: 3px solid rgb(245, 245, 245);
 }
 #cards:hover {
   cursor: pointer;

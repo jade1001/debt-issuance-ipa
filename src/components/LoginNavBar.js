@@ -9,7 +9,8 @@ class LoginNavBar extends Component {
     return (
       <div>
         <Navbar
-          b
+          collapseOnSelect
+          expand='lg'
           style={{ backgroundColor: 'rgb(245, 245, 245)' }}
           variant='light'
         >
@@ -23,23 +24,26 @@ class LoginNavBar extends Component {
               style={{ marginLeft: 80 }}
             />
           </Navbar.Brand>
-          <Nav className='mr-auto'></Nav>
-          <Form inline>
-            <Nav.Link
-              href='#signin'
-              style={{ color: '#919191', marginRight: 20 }}
-              className='navHover'
-            >
-              Sign In
-            </Nav.Link>
-            <Nav.Link
-              href='#help'
-              style={{ color: '#919191', marginRight: 60 }}
-              className='navHover'
-            >
-              Help
-            </Nav.Link>
-          </Form>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='mr-auto'></Nav>
+            <Form inline>
+              <Nav.Link
+                href='#signin'
+                style={{ color: '#919191', marginRight: 20 }}
+                className='navHover'
+              >
+                Sign In
+              </Nav.Link>
+              <Nav.Link
+                href='#help'
+                style={{ color: '#919191', marginRight: 60 }}
+                className='navHover'
+              >
+                Help
+              </Nav.Link>
+            </Form>
+          </Navbar.Collapse>
         </Navbar>
       </div>
     )
