@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+/* .App {
+  text-align: center;
+=======
 #pHead {
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 11px;
   color: #a2a2a2;
+>>>>>>> 68eb6f2140c93ed53a49a6c9a6854e7b899a0dd5
 }
 #pHead1 {
   margin-top: 5px;
@@ -20,6 +25,22 @@
   color: #a2a2a2;
 }
 
+.App-link {
+  color: #09d3ac;
+} */
+/* Main Nav CSS **/
+.navHover:hover {
+  color: #192f59;
+  background-color: rgb(245, 245, 245);
+  text-decoration-line: none;
+  border-bottom: 3px solid #192f59;
+}
+.navHover {
+  color: #a2a2a2;
+  text-decoration-style: none;
+  background-color: rgb(245, 245, 245);
+  border: 3px solid rgb(245, 245, 245);
+}
 #cards:hover {
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);

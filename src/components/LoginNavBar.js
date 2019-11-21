@@ -8,7 +8,11 @@ class LoginNavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar bg='light' variant='light'>
+        <Navbar
+          b
+          style={{ backgroundColor: 'rgb(245, 245, 245)' }}
+          variant='light'
+        >
           <Navbar.Brand href='#home'>
             <img
               alt=''
@@ -24,12 +28,14 @@ class LoginNavBar extends Component {
             <Nav.Link
               href='#signin'
               style={{ color: '#919191', marginRight: 20 }}
+              className='navHover'
             >
               Sign In
             </Nav.Link>
             <Nav.Link
               href='#help'
               style={{ color: '#919191', marginRight: 60 }}
+              className='navHover'
             >
               Help
             </Nav.Link>
