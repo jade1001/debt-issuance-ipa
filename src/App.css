@@ -1,29 +1,57 @@
-.App {
-  text-align: center;
+#pHead {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    color: #a2a2a2;
 }
 
-.App-logo {
-  height: 40vmin;
+#pHead1 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 11px;
+    color: #a2a2a2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#pBody {
+    color: #192f59;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+#pFooter {
+    font-size: 12px;
+    color: #a2a2a2;
 }
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
 }
 
+*/
+/* Main Nav CSS **/
 
+.nav {
+    color: #a2a2a2;
+    text-decoration-style: none;
+    background-color: rgb(245, 245, 245);
+}
 
+.nav:hover {
+    font-size: 14px;
+    color: #192f59;
+    background-color: rgb(245, 245, 245);
+    text-decoration-line: none;
+    border-bottom: 3px solid #192f59;
+}
 
+#cards:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.table-content th {
+    font-weight: normal;
+}
 /** Main Modal **/
 
 
@@ -69,7 +97,7 @@
 }
 #secondTableHeader {
   padding-bottom: 1%;
-  border-top: 1px solid rgb(225,225,225);
+  border-top: 1px solid rgb(225,225,225)!important;
 }
 #secondTableData {
   
@@ -85,12 +113,83 @@
 }
 #btntd {
   border-top: none;
-  border-bottom: 1px solid rgb(225,225,225);
+  border-bottom: 1px solid rgb(225,225,225)!important;
 }
 #btnadd {
-  background-color: rgb(4, 4, 63);
+  background-color: rgb(25, 47, 89);
   border: none;
   font-size: 8px;
   color:white;
+  border-radius: 2px;
 }
+
+
 /** Maturity Data **/
+#text-center {
+    text-align: center;
+}
+
+#text-right {
+    text-align: right;
+}
+
+#text-left {
+    text-align: left;
+}
+
+#float-left {
+    float: left;
+}
+
+#float-right {
+    float: right;
+}
+
+
+/** CSS for CreditLimits, Documents, Settlement section **/
+
+table thead tr th {
+    font-weight: normal;
+}
+
+table tbody {
+    color: #0a3a94;
+}
+
+thead tr th,
+tbody tr td:last-child {
+    border: none !important;
+}
+
+.dropleft a {
+    color: #0a3a94;
+}
+
+#pdf-logo {
+    color: #ff0000;
+    text-align: center;
+}
+
+#verify {
+    text-align: center;
+    color: #adadad;
+    /*color: #398a25;*/
+}
+
+
+/*#verify i{
+    visibility: hidden !important;
+}*/
+
+#settle-menu a {
+    text-decoration: none;
+    color: #a1aca9;
+}
+
+#settle-menu a:hover {
+    font-weight: 500;
+    color: #3f33b1;
+}
+
+
+/** End of section **/

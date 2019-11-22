@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import LoginNavBar from './LoginNavBar'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import NavLink from 'react-bootstrap/NavLink'
-import FormLabel from 'react-bootstrap/FormLabel'
-import InputGroup from 'react-bootstrap/InputGroup'
+import { Form, Button, Nav, FormLabel, InputGroup } from 'react-bootstrap'
 
 class Login extends Component {
   render() {
@@ -48,9 +44,12 @@ class Login extends Component {
           </Form.Group>
           <Form inline>
             <Form.Group controlId='formBasicCheckbox'>
-              <NavLink href='#forgot' style={{ fontSize: 13, marginLeft: -15 }}>
+              <Nav.Link
+                href='#forgot'
+                style={{ fontSize: 13, marginLeft: -15 }}
+              >
                 Forgot Password?
-              </NavLink>
+              </Nav.Link>
             </Form.Group>
             <Button
               variant='secondary'

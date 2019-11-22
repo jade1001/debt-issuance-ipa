@@ -89,6 +89,9 @@ function MainModal() {
               <MaturityData />
             </Container>
           </Modal.Body>
+          <Modal.Footer style={{border:'none', height:'150px'}}>
+    
+          </Modal.Footer>
         </Modal>
       </ButtonToolbar>
     </div>

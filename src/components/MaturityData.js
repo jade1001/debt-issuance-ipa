@@ -46,7 +46,7 @@ class MaturityData extends Component {
                             <td id="secondData">None</td>
                         </tr>
                     </tbody>
-                    <tbody style={{borderTop:'none', borderBottom:'1px grey'}}>
+                    <tbody style={{borderTop:'none'}}>
                         <tr>
                             <td id="btntd"><button id="btnadd">+add</button></td>
                         </tr>
