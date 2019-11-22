@@ -5,7 +5,7 @@ class MaturityData extends Component {
     render() {
         return (
             <Container>
-                <Table id="firstMainTable">
+                <Table id="firstMainTable" responsive>
                     <thead >
                         <tr id="firstTable">
                         <th id="firstTableHeader">ISIN</th>
@@ -35,7 +35,7 @@ class MaturityData extends Component {
                         </tr>
                     </tbody>
                 </Table>
-                <Table id="secondMainTable">
+                <Table id="secondMainTable" responsive>
                     <thead>
                         <tr id="secondTable">
                         <th id="secondTableHeader">Comments</th>

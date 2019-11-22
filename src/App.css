@@ -2,14 +2,14 @@
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 11px;
-  color: #a2a2a2;
+  color: #615f5f;
 }
 
 #pHead1 {
   margin-top: 5px;
   margin-bottom: 15px;
-  font-size: 11px;
-  color: #a2a2a2;
+  font-size: 10px;
+  color: #615f5f;
 }
 
 #pBody {
@@ -20,7 +20,7 @@
 
 #pFooter {
   font-size: 12px;
-  color: #a2a2a2;
+  color: #615f5f;
 }
 
 .App-link {
@@ -33,13 +33,8 @@
   color: #a2a2a2;
   text-decoration-style: none;
   background-color: rgb(245, 245, 245);
-}
-.nav:active {
   font-size: 14px;
-  color: #192f59;
-  background-color: rgb(245, 245, 245);
-  text-decoration-line: none;
-  border-bottom: 3px solid #192f59;
+  margin-left: 8px;
 }
 
 #cards:hover {
@@ -139,10 +134,14 @@
   float: right;
 }
 
+table {
+  font-size: 0.7rem;
+}
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
   font-weight: normal;
+  color: grey;
 }
 
 table tbody {

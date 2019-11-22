@@ -7,6 +7,8 @@ import {Modal,Button,ButtonToolbar,Nav,
   Navbar
 } from 'react-bootstrap'
 import MaturityData from './MaturityData'
+import Documents from './Documents'
+import CreditLimits from './CreditLimits'
 import '../App.css'
 
 function MainModal() {
@@ -31,14 +33,14 @@ function MainModal() {
                 backgroundColor: 'rgb(245,245,245)',
                 width: '100%',
                 textAlign: 'center',
-                fontSize: '20px',
+                fontSize: '1rem',
                 color: 'rgb(58, 77, 150)'}}>
               MonetaGo CP 100D 17/10/2019
             </Modal.Title>
             <a
               href=''
               style={{
-                fontSize: '10px',
+                fontSize: '0.5rem',
                 textAlign: 'center',
                 margin: '0',
                 margin: 'auto',
@@ -55,7 +57,7 @@ function MainModal() {
                   <Nav
                     className='mr-auto'
                     style={{
-                      fontSize: '12px',
+                      fontSize: '0.74rem',
                       margin: 'auto',
                       color: 'grey',
                       borderBottom: '1px solid grey'
@@ -87,6 +89,8 @@ function MainModal() {
               </Navbar>
 
               <MaturityData />
+              {/* <Documents/> */}
+              {/* <CreditLimits/> */}
             </Container>
           </Modal.Body>
           <Modal.Footer style={{border:'none', height:'150px'}}>
