@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import MainNavBar from './MainNavBar'
 import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload, faSearch } from '@fortawesome/free-solid-svg-icons'
+import {
+  faDownload,
+  faSearch,
+  faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
 
@@ -29,7 +32,6 @@ class DebtIssuance extends Component {
     })
     return (
       <div>
-        <MainNavBar />
         <Container>
           <Row style={{ marginTop: 20 }}>
             <Col xs>
@@ -48,15 +50,16 @@ class DebtIssuance extends Component {
         </Container>
         <Container
           style={{
-            width: 280,
+            width: 290,
             height: 1070,
             float: 'left',
             paddingLeft: 120,
-            borderRight: '1px solid #919191'
+            borderRight: '1px solid #E5E5E5'
           }}
         >
           <Col style={{ color: '#182e58', fontSize: 14, cursor: 'pointer' }}>
-            Maturities (ISIN)
+            Maturities (ISIN) &nbsp;
+            <FontAwesomeIcon icon={faChevronRight} />
           </Col>
           <Col
             style={{
@@ -66,7 +69,8 @@ class DebtIssuance extends Component {
               cursor: 'pointer'
             }}
           >
-            Tranches
+            Tranches &nbsp;
+            <FontAwesomeIcon icon={faChevronRight} />
           </Col>
           <Col
             style={{
@@ -76,7 +80,8 @@ class DebtIssuance extends Component {
               cursor: 'pointer'
             }}
           >
-            Allocations
+            Allocations &nbsp;
+            <FontAwesomeIcon icon={faChevronRight} />
           </Col>
           <Col
             style={{
@@ -91,10 +96,11 @@ class DebtIssuance extends Component {
         </Container>
         <Container>
           <Row>
-            <Col style={{ marginLeft: 35, marginTop: 10 }}>
+            <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
               <FontAwesomeIcon
                 icon={faDownload}
                 style={{
+                  cursor: 'pointer',
                   width: 50,
                   height: 25,
                   color: 'white',
@@ -104,12 +110,20 @@ class DebtIssuance extends Component {
                 }}
               />
             </Col>
-            <Col align='right' style={{ marginLeft: '23%' }}>
+            <Col
+              sm={4}
+              align='right'
+              style={{
+                display: 'flex',
+                float: 'right',
+                marginLeft: '23%'
+              }}
+            >
               <Form inline>
                 <FormControl
                   type='text'
                   className=' mr-sm-2'
-                  style={{ width: 280, height: 30 }}
+                  style={{ width: 220, height: 30 }}
                   onChange={this.updateSearch.bind(this)}
                 />
                 <Button
@@ -134,7 +148,7 @@ class DebtIssuance extends Component {
         >
           <thead>
             <tr>
-              <th scope='col' style={{ fontWeight: 'bold' }} fixed>
+              <th scope='col' style={{ fontWeight: 'bold' }}>
                 Name
               </th>
               <th scope='col' style={{ fontWeight: 'bold' }}>
@@ -164,27 +178,31 @@ class DebtIssuance extends Component {
                 data-toggle='modal'
                 data-target='#myModal'
                 id='tRow'
-                style={{ cursor: 'pointer' }}
+                style={{
+                  cursor: 'pointer',
+                  color: '#182E58',
+                  lineHeight: '70%'
+                }}
               >
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.name}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.isin}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.status}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.trvalue}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.tenor}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.mdate}</span>
                 </td>
-                <td>
+                <td style={{ border: 'none' }}>
                   <span>{n.created}</span>
                 </td>
               </tr>

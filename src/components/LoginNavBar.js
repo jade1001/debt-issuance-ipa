@@ -11,7 +11,7 @@ class LoginNavBar extends Component {
         <Navbar
           collapseOnSelect
           expand='lg'
-          style={{ backgroundColor: 'rgb(245, 245, 245)' }}
+          style={{ backgroundColor: 'rgb(245, 245, 245)', fontSize: '14px' }}
           variant='light'
         >
           <Navbar.Brand href='#home'>
