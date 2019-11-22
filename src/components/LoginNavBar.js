@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
+import '../App.css'
+import { Navbar, Nav } from 'react-bootstrap'
 import logo from './logo.png'
 
 class LoginNavBar extends Component {
@@ -27,22 +26,20 @@ class LoginNavBar extends Component {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'></Nav>
-            <Form inline>
-              <Nav.Link
-                href='#signin'
-                style={{ color: '#919191', marginRight: 20 }}
-                className='navHover'
-              >
-                Sign In
-              </Nav.Link>
-              <Nav.Link
-                href='#help'
-                style={{ color: '#919191', marginRight: 60 }}
-                className='navHover'
-              >
-                Help
-              </Nav.Link>
-            </Form>
+            <Nav.Link
+              href='#signin'
+              style={{ color: '#919191', marginRight: 20 }}
+              className='navHover'
+            >
+              Sign In
+            </Nav.Link>
+            <Nav.Link
+              href='#help'
+              style={{ color: '#919191', marginRight: 60 }}
+              className='navHover'
+            >
+              Help
+            </Nav.Link>
           </Navbar.Collapse>
         </Navbar>
       </div>
