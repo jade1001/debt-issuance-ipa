@@ -32,7 +32,7 @@ class MainNavBar extends Component {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'>
-              <Nav.Link href='#dashboard' className='nav'>
+              <Nav.Link href='#dashboard' className='nav' active>
                 Dashboard
               </Nav.Link>
               <Nav.Link href='#dept-issuance' className='nav'>
