@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, Form } from 'react-bootstrap'
+import { Navbar, Nav, Form, Container } from 'react-bootstrap'
 import logo from './logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -7,11 +7,14 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 class MainNavBar extends Component {
   render() {
     return (
-      <div>
+      <div className='App container'>
         <Navbar
+          fluid='true'
           collapseOnSelect
           expand='lg'
-          style={{ backgroundColor: 'rgb(245, 245, 245)' }}
+          style={{
+            backgroundColor: 'rgb(245, 245, 245)'
+          }}
           variant='light'
         >
           <Navbar.Brand
@@ -24,7 +27,6 @@ class MainNavBar extends Component {
               width='30'
               height='30'
               className='d-inline-block align-top'
-              style={{ marginLeft: 80 }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
@@ -46,25 +48,15 @@ class MainNavBar extends Component {
                 Settings
               </Nav.Link>
             </Nav>
-
-            <Form inline>
-              <Nav.Link
-                href='#signin'
-                style={{ color: '#919191', marginRight: 20 }}
-              >
+            <Nav className='ml-auto' style={{}}>
+              <Nav.Link href='#IPA-Ops'>
                 IPA Ops &nbsp;
                 <FontAwesomeIcon icon={faChevronDown} />
               </Nav.Link>
-              <Nav.Link
-                href='#help'
-                style={{
-                  color: '#919191',
-                  marginRight: 60
-                }}
-              >
+              <Nav.Link href='#help' style={{}}>
                 Help
               </Nav.Link>
-            </Form>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

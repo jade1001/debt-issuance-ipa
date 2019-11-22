@@ -17,7 +17,7 @@ class OpsNotif1 extends Component {
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
-                size='.xs'
+                size='xs'
                 style={{ color: 'orange' }}
               />
             </span>
@@ -46,7 +46,7 @@ class OpsNotif1 extends Component {
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
-                size='.xs'
+                size='xs'
                 style={{ color: 'orange' }}
               />
             </span>
