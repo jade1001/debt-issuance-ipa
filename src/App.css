@@ -1,123 +1,119 @@
 #pHead {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    font-size: 11px;
-    color: #a2a2a2;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #a2a2a2;
 }
 
 #pHead1 {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    font-size: 11px;
-    color: #a2a2a2;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #a2a2a2;
 }
 
 #pBody {
-    color: #192f59;
-    font-size: 20px;
-    margin-bottom: 35px;
+  color: #192f59;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 #pFooter {
-    font-size: 12px;
-    color: #a2a2a2;
+  font-size: 12px;
+  color: #a2a2a2;
 }
 
 .App-link {
-    color: #09d3ac;
+  color: #09d3ac;
 }
 
 */
 /* Main Nav CSS **/
 
 .nav {
-    color: #a2a2a2;
-    text-decoration-style: none;
-    background-color: rgb(245, 245, 245);
+  color: #a2a2a2;
+  text-decoration-style: none;
+  background-color: rgb(245, 245, 245);
 }
-
-.nav:hover {
-    font-size: 14px;
-    color: #192f59;
-    background-color: rgb(245, 245, 245);
-    text-decoration-line: none;
-    border-bottom: 3px solid #192f59;
+.nav:active {
+  font-size: 14px;
+  color: #192f59;
+  background-color: rgb(245, 245, 245);
+  text-decoration-line: none;
+  border-bottom: 3px solid #192f59;
 }
 
 #cards:hover {
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .table-content th {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 #text-center {
-    text-align: center;
+  text-align: center;
 }
 
 #text-right {
-    text-align: right;
+  text-align: right;
 }
 
 #text-left {
-    text-align: left;
+  text-align: left;
 }
 
 #float-left {
-    float: left;
+  float: left;
 }
 
 #float-right {
-    float: right;
+  float: right;
 }
-
 
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 table tbody {
-    color: #0a3a94;
+  color: #0a3a94;
 }
 
 thead tr th,
 tbody tr td:last-child {
-    border: none !important;
+  border: none !important;
 }
 
 .dropleft a {
-    color: #0a3a94;
+  color: #0a3a94;
 }
 
 #pdf-logo {
-    color: #ff0000;
-    text-align: center;
+  color: #ff0000;
+  text-align: center;
 }
 
 #verify {
-    text-align: center;
-    color: #adadad;
-    /*color: #398a25;*/
+  text-align: center;
+  color: #adadad;
+  /*color: #398a25;*/
 }
-
 
 /*#verify i{
     visibility: hidden !important;
 }*/
 
 #settle-menu a {
-    text-decoration: none;
-    color: #a1aca9;
+  text-decoration: none;
+  color: #a1aca9;
 }
 
 #settle-menu a:hover {
-    font-weight: 500;
-    color: #3f33b1;
+  font-weight: 500;
+  color: #3f33b1;
 }
-
 
 /** End of section **/

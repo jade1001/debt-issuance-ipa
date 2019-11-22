@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, Form } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import logo from './logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -30,7 +30,7 @@ class MainNavBar extends Component {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'>
-              <Nav.Link href='#dashboard' className='nav'>
+              <Nav.Link href='#dashboard' className='nav' active>
                 Dashboard
               </Nav.Link>
               <Nav.Link href='#dept-issuance' className='nav'>
