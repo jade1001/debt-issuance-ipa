@@ -73,6 +73,18 @@
     float: right;
 }
 
+#border-b-0 {
+    border-bottom: hidden;
+}
+
+#border-b-1 {
+    border-bottom: 1px solid #adadad;
+}
+
+#d-block {
+    display: block;
+}
+
 
 /** CSS for CreditLimits, Documents, Settlement section **/
 
