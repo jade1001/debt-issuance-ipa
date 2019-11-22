@@ -11,7 +11,7 @@ class MainNavBar extends Component {
         <Navbar
           collapseOnSelect
           expand='lg'
-          style={{ backgroundColor: 'rgb(245, 245, 245)' }}
+          style={{ backgroundColor: 'rgb(245, 245, 245)', fontSize: '14px' }}
           variant='light'
         >
           <Navbar.Brand
@@ -51,6 +51,7 @@ class MainNavBar extends Component {
               <Nav.Link
                 href='#signin'
                 style={{ color: '#919191', marginRight: 20 }}
+                className='nav'
               >
                 IPA Ops &nbsp;
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -61,6 +62,7 @@ class MainNavBar extends Component {
                   color: '#919191',
                   marginRight: 60
                 }}
+                className='nav'
               >
                 Help
               </Nav.Link>
