@@ -14,7 +14,7 @@ class Documents extends Component {
         ));
 
         return (
-            <Table hover size="sm">
+            <Table hover size="sm" responsive>
                 <thead>
                     <tr>
                         <th>Document Type</th>

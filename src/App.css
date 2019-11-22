@@ -145,11 +145,14 @@
     float: right;
 }
 
-
+table {
+  font-size: 0.7rem;
+}
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
     font-weight: normal;
+    color: grey;
 }
 
 table tbody {
