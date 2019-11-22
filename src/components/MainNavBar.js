@@ -46,27 +46,24 @@ class MainNavBar extends Component {
                 Settings
               </Nav.Link>
             </Nav>
-
-            <Form inline>
-              <Nav.Link
-                href='#signin'
-                style={{ color: '#919191', marginRight: 20 }}
-                className='nav'
-              >
-                IPA Ops &nbsp;
-                <FontAwesomeIcon icon={faChevronDown} />
-              </Nav.Link>
-              <Nav.Link
-                href='#help'
-                style={{
-                  color: '#919191',
-                  marginRight: 60
-                }}
-                className='nav'
-              >
-                Help
-              </Nav.Link>
-            </Form>
+            <Nav.Link
+              href='#signin'
+              style={{ color: '#919191', marginRight: 20 }}
+              className='nav'
+            >
+              IPA Ops &nbsp;
+              <FontAwesomeIcon icon={faChevronDown} />
+            </Nav.Link>
+            <Nav.Link
+              href='#help'
+              style={{
+                color: '#919191',
+                marginRight: 60
+              }}
+              className='nav'
+            >
+              Help
+            </Nav.Link>
           </Navbar.Collapse>
         </Navbar>
       </div>
