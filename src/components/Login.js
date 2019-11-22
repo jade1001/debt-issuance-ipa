@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import LoginNavBar from './LoginNavBar'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import NavLink from 'react-bootstrap/NavLink'
-import FormLabel from 'react-bootstrap/FormLabel'
-import InputGroup from 'react-bootstrap/InputGroup'
+import { Form, Button, Nav, FormLabel, InputGroup } from 'react-bootstrap'
 
 class Login extends Component {
   constructor(props) {
@@ -66,41 +62,41 @@ class Login extends Component {
           }}
           onSubmit={this.Login}
         >
-          <Form.Group controlId="formBasicEmail">
+          <Form.Group controlId='formBasicEmail'>
             <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+              <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
               <Form.Control
-                type="email"
-                placeholder="User ID / Email"
+                type='email'
+                placeholder='User ID / Email'
                 style={{ width: '300px', color: '#182e58' }}
                 onChange={this.emailOnChangeHandler}
               />
             </InputGroup.Prepend>
           </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
+          <Form.Group controlId='formBasicPassword'>
             <InputGroup.Prepend>
-              <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+              <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
               <Form.Control
-                type="password"
-                placeholder="Password"
+                type='password'
+                placeholder='Password'
                 style={{ width: '300px', color: '#182e58' }}
                 onChange={this.passOnChangeHandler}
               />
             </InputGroup.Prepend>
           </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
+          <Form.Group controlId='formBasicCheckbox'>
             <NavLink
-              href="#forgot"
+              href='#forgot'
               style={{ fontSize: 13, marginLeft: -15, float: 'left' }}
             >
               Forgot Password?
             </NavLink>
           </Form.Group>
           <Button
-            variant="secondary"
-            size="sm"
-            type="submit"
+            variant='secondary'
+            size='sm'
+            type='submit'
             style={{
               fontSize: 13,
               width: 82,

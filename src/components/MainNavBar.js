@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, Form } from 'react-bootstrap'
 import logo from './logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 class MainNavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar bg='light' variant='light'>
-          <Navbar.Brand href='#home'>
+        <Navbar
+          collapseOnSelect
+          expand='lg'
+          style={{ backgroundColor: 'rgb(245, 245, 245)' }}
+          variant='light'
+        >
+          <Navbar.Brand
+            href='#home'
+            style={{ border: '3px solid rgb(245, 245, 245)' }}
+          >
             <img
               alt=''
               src={logo}
@@ -17,27 +27,45 @@ class MainNavBar extends Component {
               style={{ marginLeft: 80 }}
             />
           </Navbar.Brand>
-          <Nav className='mr-auto'>
-            <Nav.Link href='#dashboard'>Dashboard</Nav.Link>
-            <Nav.Link href='#dept-issuance'>Debt Issuance</Nav.Link>
-            <Nav.Link href='#credit-limits'>Credit Limits</Nav.Link>
-            <Nav.Link href='#identities'>Identities</Nav.Link>
-            <Nav.Link href='#settings'>Settings</Nav.Link>
-          </Nav>
-          <Form inline>
-            <Nav.Link
-              href='#signin'
-              style={{ color: '#919191', marginRight: 20 }}
-            >
-              IPA Ops
-            </Nav.Link>
-            <Nav.Link
-              href='#help'
-              style={{ color: '#919191', marginRight: 60 }}
-            >
-              Help
-            </Nav.Link>
-          </Form>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='mr-auto'>
+              <Nav.Link href='#dashboard' className='nav'>
+                Dashboard
+              </Nav.Link>
+              <Nav.Link href='#dept-issuance' className='nav'>
+                Debt Issuance
+              </Nav.Link>
+              <Nav.Link href='#credit-limits' className='nav'>
+                Credit Limits
+              </Nav.Link>
+              <Nav.Link href='#identities' className='nav'>
+                Identities
+              </Nav.Link>
+              <Nav.Link href='#settings' className='nav'>
+                Settings
+              </Nav.Link>
+            </Nav>
+
+            <Form inline>
+              <Nav.Link
+                href='#signin'
+                style={{ color: '#919191', marginRight: 20 }}
+              >
+                IPA Ops &nbsp;
+                <FontAwesomeIcon icon={faChevronDown} />
+              </Nav.Link>
+              <Nav.Link
+                href='#help'
+                style={{
+                  color: '#919191',
+                  marginRight: 60
+                }}
+              >
+                Help
+              </Nav.Link>
+            </Form>
+          </Navbar.Collapse>
         </Navbar>
       </div>
     )
