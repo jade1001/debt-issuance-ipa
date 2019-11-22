@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MainNavBar from './MainNavBar'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../App.css'
+import OpsNotif1 from './OpsNotif1'
 
 class DashboardMain extends Component {
   render() {

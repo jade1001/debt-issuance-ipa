@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MainNavBar from './MainNavBar'
 import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -29,7 +28,6 @@ class DebtIssuance extends Component {
     })
     return (
       <div>
-        <MainNavBar />
         <Container>
           <Row style={{ marginTop: 20 }}>
             <Col xs>
@@ -95,6 +93,7 @@ class DebtIssuance extends Component {
               <FontAwesomeIcon
                 icon={faDownload}
                 style={{
+                  cursor: 'pointer',
                   width: 50,
                   height: 25,
                   color: 'white',
@@ -134,7 +133,7 @@ class DebtIssuance extends Component {
         >
           <thead>
             <tr>
-              <th scope='col' style={{ fontWeight: 'bold' }} fixed>
+              <th scope='col' style={{ fontWeight: 'bold' }}>
                 Name
               </th>
               <th scope='col' style={{ fontWeight: 'bold' }}>
