@@ -27,7 +27,6 @@
   color: #09d3ac;
 }
 
-*/
 /* Main Nav CSS **/
 
 .nav {
@@ -51,7 +50,79 @@
 .table-content th {
   font-weight: normal;
 }
+/** Main Modal **/
 
+
+
+/** Maturity Data **/
+#firstMainTable {
+  margin: auto;
+  width: 80%;
+}
+#firstTable {
+  border-top-style: hidden !important;
+  border-bottom-style: hidden !important;
+  font-size: 10px;
+  color: grey;
+  font-weight: normal;
+  text-align: left!important;
+  margin: auto;
+}
+#firstTableData {
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+  color: rgb(58, 77, 150);
+  text-align: left!important;
+}
+#firstTableHeader{
+  padding-bottom: 0;
+}
+#firstData {
+  padding-top: 0;
+}
+#secondMainTable {
+  margin: auto;
+  width: 80%;
+}
+#secondTable {
+  border-bottom-style: hidden !important;
+  font-size: 10px;
+  color: grey;
+  font-weight: normal;
+  text-align: left!important;
+  margin: auto;
+}
+#secondTableHeader {
+  padding-bottom: 1%;
+  border-top: 1px solid rgb(225,225,225)!important;
+}
+#secondTableData {
+  
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+  color: rgb(58, 77, 150);
+  text-align: left!important;
+}
+#secondData{
+  padding-top: 0;
+  text-align: left!important;
+}
+#btntd {
+  border-top: none;
+  border-bottom: 1px solid rgb(225,225,225)!important;
+}
+#btnadd {
+  background-color: rgb(25, 47, 89);
+  border: none;
+  font-size: 8px;
+  color:white;
+  border-radius: 2px;
+}
+
+
+/** Maturity Data **/
 #text-center {
   text-align: center;
 }
@@ -116,4 +187,8 @@ tbody tr td:last-child {
   color: #3f33b1;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dff489e0d44c9fc3ac87b699c482bb12e5dea1eb
 /** End of section **/
