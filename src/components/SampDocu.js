@@ -31,7 +31,7 @@ class SampDocu extends Component {
       <Container>
         <Table>
           <thead>
-            <tr>
+            <tr style={{ lineHeight: '1%', borderBottom: '2px solid #F3F3F3' }}>
               <th>Document Type</th>
               <th>Last Filename</th>
               <th>Status</th>
@@ -50,8 +50,7 @@ class SampDocu extends Component {
                 id='tRow'
                 style={{
                   cursor: 'pointer',
-                  color: '#182E58',
-                  lineHeight: '70%'
+                  color: '#182E58'
                 }}
               >
                 <td style={{ border: 'none' }}>

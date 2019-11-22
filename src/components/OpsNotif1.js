@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row } from 'react-bootstrap'
+import '../App.css'
 
 class OpsNotif1 extends Component {
   render() {
@@ -18,6 +19,7 @@ class OpsNotif1 extends Component {
               <FontAwesomeIcon
                 icon={faCircle}
                 style={{ color: 'orange', fontSize: '12px' }}
+                id='notificon'
               />
             </span>
           </Col>
