@@ -12,7 +12,7 @@ class OpsNotif1 extends Component {
         </p>
         <br />
         <br />
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
           <Col sm={1}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
@@ -45,8 +45,7 @@ class OpsNotif1 extends Component {
             </b>
           </Col>
         </Row>
-
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
           <Col sm={1}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
@@ -72,7 +71,7 @@ class OpsNotif1 extends Component {
           </Col>
         </Row>
 
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
           <Col sm={1}>
             <span style={{ float: 'right' }}></span>
           </Col>
@@ -116,7 +115,7 @@ class OpsNotif1 extends Component {
           </Col>
         </Row>
 
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
           <Col sm={1}>
             <span style={{ float: 'right' }}></span>
           </Col>

@@ -32,7 +32,7 @@ class MainNavBar extends Component {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='mr-auto'>
-              <Nav.Link href='#dashboard' className='nav' active>
+              <Nav.Link href='#dashboard' className='nav'>
                 Dashboard
               </Nav.Link>
               <Nav.Link href='#dept-issuance' className='nav'>
@@ -48,12 +48,12 @@ class MainNavBar extends Component {
                 Settings
               </Nav.Link>
             </Nav>
-            <Nav className='ml-auto' style={{}}>
+            <Nav className='ml-auto' className='nav'>
               <Nav.Link href='#IPA-Ops'>
                 IPA Ops &nbsp;
                 <FontAwesomeIcon icon={faChevronDown} />
               </Nav.Link>
-              <Nav.Link href='#help' style={{}}>
+              <Nav.Link href='#help' className='nav'>
                 Help
               </Nav.Link>
             </Nav>
