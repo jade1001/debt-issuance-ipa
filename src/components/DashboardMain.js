@@ -4,6 +4,9 @@ import { Container, Row, Col } from 'react-bootstrap'
 import '../App.css'
 import OpsNotif1 from './OpsNotif1'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+
+import { userActions } from '../Redux/_actions/user.actions'
 
 const Cards = styled.div`
   background-color: rgb(245, 245, 245);
@@ -223,4 +226,18 @@ class DashboardMain extends Component {
   }
 }
 
-export default DashboardMain
+function mapState(state) {
+  const { users, authentication } = state
+  const { user } = authentication
+  return { user, users }
+}
+
+const actionCreators = {
+  getUsers: userActions.getAll,
+  deleteUser: userActions.delete
+}
+
+export default connect(mapState, actionCreators)(DashboardMain)
+// export { connectedHomePage as DashboardMain }
+
+// export default DashboardMain
