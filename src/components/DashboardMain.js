@@ -3,6 +3,9 @@ import MainNavBar from './MainNavBar'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../App.css'
 import OpsNotif1 from './OpsNotif1'
+import { connect } from 'react-redux'
+
+import { userActions } from '../Redux/_actions/user.actions'
 
 class DashboardMain extends Component {
   render() {
@@ -18,7 +21,7 @@ class DashboardMain extends Component {
                 color: '#919191',
                 marginTop: 10,
                 marginBottom: 10,
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
             >
               Reports
@@ -31,7 +34,7 @@ class DashboardMain extends Component {
                 backgroundColor: 'rgb(245, 245, 245)',
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
-                textAlign: 'center'
+                textAlign: 'center',
               }}
               id='cards'
             >
@@ -46,7 +49,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -61,7 +64,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -76,7 +79,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -91,7 +94,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -106,7 +109,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -123,7 +126,7 @@ class DashboardMain extends Component {
                 backgroundColor: 'rgb(245, 245, 245)',
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
-                textAlign: 'center'
+                textAlign: 'center',
               }}
               id='cards'
             >
@@ -138,7 +141,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -153,7 +156,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -168,7 +171,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -183,7 +186,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -198,7 +201,7 @@ class DashboardMain extends Component {
                 height: 150,
                 transition: 'all 0.2s ease-in -out',
                 textAlign: 'center',
-                marginLeft: 10
+                marginLeft: 10,
               }}
               id='cards'
             >
@@ -214,4 +217,18 @@ class DashboardMain extends Component {
   }
 }
 
-export default DashboardMain
+function mapState(state) {
+  const { users, authentication } = state
+  const { user } = authentication
+  return { user, users }
+}
+
+const actionCreators = {
+  getUsers: userActions.getAll,
+  deleteUser: userActions.delete,
+}
+
+export default connect(mapState, actionCreators)(DashboardMain)
+// export { connectedHomePage as DashboardMain }
+
+// export default DashboardMain

@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
 import LoginNavBar from './LoginNavBar'
+import { connect } from 'react-redux'
+import { userActions } from '../Redux/_actions/user.actions'
 import { Form, Button, Nav, FormLabel, InputGroup } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
+import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
 
 class Login extends Component {
   constructor(props) {
     super(props)
 
+    this.props.logout()
+
     this.state = {
       Email: '',
       Password: '',
-      isLoggedIn: false,
+      submitted: false,
     }
 
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
@@ -31,29 +38,39 @@ class Login extends Component {
     })
   }
 
-  Login(event) {
-    const email = 'samp@email.com'
-    const pass = '1'
-    if (this.state.Email === email && this.state.Password === pass) {
-      this.props.signIn(this.state.Email, this.state.Password)
-      event.preventDefault()
-    } else {
-      alert('Incorrect Email or Password')
-      event.preventDefault()
+  Login(e) {
+    e.preventDefault()
+
+    this.setState({ submitted: true })
+    const { Email, Password } = this.state
+    if (Email && Password) {
+      this.props.login(Email, Password)
     }
   }
 
   render() {
+    const { loggingIn } = this.props
+    const { username, password, submitted } = this.state
+
     return (
       <div>
         <LoginNavBar />
-        <FormLabel style={{ fontSize: 30, marginTop: '11%', color: '#182e58' }}>
-          Treasury Debt Issuance
-        </FormLabel>{' '}
-        <br />
-        <FormLabel style={{ color: '#182e58', marginTop: 20 }}>
-          Login To Your Account
-        </FormLabel>
+        <div style={{ textAlign: 'center' }}>
+          <FormLabel
+            style={{
+              fontSize: 30,
+              marginTop: '11% ',
+              color: '#182e58',
+              backgroundColor: '',
+            }}
+          >
+            Treasury Debt Issuance
+          </FormLabel>{' '}
+          <br />
+          <FormLabel style={{ color: '#182e58', marginTop: 20 }}>
+            Login To Your Account
+          </FormLabel>
+        </div>
         <Form
           style={{
             width: 300,
@@ -64,7 +81,9 @@ class Login extends Component {
         >
           <Form.Group controlId='formBasicEmail'>
             <InputGroup.Prepend>
-              <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
+              <InputGroup.Text id='basic-addon1'>
+                <FontAwesomeIcon icon={faIdCardAlt} />
+              </InputGroup.Text>
               <Form.Control
                 type='email'
                 placeholder='User ID / Email'
@@ -76,7 +95,9 @@ class Login extends Component {
 
           <Form.Group controlId='formBasicPassword'>
             <InputGroup.Prepend>
-              <InputGroup.Text id='basic-addon1'>@</InputGroup.Text>
+              <InputGroup.Text id='basic-addon1'>
+                <FontAwesomeIcon icon={faKey} />
+              </InputGroup.Text>
               <Form.Control
                 type='password'
                 placeholder='Password'
@@ -86,12 +107,12 @@ class Login extends Component {
             </InputGroup.Prepend>
           </Form.Group>
           <Form.Group controlId='formBasicCheckbox'>
-            <NavLink
+            <Nav.Link
               href='#forgot'
               style={{ fontSize: 13, marginLeft: -15, float: 'left' }}
             >
               Forgot Password?
-            </NavLink>
+            </Nav.Link>
           </Form.Group>
           <Button
             variant='secondary'
@@ -114,4 +135,15 @@ class Login extends Component {
   }
 }
 
-export default Login
+function mapState(state) {
+  const { loggingIn } = state.authentication
+  return { loggingIn }
+}
+
+const actionCreators = {
+  login: userActions.login,
+  logout: userActions.logout,
+}
+
+const connectedLoginPage = connect(mapState, actionCreators)(Login)
+export { connectedLoginPage as Login }
