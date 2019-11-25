@@ -8,11 +8,12 @@ import {
   Nav,
   FormLabel,
   InputGroup,
-  Toast
+  Toast,
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
   constructor(props) {
@@ -25,25 +26,26 @@ class Login extends Component {
       Password: '',
       submitted: false,
       visibility: 'hidden',
-      setShow: true
+      setShow: true,
     }
 
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
     this.passOnChangeHandler = this.passOnChangeHandler.bind(this)
     this.Login = this.Login.bind(this)
+    this.getUser = this.getUser.bind(this)
   }
 
   emailOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Email: event.target.value
+      Email: event.target.value,
     })
   }
 
   passOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Password: event.target.value
+      Password: event.target.value,
     })
   }
 
@@ -67,14 +69,18 @@ class Login extends Component {
     }
   }
 
+  getUser() {
+    localStorage.getItem('user')
+  }
+
   render() {
-    const { loggingIn } = this.props
+    //const { user } = localStorage.getItem('user')
     const { username, password, submitted } = this.state
 
     return (
       <div>
+        {/* {user} && <Redirect to='/' /> */}
         <LoginNavBar />
-
         <Toast
           delay={2000}
           autohide
@@ -90,14 +96,13 @@ class Login extends Component {
             Your email or password is incorrect!
           </Toast.Body>
         </Toast>
-
         <div style={{ textAlign: 'center' }}>
           <FormLabel
             style={{
               fontSize: 30,
               marginTop: '8% ',
               color: '#182e58',
-              backgroundColor: ''
+              backgroundColor: '',
             }}
           >
             Treasury Debt Issuance
@@ -111,7 +116,7 @@ class Login extends Component {
           style={{
             width: 300,
             margin: 'auto',
-            marginTop: 10
+            marginTop: 10,
           }}
           onSubmit={this.Login}
         >
@@ -160,7 +165,7 @@ class Login extends Component {
               height: 30,
               marginLeft: 98,
               backgroundColor: '#919191',
-              border: 'none'
+              border: 'none',
             }}
           >
             Sign In
@@ -178,7 +183,7 @@ function mapState(state) {
 
 const actionCreators = {
   login: userActions.login,
-  logout: userActions.logout
+  logout: userActions.logout,
 }
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login)
