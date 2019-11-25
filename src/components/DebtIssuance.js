@@ -4,23 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faDownload,
   faSearch,
-  faChevronRight
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
 
-class DebtIssuance extends Component {
+export class DebtIssuance extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       search: '',
-      jsonData: JSONData
+      jsonData: JSONData,
     }
   }
   updateSearch(event) {
     this.setState({
-      search: event.target.value.substr(0, 20)
+      search: event.target.value.substr(0, 20),
     })
   }
 
@@ -39,7 +39,7 @@ class DebtIssuance extends Component {
                 style={{
                   color: '#182e58',
                   borderBottom: '2px solid #182e58',
-                  width: 130
+                  width: 130,
                 }}
               >
                 Commercial Paper
@@ -54,7 +54,7 @@ class DebtIssuance extends Component {
             height: 1070,
             float: 'left',
             paddingLeft: 120,
-            borderRight: '1px solid #E5E5E5'
+            borderRight: '1px solid #E5E5E5',
           }}
         >
           <Col style={{ color: '#182e58', fontSize: 14, cursor: 'pointer' }}>
@@ -66,7 +66,7 @@ class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer'
+              cursor: 'pointer',
             }}
           >
             Tranches &nbsp;
@@ -77,7 +77,7 @@ class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer'
+              cursor: 'pointer',
             }}
           >
             Allocations &nbsp;
@@ -88,7 +88,7 @@ class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer'
+              cursor: 'pointer',
             }}
           >
             + Start New
@@ -106,7 +106,7 @@ class DebtIssuance extends Component {
                   color: 'white',
                   border: '1px solid #182e58',
                   backgroundColor: '#182e58',
-                  borderRadius: 5
+                  borderRadius: 5,
                 }}
               />
             </Col>
@@ -116,7 +116,7 @@ class DebtIssuance extends Component {
               style={{
                 display: 'flex',
                 float: 'right',
-                marginLeft: '23%'
+                marginLeft: '23%',
               }}
             >
               <Form inline>
@@ -143,7 +143,7 @@ class DebtIssuance extends Component {
           className='table table-hover table-content'
           style={{
             fontSize: 12,
-            width: '75%'
+            width: '75%',
           }}
         >
           <thead>
@@ -181,7 +181,7 @@ class DebtIssuance extends Component {
                 style={{
                   cursor: 'pointer',
                   color: '#182E58',
-                  lineHeight: '70%'
+                  lineHeight: '70%',
                 }}
               >
                 <td style={{ border: 'none' }}>
@@ -214,4 +214,4 @@ class DebtIssuance extends Component {
   }
 }
 
-export default DebtIssuance
+// export default DebtIssuance

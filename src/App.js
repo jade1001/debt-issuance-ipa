@@ -8,6 +8,9 @@ import { alertActions } from './Redux/_actions/alert.actions'
 import { PrivateRoute } from './components/PrivateRoute'
 import DashboardMain from './components/DashboardMain'
 import { Login } from './components/Login'
+import { DebtIssuance } from './components/DebtIssuance'
+import { CreditLimits } from './components/CreditLimits'
+import MainNavBar from './components/MainNavBar'
 
 class App extends Component {
   constructor(props) {
@@ -27,9 +30,8 @@ class App extends Component {
         )}
         <Router history={history}>
           <Switch>
-            <PrivateRoute exact path='/' component={DashboardMain} />
             <Route path='/login' component={Login} />
-            <Redirect from='*' to='/' />
+            <PrivateRoute exact path='/' component={MainNavBar} />
           </Switch>
         </Router>
       </div>

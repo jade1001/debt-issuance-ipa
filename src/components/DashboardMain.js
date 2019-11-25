@@ -69,7 +69,6 @@ class DashboardMain extends Component {
   render() {
     return (
       <>
-        <MainNavBar />
         <div className='container'>
           <Container>
             <div className='App container'>
