@@ -31,7 +31,7 @@ class OpsNotif1 extends Component {
                   style={{
                     color: '#505050',
                     float: 'left',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   MonetaGo 92D 03/10/2019
@@ -100,7 +100,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'left',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   MonetaGo 92D 03/10/2019
@@ -113,7 +113,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'left',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   IPA certificate has been issued
@@ -126,7 +126,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'right',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   07/07/2019 12:23:03
@@ -146,7 +146,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'left',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   MonetaGo 120D 1/11/2019
@@ -158,7 +158,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'left',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   New Issuance Approved
@@ -170,7 +170,7 @@ class OpsNotif1 extends Component {
                     color: '#505050',
                     float: 'right',
                     fontWeight: 'normal',
-                    fontSize: '12px',
+                    fontSize: '12px'
                   }}
                 >
                   07/07/2019 12:15:49
