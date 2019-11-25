@@ -11,7 +11,7 @@ import { PrivateRoute } from './PrivateRoute'
 class MainNavBar extends Component {
   render() {
     return (
-      <>
+      <div className='App container'>
         <Router className='App container'>
           <Navbar
             fluid='true'
@@ -19,6 +19,7 @@ class MainNavBar extends Component {
             expand='lg'
             style={{
               backgroundColor: 'rgb(245, 245, 245)',
+              fontSize: '14px'
             }}
             variant='light'
           >
@@ -37,7 +38,7 @@ class MainNavBar extends Component {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
               <Nav className='mr-auto'>
-                <Link to='/' className='nav-link active'>
+                <Link to='/' className='nav-link'>
                   Dashboard
                 </Link>
                 <Link to='/debt-issuance' className='nav-link'>
@@ -74,7 +75,7 @@ class MainNavBar extends Component {
             />
           </Switch>
         </Router>
-      </>
+      </div>
     )
   }
 }
