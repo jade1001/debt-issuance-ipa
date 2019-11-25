@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row } from 'react-bootstrap'
+import '../App.css'
 
 class OpsNotif1 extends Component {
   render() {
     return (
+<<<<<<< HEAD
       <>
         <div className='App container'>
           <Container>
@@ -16,6 +18,31 @@ class OpsNotif1 extends Component {
             <br />
             <Row
               style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
+=======
+      <Container>
+        <p style={{ float: 'left', color: '#505050', fontSize: '12px' }}>
+          Notifications
+        </p>
+        <br />
+        <br />
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col sm={1}>
+            <span style={{ float: 'right' }}>
+              <FontAwesomeIcon
+                icon={faCircle}
+                style={{ color: 'orange', fontSize: '12px' }}
+                id='notificon'
+              />
+            </span>
+          </Col>
+          <Col sm={3}>
+            <b
+              style={{
+                color: '#505050',
+                float: 'left',
+                fontSize: '12px'
+              }}
+>>>>>>> 51161bc645a4606b5b8e94ea2c6abfe76f1e9e0e
             >
               <Col sm={1}>
                 <span style={{ float: 'right' }}>
