@@ -7,18 +7,6 @@ import '../App.css'
 class OpsNotif1 extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      <>
-        <div className='App container'>
-          <Container>
-            <p style={{ float: 'left', color: '#505050', fontSize: '12px' }}>
-              Notifications
-            </p>
-            <br />
-            <br />
-            <Row
-              style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
-=======
       <Container>
         <p style={{ float: 'left', color: '#505050', fontSize: '12px' }}>
           Notifications
@@ -26,186 +14,151 @@ class OpsNotif1 extends Component {
         <br />
         <br />
         <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
-          <Col sm={1}>
+          <Col xs={1}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
                 style={{ color: 'orange', fontSize: '12px' }}
-                id='notificon'
               />
             </span>
           </Col>
-          <Col sm={3}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
                 float: 'left',
                 fontSize: '12px'
               }}
->>>>>>> 51161bc645a4606b5b8e94ea2c6abfe76f1e9e0e
             >
-              <Col sm={1}>
-                <span style={{ float: 'right' }}>
-                  <FontAwesomeIcon
-                    icon={faCircle}
-                    style={{ color: 'orange', fontSize: '12px' }}
-                  />
-                </span>
-              </Col>
-              <Col sm={3}>
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'left',
-                    fontSize: '12px'
-                  }}
-                >
-                  MonetaGo 92D 03/10/2019
-                </b>
-              </Col>
-              <Col sm={4}>
-                {' '}
-                <b
-                  style={{ color: '#505050', float: 'left', fontSize: '12px' }}
-                >
-                  IPA certificate has been issued
-                </b>
-              </Col>
-              <Col sm={4}>
-                {' '}
-                <b
-                  style={{ color: '#505050', float: 'right', fontSize: '12px' }}
-                >
-                  07/07/2019 12:23:03
-                </b>
-              </Col>
-            </Row>
-            <Row
-              style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
-            >
-              <Col sm={1}>
-                <span style={{ float: 'right' }}>
-                  <FontAwesomeIcon
-                    icon={faCircle}
-                    style={{ color: 'orange', fontSize: '12px' }}
-                  />
-                </span>
-              </Col>
-              <Col sm={3}>
-                <b
-                  style={{ color: '#505050', float: 'left', fontSize: '12px' }}
-                >
-                  MonetaGo 120D 1/11/2019
-                </b>
-              </Col>
-              <Col sm={4}>
-                <b
-                  style={{ color: '#505050', float: 'left', fontSize: '12px' }}
-                >
-                  New Issuance Approved
-                </b>
-              </Col>
-              <Col sm={4}>
-                <b
-                  style={{ color: '#505050', float: 'right', fontSize: '12px' }}
-                >
-                  07/07/2019 12:15:49
-                </b>
-              </Col>
-            </Row>
+              MonetaGo 92D 03/10/2019
+            </b>
+          </Col>
+          <Col xs={3}>
+            {' '}
+            <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
+              IPA certificate has been issued
+            </b>
+          </Col>
+          <Col xs={4}>
+            {' '}
+            <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
+              07/07/2019 12:23:03
+            </b>
+          </Col>
+        </Row>
 
-            <Row
-              style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
-            >
-              <Col sm={1}>
-                <span style={{ float: 'right' }}></span>
-              </Col>
-              <Col sm={3}>
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'left',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  MonetaGo 92D 03/10/2019
-                </b>
-              </Col>
-              <Col sm={4}>
-                {' '}
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'left',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  IPA certificate has been issued
-                </b>
-              </Col>
-              <Col sm={4}>
-                {' '}
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'right',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  07/07/2019 12:23:03
-                </b>
-              </Col>
-            </Row>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
+            <span style={{ float: 'right' }}>
+              <FontAwesomeIcon
+                icon={faCircle}
+                style={{ color: 'orange', fontSize: '12px' }}
+              />
+            </span>
+          </Col>
+          <Col xs={3}>
+            <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
+              MonetaGo 120D 1/11/2019
+            </b>
+          </Col>
+          <Col xs={3}>
+            <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
+              New Issuance Approved
+            </b>
+          </Col>
+          <Col xs={4}>
+            <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
+              07/07/2019 12:15:49
+            </b>
+          </Col>
+        </Row>
 
-            <Row
-              style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
+            <span style={{ float: 'right' }}></span>
+          </Col>
+          <Col xs={3}>
+            <b
+              style={{
+                color: '#505050',
+                float: 'left',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
             >
-              <Col sm={1}>
-                <span style={{ float: 'right' }}></span>
-              </Col>
-              <Col sm={3}>
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'left',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  MonetaGo 120D 1/11/2019
-                </b>
-              </Col>
-              <Col sm={4}>
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'left',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  New Issuance Approved
-                </b>
-              </Col>
-              <Col sm={4}>
-                <b
-                  style={{
-                    color: '#505050',
-                    float: 'right',
-                    fontWeight: 'normal',
-                    fontSize: '12px'
-                  }}
-                >
-                  07/07/2019 12:15:49
-                </b>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </>
+              MonetaGo 92D 03/10/2019
+            </b>
+          </Col>
+          <Col xs={3}>
+            {' '}
+            <b
+              style={{
+                color: '#505050',
+                float: 'left',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
+            >
+              IPA certificate has been issued
+            </b>
+          </Col>
+          <Col xs={4}>
+            {' '}
+            <b
+              style={{
+                color: '#505050',
+                float: 'right',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
+            >
+              07/07/2019 12:23:03
+            </b>
+          </Col>
+        </Row>
+
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
+            <span style={{ float: 'right' }}></span>
+          </Col>
+          <Col xs={3}>
+            <b
+              style={{
+                color: '#505050',
+                float: 'left',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
+            >
+              MonetaGo 120D 1/11/2019
+            </b>
+          </Col>
+          <Col xs={3}>
+            <b
+              style={{
+                color: '#505050',
+                float: 'left',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
+            >
+              New Issuance Approved
+            </b>
+          </Col>
+          <Col xs={4}>
+            <b
+              style={{
+                color: '#505050',
+                float: 'right',
+                fontWeight: 'normal',
+                fontSize: '12px'
+              }}
+            >
+              07/07/2019 12:15:49
+            </b>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }
