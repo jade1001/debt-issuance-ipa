@@ -14,13 +14,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
 import { Redirect } from 'react-router-dom'
+import { history } from '../Redux/_helpers/history'
 
 class Login extends Component {
   constructor(props) {
     super(props)
 
-    this.props.logout()
-
+    // this.props.logout()
     this.state = {
       Email: '',
       Password: '',
@@ -32,7 +32,6 @@ class Login extends Component {
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
     this.passOnChangeHandler = this.passOnChangeHandler.bind(this)
     this.Login = this.Login.bind(this)
-    this.getUser = this.getUser.bind(this)
   }
 
   emailOnChangeHandler(event) {
@@ -69,17 +68,11 @@ class Login extends Component {
     }
   }
 
-  getUser() {
-    localStorage.getItem('user')
-  }
+  getUser() {}
 
   render() {
-    //const { user } = localStorage.getItem('user')
-    const { username, password, submitted } = this.state
-
     return (
       <div>
-        {/* {user} && <Redirect to='/' /> */}
         <LoginNavBar />
         <Toast
           delay={3000}
@@ -183,7 +176,6 @@ function mapState(state) {
 
 const actionCreators = {
   login: userActions.login,
-  logout: userActions.logout,
 }
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login)
