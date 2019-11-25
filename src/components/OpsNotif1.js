@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row } from 'react-bootstrap'
+import '../App.css'
 
 class OpsNotif1 extends Component {
   render() {
@@ -12,8 +13,8 @@ class OpsNotif1 extends Component {
         </p>
         <br />
         <br />
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
-          <Col sm={1}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
@@ -21,7 +22,7 @@ class OpsNotif1 extends Component {
               />
             </span>
           </Col>
-          <Col sm={3}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
@@ -32,13 +33,13 @@ class OpsNotif1 extends Component {
               MonetaGo 92D 03/10/2019
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={3}>
             {' '}
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               IPA certificate has been issued
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={4}>
             {' '}
             <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
               07/07/2019 12:23:03
@@ -46,8 +47,8 @@ class OpsNotif1 extends Component {
           </Col>
         </Row>
 
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
-          <Col sm={1}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
@@ -55,28 +56,28 @@ class OpsNotif1 extends Component {
               />
             </span>
           </Col>
-          <Col sm={3}>
+          <Col xs={3}>
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               MonetaGo 120D 1/11/2019
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={3}>
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               New Issuance Approved
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={4}>
             <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
               07/07/2019 12:15:49
             </b>
           </Col>
         </Row>
 
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
-          <Col sm={1}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
             <span style={{ float: 'right' }}></span>
           </Col>
-          <Col sm={3}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
@@ -88,7 +89,7 @@ class OpsNotif1 extends Component {
               MonetaGo 92D 03/10/2019
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={3}>
             {' '}
             <b
               style={{
@@ -101,7 +102,7 @@ class OpsNotif1 extends Component {
               IPA certificate has been issued
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={4}>
             {' '}
             <b
               style={{
@@ -116,11 +117,11 @@ class OpsNotif1 extends Component {
           </Col>
         </Row>
 
-        <Row style={{ borderBottom: '1px solid #F3F3F3' }}>
-          <Col sm={1}>
+        <Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}>
+          <Col xs={1}>
             <span style={{ float: 'right' }}></span>
           </Col>
-          <Col sm={3}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
@@ -132,7 +133,7 @@ class OpsNotif1 extends Component {
               MonetaGo 120D 1/11/2019
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
@@ -144,7 +145,7 @@ class OpsNotif1 extends Component {
               New Issuance Approved
             </b>
           </Col>
-          <Col sm={4}>
+          <Col xs={4}>
             <b
               style={{
                 color: '#505050',

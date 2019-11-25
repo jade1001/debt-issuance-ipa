@@ -6,8 +6,9 @@ import logo from './logo.png'
 class LoginNavBar extends Component {
   render() {
     return (
-      <div>
+      <div className='App container'>
         <Navbar
+          fluid='true'
           collapseOnSelect
           expand='lg'
           style={{ backgroundColor: 'rgb(245, 245, 245)', fontSize: '14px' }}
@@ -20,26 +21,18 @@ class LoginNavBar extends Component {
               width='30'
               height='30'
               className='d-inline-block align-top'
-              style={{ marginLeft: 80 }}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='mr-auto'></Nav>
-            <Nav.Link
-              href='#signin'
-              style={{ color: '#919191', marginRight: 20 }}
-              className='navHover'
-            >
-              Sign In
-            </Nav.Link>
-            <Nav.Link
-              href='#help'
-              style={{ color: '#919191', marginRight: 60 }}
-              className='navHover'
-            >
-              Help
-            </Nav.Link>
+            <Nav className='ml-auto'>
+              <Nav.Link href='#signin' className='nav'>
+                Sign In
+              </Nav.Link>
+              <Nav.Link href='#help' className='nav'>
+                Help
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>

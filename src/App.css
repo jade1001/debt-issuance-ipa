@@ -2,14 +2,14 @@
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 11px;
-  color: #a2a2a2;
+  color: #615f5f;
 }
 
 #pHead1 {
   margin-top: 5px;
   margin-bottom: 15px;
-  font-size: 11px;
-  color: #a2a2a2;
+  font-size: 10px;
+  color: #615f5f;
 }
 
 #pBody {
@@ -20,7 +20,7 @@
 
 #pFooter {
   font-size: 12px;
-  color: #a2a2a2;
+  color: #615f5f;
 }
 
 .App-link {
@@ -33,13 +33,8 @@
   color: #a2a2a2;
   text-decoration-style: none;
   background-color: rgb(245, 245, 245);
-}
-.nav:active {
   font-size: 14px;
-  color: #192f59;
-  background-color: rgb(245, 245, 245);
-  text-decoration-line: none;
-  border-bottom: 3px solid #192f59;
+  margin-left: 8px;
 }
 
 #cards:hover {
@@ -50,13 +45,16 @@
 .table-content th {
   font-weight: normal;
 }
+
 /** Main Modal **/
 
 /** Maturity Data **/
+
 #firstMainTable {
   margin: auto;
   width: 80%;
 }
+
 #firstTable {
   border-top-style: hidden !important;
   border-bottom-style: hidden !important;
@@ -66,6 +64,7 @@
   text-align: left !important;
   margin: auto;
 }
+
 #firstTableData {
   font-size: 12px;
   color: grey;
@@ -73,16 +72,20 @@
   color: rgb(58, 77, 150);
   text-align: left !important;
 }
+
 #firstTableHeader {
   padding-bottom: 0;
 }
+
 #firstData {
   padding-top: 0;
 }
+
 #secondMainTable {
   margin: auto;
   width: 80%;
 }
+
 #secondTable {
   border-bottom-style: hidden !important;
   font-size: 10px;
@@ -91,10 +94,12 @@
   text-align: left !important;
   margin: auto;
 }
+
 #secondTableHeader {
   padding-bottom: 1%;
   border-top: 1px solid rgb(225, 225, 225) !important;
 }
+
 #secondTableData {
   font-size: 12px;
   color: grey;
@@ -102,14 +107,17 @@
   color: rgb(58, 77, 150);
   text-align: left !important;
 }
+
 #secondData {
   padding-top: 0;
   text-align: left !important;
 }
+
 #btntd {
   border-top: none;
   border-bottom: 1px solid rgb(225, 225, 225) !important;
 }
+
 #btnadd {
   background-color: rgb(25, 47, 89);
   border: none;
@@ -119,6 +127,7 @@
 }
 
 /** Maturity Data **/
+
 #text-center {
   text-align: center;
 }
@@ -139,9 +148,22 @@
   float: right;
 }
 
+#border-b-0 {
+  border-bottom: hidden;
+}
+
+#border-b-1 {
+  border-bottom: 1px solid #adadad;
+}
+
+#d-block {
+  display: block;
+}
+
 table {
   font-size: 0.7rem;
 }
+
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
@@ -187,6 +209,21 @@ tbody tr td:last-child {
   color: #3f33b1;
 }
 
+@media (max-width: 381) {
+  span {
+    float: left;
+  }
+}
+
+#approvedData {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding-top: inherit;
+  margin-bottom: 0;
+  height: 100%;
+}
+
 /** End of section **/
 
 /** Mobile Code **/
@@ -194,5 +231,213 @@ tbody tr td:last-child {
   .mtitle {
     width: 80%;
     background-color: red;
+  }
+  /*Media queries*/
+  #pHeader {
+    color: #182e58;
+    border-bottom: 2px solid #182e58;
+    width: 130px;
+  }
+}
+#sideBar {
+  width: 15%;
+  height: 100%;
+  float: left;
+  padding-left: 0;
+  border-right: 1px solid #e5e5e5;
+}
+#fMenu {
+  color: #182e58;
+  font-size: 14px;
+  cursor: pointer;
+}
+#dMenu {
+  opacity: 0.4;
+  margin-top: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#iconDL {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  color: white;
+  border: 1px solid #182e58;
+  background-color: #182e58;
+  border-radius: 5px;
+}
+#searchBox {
+  width: 220px;
+  height: 30px;
+}
+#btnSearch {
+  height: 30px;
+  width: 30px;
+  background-color: #182e58;
+}
+#colSearch {
+  display: flex;
+  float: right;
+  margin-left: 23%;
+}
+#tableId {
+  font-size: 11px;
+  width: 82%;
+}
+#formF {
+  width: 100%;
+}
+/*Responsive for mobile 320px*/
+@media (max-width: 400px) {
+  #pHeader {
+    font-size: 10px;
+    border-bottom: 1px solid #182e58;
+    width: 85px;
+  }
+  #sideBar {
+    width: 45%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #iconDL {
+    width: 30px;
+    height: 15px;
+    border-radius: 2px;
+  }
+  #searchBox {
+    width: 120px;
+    height: 18px;
+    margin-left: 60%;
+  }
+  #btnSearch {
+    width: 20px;
+    height: 20px;
+  }
+  #iconSearch {
+    width: 8px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: -2px;
+  }
+  #contFunctions {
+    width: 700px;
+  }
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 9px;
+    width: 82%;
+    float: left;
+  }
+}
+/*Responsive for mobile*/
+@media (max-width: 500px) {
+  #pHeader {
+    font-size: 12px;
+    border-bottom: 1px solid #182e58;
+    width: 100px;
+  }
+  #sideBar {
+    width: 45%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  #iconDL {
+    width: 35px;
+    height: 15px;
+    border-radius: 2px;
+  }
+  #searchBox {
+    width: 150px;
+    height: 21px;
+    margin-left: 60%;
+  }
+  #btnSearch {
+    width: 22px;
+    height: 21px;
+  }
+  #iconSearch {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 7px;
+    margin-left: -2px;
+  }
+  #contFunctions {
+    width: 800px;
+  }
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 10px;
+    width: 75%;
+    float: left;
+  }
+}
+/*Responsive for tablet*/
+@media (max-width: 768px) {
+  #pHeader {
+    font-size: 14px;
+    border-bottom: 2px solid #182e58;
+    width: 118px;
+  }
+  #sideBar {
+    width: 25%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #searchBox {
+    width: 180px;
+    height: 25px;
+  }
+  #btnSearch {
+    width: 25px;
+    height: 25px;
+  }
+  #iconSearch {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 5px;
+  }
+
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 12px;
+  }
+  #contFunctions {
+    margin-left: 20%;
   }
 }
