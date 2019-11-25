@@ -3,7 +3,13 @@ import { Navbar, Nav, Form, Container } from 'react-bootstrap'
 import logo from './logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from 'react-router-dom'
 import { DebtIssuance } from './DebtIssuance'
 import DashboardMain from './DashboardMain'
 import { PrivateRoute } from './PrivateRoute'
@@ -19,12 +25,12 @@ class MainNavBar extends Component {
             expand='lg'
             style={{
               backgroundColor: 'rgb(245, 245, 245)',
-              fontSize: '14px'
+              fontSize: '14px',
             }}
             variant='light'
           >
             <Navbar.Brand
-              href='#home'
+              href='/'
               style={{ border: '3px solid rgb(245, 245, 245)' }}
             >
               <img
@@ -38,21 +44,46 @@ class MainNavBar extends Component {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
               <Nav className='mr-auto'>
-                <Link to='/' className='nav-link'>
+                <NavLink
+                  exact
+                  to='/'
+                  className='nav-link'
+                  activeClassName='active'
+                >
                   Dashboard
-                </Link>
-                <Link to='/debt-issuance' className='nav-link'>
+                </NavLink>
+                <NavLink
+                  exact
+                  to='/debt-issuance'
+                  className='nav-link'
+                  activeClassName='active'
+                >
                   Debt Issuance
-                </Link>
-                <Link to='/credit-limits' className='nav-link'>
+                </NavLink>
+                <NavLink
+                  exact
+                  to='/credit-limits'
+                  className='nav-link'
+                  activeClassName='active'
+                >
                   Credit Limits
-                </Link>
-                <Link to='/identities' className='nav-link'>
+                </NavLink>
+                <NavLink
+                  exact
+                  to='/identities'
+                  className='nav-link'
+                  activeClassName='active'
+                >
                   Identities
-                </Link>
-                <Link to='/settings' className='nav-link'>
+                </NavLink>
+                <NavLink
+                  exact
+                  to='/settings'
+                  className='nav-link'
+                  activeClassName='active'
+                >
                   Settings
-                </Link>
+                </NavLink>
               </Nav>
               <Nav className='ml-auto' style={{}}>
                 <Nav.Link href='#IPA-Ops'>

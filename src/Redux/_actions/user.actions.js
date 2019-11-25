@@ -11,17 +11,6 @@ export const userActions = {
 function login(Email, Password) {
   return dispatch => {
     dispatch(request({ Email }))
-
-    // userService.login(Email, Password).then(
-    //   user => {
-    //     dispatch(success(user))
-    //     history.push('/')
-    //   },
-    //   error => {
-    //     dispatch(failure(error.toString()))
-    //     dispatch(alertActions.error(error.toString()))
-    //   }
-    // )
     if (userService.login(Email, Password)) {
       dispatch(success(Email))
       history.push('/')
