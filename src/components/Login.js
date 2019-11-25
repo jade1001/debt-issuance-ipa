@@ -2,7 +2,14 @@ import React, { Component } from 'react'
 import LoginNavBar from './LoginNavBar'
 import { connect } from 'react-redux'
 import { userActions } from '../Redux/_actions/user.actions'
-import { Form, Button, Nav, FormLabel, InputGroup } from 'react-bootstrap'
+import {
+  Form,
+  Button,
+  Nav,
+  FormLabel,
+  InputGroup,
+  Toast
+} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
 import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons'
@@ -17,6 +24,8 @@ class Login extends Component {
       Email: '',
       Password: '',
       submitted: false,
+      visibility: 'hidden',
+      setShow: true
     }
 
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
@@ -27,24 +36,34 @@ class Login extends Component {
   emailOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Email: event.target.value,
+      Email: event.target.value
     })
   }
 
   passOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Password: event.target.value,
+      Password: event.target.value
     })
   }
 
   Login(e) {
     e.preventDefault()
 
-    this.setState({ submitted: true })
-    const { Email, Password } = this.state
-    if (Email && Password) {
-      this.props.login(Email, Password)
+    if (this.state.Email === 'samp@email.com' && this.state.Password === '1') {
+      this.setState({ submitted: true })
+      const { Email, Password } = this.state
+      if (Email && Password) {
+        this.props.login(Email, Password)
+      }
+    } else {
+      this.setState({ visibility: '' })
+      setTimeout(
+        function() {
+          this.setState({ visibility: 'hidden' })
+        }.bind(this),
+        3000
+      )
     }
   }
 
@@ -55,13 +74,30 @@ class Login extends Component {
     return (
       <div>
         <LoginNavBar />
+
+        <Toast
+          delay={2000}
+          autohide
+          onClose={() => this.state.setShow.value}
+          style={{ visibility: this.state.visibility, margin: 'auto' }}
+        >
+          <Toast.Header>
+            <strong className='mr-auto' style={{ color: 'red' }}>
+              Opps!
+            </strong>
+          </Toast.Header>
+          <Toast.Body style={{ color: 'red' }}>
+            Your email or password is incorrect!
+          </Toast.Body>
+        </Toast>
+
         <div style={{ textAlign: 'center' }}>
           <FormLabel
             style={{
               fontSize: 30,
-              marginTop: '11% ',
+              marginTop: '8% ',
               color: '#182e58',
-              backgroundColor: '',
+              backgroundColor: ''
             }}
           >
             Treasury Debt Issuance
@@ -75,7 +111,7 @@ class Login extends Component {
           style={{
             width: 300,
             margin: 'auto',
-            marginTop: 10,
+            marginTop: 10
           }}
           onSubmit={this.Login}
         >
@@ -124,7 +160,7 @@ class Login extends Component {
               height: 30,
               marginLeft: 98,
               backgroundColor: '#919191',
-              border: 'none',
+              border: 'none'
             }}
           >
             Sign In
@@ -142,7 +178,7 @@ function mapState(state) {
 
 const actionCreators = {
   login: userActions.login,
-  logout: userActions.logout,
+  logout: userActions.logout
 }
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login)

@@ -52,7 +52,7 @@ function IPACert1() {
                     textAlign: 'center'
                   }}
                 >
-                  IPA Certificate
+                  Redemption Certificate
                 </h6>
                 <br />
                 <Row>
@@ -64,7 +64,8 @@ function IPACert1() {
                         marginBottom: '0'
                       }}
                     >
-                      An IPA Certificate has been automatically generated for
+                      An Redemption Certificate has been automatically generated
+                      for
                     </p>
                     <b style={{ fontSize: '12px' }}>MonetaGo</b>
                   </Col>
@@ -86,16 +87,6 @@ function IPACert1() {
                     border: '1px solid #000000'
                   }}
                 ></div>
-                <p
-                  style={{
-                    textAlign: 'left',
-                    marginLeft: '2%',
-                    fontSize: '12px'
-                  }}
-                >
-                  Upload a custom version of the Documents &nbsp;
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </p>
                 <br />
 
                 <Row>
@@ -105,7 +96,7 @@ function IPACert1() {
                       className='btn btn-primary btn-cert'
                       id='cancel-btn'
                     >
-                      Cancel
+                      Reject
                     </button>
                   </Col>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>
@@ -114,7 +105,7 @@ function IPACert1() {
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
                     >
-                      Submit
+                      Approve
                     </button>
                   </Col>
                 </Row>
