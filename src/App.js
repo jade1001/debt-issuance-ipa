@@ -8,11 +8,11 @@ import { alertActions } from './Redux/_actions/alert.actions'
 import { PrivateRoute } from './components/PrivateRoute'
 import DashboardMain from './components/DashboardMain'
 import { Login } from './components/Login'
+import { Alert } from 'react-bootstrap'
 
 class App extends Component {
   constructor(props) {
     super(props)
-
     history.listen((location, action) => {
       this.props.clearAlerts()
     })
@@ -23,7 +23,12 @@ class App extends Component {
     return (
       <div className='App'>
         {alert.message && (
-          <div className={`alert ${alert.type}`}>{alert.message}</div>
+          <Alert
+            className={`alert ${alert.type}`}
+            style={{ width: '20%', textAlign: 'center' }}
+          >
+            {alert.message}
+          </Alert>
         )}
         <Router history={history}>
           <Switch>
