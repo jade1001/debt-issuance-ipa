@@ -5,19 +5,12 @@ import {
   ButtonToolbar,
   Nav,
   Container,
-  NavDropdown,
-  Form,
-  FormControl,
   Navbar
 } from 'react-bootstrap'
-import MaturityData from './MaturityData'
 import Documents from './Documents'
-import CreditLimits from './CreditLimits'
-import Allocations from './Allocations'
 import '../App.css'
 
 function MainModal() {
-  const [smShow, setSmShow] = useState(false)
   const [lgShow, setLgShow] = useState(false)
   return (
     <div>
@@ -97,11 +90,7 @@ function MainModal() {
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>
-
-              {/* <MaturityData /> */}
               <Documents />
-              {/* <CreditLimits/> */}
-              {/* <Allocations /> */}
             </Container>
           </Modal.Body>
           <Modal.Footer

@@ -277,6 +277,10 @@ tbody tr td:last-child {
   font-size: 12px;
   width: 100%;
 }
+#contFunctions {
+  margin-left: 160px;
+  margin-right: 0px;
+}
 
 /*Responsive for mobile 320px*/
 @media (min-width: 320px) {
@@ -490,5 +494,9 @@ tbody tr td:last-child {
   }
   #formF {
     width: 100%;
+  }
+  #contFunctions {
+    margin-left: 160px;
+    margin-right: 0px;
   }
 }
