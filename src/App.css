@@ -226,7 +226,7 @@ tbody tr td:last-child {
 
 /** End of section **/
 
-/*Media queries*/
+/*Media queries for Debt issuance*/
 #pHeader {
   color: #182e58;
   border-bottom: 2px solid #182e58;
@@ -274,14 +274,12 @@ tbody tr td:last-child {
   margin-left: 23%;
 }
 #tableId {
-  font-size: 11px;
-  width: 82%;
-}
-#formF {
+  font-size: 12px;
   width: 100%;
 }
+
 /*Responsive for mobile 320px*/
-@media (max-width: 400px) {
+@media (min-width: 320px) {
   #pHeader {
     font-size: 10px;
     border-bottom: 1px solid #182e58;
@@ -335,7 +333,7 @@ tbody tr td:last-child {
   }
 }
 /*Responsive for mobile*/
-@media (max-width: 500px) {
+@media (min-width: 375px) {
   #pHeader {
     font-size: 12px;
     border-bottom: 1px solid #182e58;
@@ -389,7 +387,7 @@ tbody tr td:last-child {
   }
 }
 /*Responsive for tablet*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   #pHeader {
     font-size: 14px;
     border-bottom: 2px solid #182e58;
@@ -432,5 +430,65 @@ tbody tr td:last-child {
   }
   #contFunctions {
     margin-left: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  #pHeader {
+    color: #182e58;
+    border-bottom: 2px solid #182e58;
+    width: 130px;
+  }
+  #sideBar {
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding-left: 0;
+    border-right: 1px solid #e5e5e5;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #iconDL {
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    color: white;
+    border: 1px solid #182e58;
+    background-color: #182e58;
+    border-radius: 5px;
+  }
+  #searchBox {
+    width: 220px;
+    height: 30px;
+  }
+  #btnSearch {
+    height: 30px;
+    width: 30px;
+    background-color: #182e58;
+  }
+  #iconSearch {
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    margin-left: 1px;
+  }
+  #colSearch {
+    display: flex;
+    float: right;
+  }
+  #tableId {
+    font-size: 12px;
+    width: 900px;
+  }
+  #formF {
+    width: 100%;
   }
 }

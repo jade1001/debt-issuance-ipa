@@ -124,7 +124,7 @@ class DashboardMain extends Component {
                 style={{ marginRight: -20, marginBottom: 10 }}
               >
                 <Cards id='cards'>
-                  <p id='pHead'>Total Market CP Outstanding</p>
+                  <p id='pHead1'>Total Market CP Outstanding</p>
                   <p id='pBody'>35,54,800 Cr</p>
                   <p id='pFooter'>INR</p>
                 </Cards>
