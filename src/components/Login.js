@@ -52,7 +52,7 @@ class Login extends Component {
 
   Login(e) {
     e.preventDefault()
-
+    this.setState({ animation: 'border' })
     if (this.state.Email === 'samp@email.com' && this.state.Password === '1') {
       setTimeout(
         function() {
@@ -65,7 +65,7 @@ class Login extends Component {
         2000
       )
     } else {
-      this.setState({ visibility: '', animation: 'border' })
+      this.setState({ visibility: '' })
       setTimeout(
         function() {
           this.setState({ animation: '' })
