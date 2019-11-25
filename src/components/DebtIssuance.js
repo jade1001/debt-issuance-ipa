@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faDownload,
   faSearch,
-  faChevronRight,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
@@ -15,12 +15,12 @@ export class DebtIssuance extends Component {
 
     this.state = {
       search: '',
-      jsonData: JSONData,
+      jsonData: JSONData
     }
   }
   updateSearch(event) {
     this.setState({
-      search: event.target.value.substr(0, 20),
+      search: event.target.value.substr(0, 20)
     })
   }
 
@@ -39,7 +39,7 @@ export class DebtIssuance extends Component {
                 style={{
                   color: '#182e58',
                   borderBottom: '2px solid #182e58',
-                  width: 130,
+                  width: 130
                 }}
               >
                 Commercial Paper
@@ -50,11 +50,11 @@ export class DebtIssuance extends Component {
         </Container>
         <Container
           style={{
-            width: 290,
+            width: 170,
             height: 1070,
             float: 'left',
-            paddingLeft: 120,
-            borderRight: '1px solid #E5E5E5',
+            paddingLeft: 0,
+            borderRight: '1px solid #E5E5E5'
           }}
         >
           <Col style={{ color: '#182e58', fontSize: 14, cursor: 'pointer' }}>
@@ -66,7 +66,7 @@ export class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer',
+              cursor: 'pointer'
             }}
           >
             Tranches &nbsp;
@@ -77,7 +77,7 @@ export class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer',
+              cursor: 'pointer'
             }}
           >
             Allocations &nbsp;
@@ -88,13 +88,13 @@ export class DebtIssuance extends Component {
               opacity: 0.4,
               marginTop: 7,
               fontSize: 14,
-              cursor: 'pointer',
+              cursor: 'pointer'
             }}
           >
             + Start New
           </Col>
         </Container>
-        <Container>
+        <Container className='App container'>
           <Row>
             <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
               <FontAwesomeIcon
@@ -106,7 +106,7 @@ export class DebtIssuance extends Component {
                   color: 'white',
                   border: '1px solid #182e58',
                   backgroundColor: '#182e58',
-                  borderRadius: 5,
+                  borderRadius: 5
                 }}
               />
             </Col>
@@ -116,7 +116,7 @@ export class DebtIssuance extends Component {
               style={{
                 display: 'flex',
                 float: 'right',
-                marginLeft: '23%',
+                marginLeft: '23%'
               }}
             >
               <Form inline>
@@ -142,8 +142,8 @@ export class DebtIssuance extends Component {
         <table
           className='table table-hover table-content'
           style={{
-            fontSize: 12,
-            width: '75%',
+            fontSize: 11,
+            width: '82%'
           }}
         >
           <thead>
@@ -181,7 +181,7 @@ export class DebtIssuance extends Component {
                 style={{
                   cursor: 'pointer',
                   color: '#182E58',
-                  lineHeight: '70%',
+                  lineHeight: '70%'
                 }}
               >
                 <td style={{ border: 'none' }}>

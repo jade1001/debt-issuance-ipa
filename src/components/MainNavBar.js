@@ -17,7 +17,7 @@ import { PrivateRoute } from './PrivateRoute'
 class MainNavBar extends Component {
   render() {
     return (
-      <>
+      <div className='App container'>
         <Router className='App container'>
           <Navbar
             fluid='true'
@@ -25,6 +25,7 @@ class MainNavBar extends Component {
             expand='lg'
             style={{
               backgroundColor: 'rgb(245, 245, 245)',
+              fontSize: '14px',
             }}
             variant='light'
           >
@@ -105,7 +106,7 @@ class MainNavBar extends Component {
             />
           </Switch>
         </Router>
-      </>
+      </div>
     )
   }
 }

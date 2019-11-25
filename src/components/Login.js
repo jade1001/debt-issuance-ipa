@@ -82,9 +82,9 @@ class Login extends Component {
         {/* {user} && <Redirect to='/' /> */}
         <LoginNavBar />
         <Toast
-          delay={2000}
+          delay={3000}
           autohide
-          onClose={() => this.state.setShow.value}
+          onClose={() => this.setState({ visibility: 'hidden' })}
           style={{ visibility: this.state.visibility, margin: 'auto' }}
         >
           <Toast.Header>
