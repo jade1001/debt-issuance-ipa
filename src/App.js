@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { history } from './Redux/_helpers/history'
 import { alertActions } from './Redux/_actions/alert.actions'
 import { PrivateRoute } from './components/PrivateRoute'
-import DashboardMain from './components/DashboardMain'
 import { Login } from './components/Login'
+import MainNavBar from './components/MainNavBar'
 import { Alert } from 'react-bootstrap'
 
 class App extends Component {
@@ -32,9 +32,8 @@ class App extends Component {
         )}
         <Router history={history}>
           <Switch>
-            <PrivateRoute exact path='/' component={DashboardMain} />
             <Route path='/login' component={Login} />
-            <Redirect from='*' to='/' />
+            <PrivateRoute exact path='/' component={MainNavBar} />
           </Switch>
         </Router>
       </div>
@@ -48,6 +47,6 @@ function mapState(state) {
 }
 
 const actionCreators = {
-  clearAlerts: alertActions.clear
+  clearAlerts: alertActions.clear,
 }
 export default connect(mapState, actionCreators)(App)
