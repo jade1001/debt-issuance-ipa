@@ -5,10 +5,18 @@ import {
   ButtonToolbar,
   Nav,
   Container,
-  Navbar
+  NavDropdown,
+  Form,
+  FormControl,
+  Navbar,
+  Tab,
+  Tabs
 } from 'react-bootstrap'
-import Documents from './Documents'
 import '../App.css'
+import { CreditLimits } from './CreditLimits'
+import { MaturityData } from './MaturityData'
+import { Allocations } from './Allocations'
+import { Documents } from './Documents'
 
 function MainModal() {
   const [lgShow, setLgShow] = useState(false)
@@ -53,45 +61,33 @@ function MainModal() {
             </a>
           </Modal.Header>
           <Modal.Body>
-            <Container>
-              <Navbar expand='lg'>
-                <Navbar.Toggle aria-controls='basic-navbar-nav' />
-                <Navbar.Collapse id='basic-navbar-nav'>
-                  <Nav
-                    className='mr-auto'
-                    style={{
-                      fontSize: '0.74rem',
-                      margin: 'auto',
-                      color: 'grey',
-                      borderBottom: '1px solid grey'
-                    }}
-                  >
-                    <Nav.Link href='#maturity' className='navbar-items'>
-                      Maturity Details
-                    </Nav.Link>
-                    <Nav.Link href='#tranches' className='navbar-items'>
-                      Tranches
-                    </Nav.Link>
-                    <Nav.Link href='#cllocation' className='navbar-items'>
-                      Allocation
-                    </Nav.Link>
-                    <Nav.Link href='#credit' className='navbar-items'>
-                      Credit Limits
-                    </Nav.Link>
-                    <Nav.Link href='#documents' className='navbar-items'>
-                      Documents
-                    </Nav.Link>
-                    <Nav.Link href='#service' className='navbar-items'>
-                      Service Provider
-                    </Nav.Link>
-                    <Nav.Link href='#audit' className='navbar-items'>
-                      Audit Trail
-                    </Nav.Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
-              <Documents />
-            </Container>
+            <Tabs
+              defaultActiveKey='maturity data'
+              transition={false}
+              id='noanim-tab-example'
+            >
+              <Tab eventKey='maturity data' title='Maturity Data'>
+                <MaturityData />
+              </Tab>
+              <Tab eventKey='tranches' title='Tranches'>
+                Tranches
+              </Tab>
+              <Tab eventKey='allocations' title='Allocations'>
+                <Allocations />
+              </Tab>
+              <Tab eventKey='credit' title='Credit Limits'>
+                <CreditLimits />
+              </Tab>
+              <Tab eventKey='documents' title='Documents'>
+                <Documents />
+              </Tab>
+              <Tab eventKey='service' title='Service'>
+                Service
+              </Tab>
+              <Tab eventKey='audit' title='Audit'>
+                Audit
+              </Tab>
+            </Tabs>
           </Modal.Body>
           <Modal.Footer
             style={{ border: 'none', height: '150px' }}
