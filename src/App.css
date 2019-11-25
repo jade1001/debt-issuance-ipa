@@ -52,8 +52,6 @@
 }
 /** Main Modal **/
 
-
-
 /** Maturity Data **/
 #firstMainTable {
   margin: auto;
@@ -65,7 +63,7 @@
   font-size: 10px;
   color: grey;
   font-weight: normal;
-  text-align: left!important;
+  text-align: left !important;
   margin: auto;
 }
 #firstTableData {
@@ -73,9 +71,9 @@
   color: grey;
   font-weight: bold;
   color: rgb(58, 77, 150);
-  text-align: left!important;
+  text-align: left !important;
 }
-#firstTableHeader{
+#firstTableHeader {
   padding-bottom: 0;
 }
 #firstData {
@@ -90,37 +88,35 @@
   font-size: 10px;
   color: grey;
   font-weight: normal;
-  text-align: left!important;
+  text-align: left !important;
   margin: auto;
 }
 #secondTableHeader {
   padding-bottom: 1%;
-  border-top: 1px solid rgb(225,225,225)!important;
+  border-top: 1px solid rgb(225, 225, 225) !important;
 }
 #secondTableData {
-  
   font-size: 12px;
   color: grey;
   font-weight: bold;
   color: rgb(58, 77, 150);
-  text-align: left!important;
+  text-align: left !important;
 }
-#secondData{
+#secondData {
   padding-top: 0;
-  text-align: left!important;
+  text-align: left !important;
 }
 #btntd {
   border-top: none;
-  border-bottom: 1px solid rgb(225,225,225)!important;
+  border-bottom: 1px solid rgb(225, 225, 225) !important;
 }
 #btnadd {
   background-color: rgb(25, 47, 89);
   border: none;
   font-size: 8px;
-  color:white;
+  color: white;
   border-radius: 2px;
 }
-
 
 /** Maturity Data **/
 #text-center {
@@ -149,8 +145,8 @@ table {
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
-    font-weight: normal;
-    color: grey;
+  font-weight: normal;
+  color: grey;
 }
 
 table tbody {
@@ -192,3 +188,11 @@ tbody tr td:last-child {
 }
 
 /** End of section **/
+
+/** Mobile Code **/
+@media (max-width: 550px) {
+  .mtitle {
+    width: 80%;
+    background-color: red;
+  }
+}
