@@ -1,20 +1,27 @@
 import React, { Component } from 'react'
-import { Navbar, Nav, Form, Container } from 'react-bootstrap'
+import { Navbar, Nav, Dropdown } from 'react-bootstrap'
 import logo from './logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from 'react-router-dom'
+import { userActions } from '../Redux/_actions/user.actions'
+import { connect } from 'react-redux'
+import { BrowserRouter as Router, Switch, NavLink } from 'react-router-dom'
 import { DebtIssuance } from './DebtIssuance'
 import DashboardMain from './DashboardMain'
 import { PrivateRoute } from './PrivateRoute'
 
 class MainNavBar extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
+    this.logOut = this.logOut.bind(this)
+  }
+
+  logOut() {
+    this.props.logout()
+  }
+
   render() {
     return (
       <div className='App container'>
@@ -86,13 +93,31 @@ class MainNavBar extends Component {
                 </NavLink>
               </Nav>
               <Nav className='ml-auto' style={{}}>
-                <Nav.Link href='#IPA-Ops'>
+                {/* <Nav.Link href='#IPA-Ops'>
                   IPA Ops &nbsp;
                   <FontAwesomeIcon icon={faChevronDown} />
-                </Nav.Link>
+                </Nav.Link> */}
+                <Dropdown>
+                  <Dropdown.Toggle
+                    className='nav-link'
+                    variant=''
+                    id='dropdown-basic-button'
+                  >
+                    IPA Ops
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href='/login' onClick={this.logOut}>
+                      Logout
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
                 <Nav.Link href='#help' style={{}}>
                   Help
                 </Nav.Link>
+                {/* <Nav.Link href='/login' style={{}} onClick={this.logOut}>
+                  Logout
+                </Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -111,4 +136,15 @@ class MainNavBar extends Component {
   }
 }
 
-export default MainNavBar
+function mapState(state) {
+  const { loggingOut } = state.authentication
+  return { loggingOut }
+}
+
+const actionCreators = {
+  logout: userActions.logout,
+}
+
+export default connect(mapState, actionCreators)(MainNavBar)
+
+// export default MainNavBar

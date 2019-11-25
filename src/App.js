@@ -10,6 +10,7 @@ import { Login } from './components/Login'
 import MainNavBar from './components/MainNavBar'
 import { Alert } from 'react-bootstrap'
 import { DebtIssuance } from './components/DebtIssuance'
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 class App extends Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class App extends Component {
         )}
         <Router history={history}>
           <Switch>
-            <Route path='/login' component={Login} />
+            <ProtectedRoute exact path='/login' component={Login} />
             <PrivateRoute exact path='/' component={MainNavBar} />
             <PrivateRoute exact path='/debt-issuance' component={MainNavBar} />
             <PrivateRoute exact path='/credit-limits' component={MainNavBar} />

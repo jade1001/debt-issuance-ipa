@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import {Modal,Button,ButtonToolbar,Nav,
+import {
+  Modal,
+  Button,
+  ButtonToolbar,
+  Nav,
   Container,
   NavDropdown,
   Form,
@@ -9,6 +13,7 @@ import {Modal,Button,ButtonToolbar,Nav,
 import MaturityData from './MaturityData'
 import Documents from './Documents'
 import CreditLimits from './CreditLimits'
+import Allocations from './Allocations'
 import '../App.css'
 
 function MainModal() {
@@ -28,13 +33,16 @@ function MainModal() {
             style={{ padding: '0', backgroundColor: 'rgb(245,245,245)' }}
           >
             <Modal.Title
+              className='mtitle'
               id='example-modal-sizes-title-lg '
               style={{
                 backgroundColor: 'rgb(245,245,245)',
                 width: '100%',
                 textAlign: 'center',
                 fontSize: '1rem',
-                color: 'rgb(58, 77, 150)'}}>
+                color: 'rgb(58, 77, 150)'
+              }}
+            >
               MonetaGo CP 100D 17/10/2019
             </Modal.Title>
             <a
@@ -45,11 +53,13 @@ function MainModal() {
                 margin: '0',
                 margin: 'auto',
                 width: '10%',
-                textDecoration: 'none'}}>
+                textDecoration: 'none'
+              }}
+            >
               Quick Startup >
             </a>
           </Modal.Header>
-          <Modal.Body style={{ paddingTop: '5px' }}>
+          <Modal.Body>
             <Container>
               <Navbar expand='lg'>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -88,14 +98,15 @@ function MainModal() {
                 </Navbar.Collapse>
               </Navbar>
 
-              <MaturityData />
-              {/* <Documents/> */}
+              {/* <MaturityData /> */}
+              <Documents />
               {/* <CreditLimits/> */}
+              {/* <Allocations /> */}
             </Container>
           </Modal.Body>
-          <Modal.Footer style={{border:'none', height:'150px'}}>
-    
-          </Modal.Footer>
+          <Modal.Footer
+            style={{ border: 'none', height: '150px' }}
+          ></Modal.Footer>
         </Modal>
       </ButtonToolbar>
     </div>
