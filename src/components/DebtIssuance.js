@@ -50,7 +50,7 @@ export class DebtIssuance extends Component {
         </Container>
         <Container
           style={{
-            width: 170,
+            width: '15%',
             height: 1070,
             float: 'left',
             paddingLeft: 0,
@@ -140,6 +140,7 @@ export class DebtIssuance extends Component {
         </Container>
 
         <table
+          responsive
           className='table table-hover table-content'
           style={{
             fontSize: 11,
@@ -147,7 +148,7 @@ export class DebtIssuance extends Component {
           }}
         >
           <thead>
-            <tr>
+            <tr style={{ lineHeight: '100%' }}>
               <th scope='col' style={{ fontWeight: 'bold' }}>
                 Name
               </th>
@@ -181,7 +182,7 @@ export class DebtIssuance extends Component {
                 style={{
                   cursor: 'pointer',
                   color: '#182E58',
-                  lineHeight: '70%'
+                  lineHeight: '100%'
                 }}
               >
                 <td style={{ border: 'none' }}>
