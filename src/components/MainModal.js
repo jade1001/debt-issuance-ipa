@@ -2,10 +2,15 @@ import React, { useState } from 'react'
 import { Modal, Tab, Tabs } from 'react-bootstrap'
 import { MaturityData } from './MaturityData'
 import { Documents } from './Documents'
+<<<<<<< HEAD
+import Tranches from './Tranches'
+import Redemption from './Redemption'
+=======
 import DocuCert from './DocuCert'
 import { CreditLimits } from './CreditLimits'
 import { Allocations } from './Allocations'
 import '../App.css'
+>>>>>>> fa9c09d56335b27529128c75b4ab58a716d2d44a
 
 function MainModal(props) {
   const [smShow, setSmShow] = useState(false)
