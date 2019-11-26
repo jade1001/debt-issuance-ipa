@@ -232,6 +232,9 @@ class OpsNotif1 extends Component {
               defaultActiveKey='documents'
               transition={false}
               id='noanim-tab-example'
+              className='justify-content-center'
+              as='div'
+              style={{ width: '668.8px', margin: 'auto' }}
             >
               <Tab eventKey='maturity data' title='Maturity Data' disabled>
                 {/* <MaturityData /> */}
