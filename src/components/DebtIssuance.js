@@ -127,37 +127,23 @@ export function DebtIssuance() {
             {searchResults.map((n, i) => (
               <tr
                 key={i}
-                data-toggle='modal'
-                data-target='#myModal'
                 id='tRow'
                 style={{
                   cursor: 'pointer',
                   color: '#182E58',
-                  lineHeight: '100%'
+                  lineHeight: '100%',
+                  fontSize: 10,
+                  fontWeight: 650
                 }}
                 onClick={() => setLgShow(true)}
               >
-                <td style={{ border: 'none' }}>
-                  <span>{n.name}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.isin}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.status}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.trvalue}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.tenor}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.mdate}</span>
-                </td>
-                <td style={{ border: 'none' }}>
-                  <span>{n.created}</span>
-                </td>
+                <td style={{ border: 'none' }}>{n.name}</td>
+                <td style={{ border: 'none' }}>{n.isin}</td>
+                <td style={{ border: 'none' }}>{n.status}</td>
+                <td style={{ border: 'none' }}>{n.trvalue}</td>
+                <td style={{ border: 'none' }}>{n.tenor}</td>
+                <td style={{ border: 'none' }}>{n.mdate}</td>
+                <td style={{ border: 'none' }}>{n.created}</td>
               </tr>
             ))}
             <Modal
@@ -204,6 +190,9 @@ export function DebtIssuance() {
                   defaultActiveKey='maturity data'
                   transition={false}
                   id='noanim-tab-example'
+                  className='justify-content-center'
+                  as='div'
+                  style={{ width: '668.8px', margin: 'auto' }}
                 >
                   <Tab eventKey='maturity data' title='Maturity Data'>
                     <MaturityData />
