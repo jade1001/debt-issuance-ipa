@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Table, Container, Dropdown } from 'react-bootstrap'
 
-class Allocations extends Component {
+export class Allocations extends Component {
   render() {
     const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
       <a
@@ -96,5 +96,3 @@ class Allocations extends Component {
     )
   }
 }
-
-export default Allocations

@@ -18,14 +18,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
-<<<<<<< HEAD
 import MainModal from './MainModal.js'
 import { CreditLimits } from './CreditLimits'
 import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
-=======
->>>>>>> 9295ff43769d8b03b6cf7645240ccc4ffe92491d
 
 export function DebtIssuance() {
   const [jsonData, setJsonData] = useState(JSONData)
@@ -186,7 +183,6 @@ export function DebtIssuance() {
                     color: 'rgb(58, 77, 150)'
                   }}
                 >
-<<<<<<< HEAD
                   MonetaGo CP 100D 17/10/2019
                 </Modal.Title>
                 <a
@@ -241,37 +237,6 @@ export function DebtIssuance() {
       </Container>
     </div>
   )
-=======
-                  <td style={{ border: 'none' }}>
-                    <span>{n.name}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.isin}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.status}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.trvalue}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.tenor}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.mdate}</span>
-                  </td>
-                  <td style={{ border: 'none' }}>
-                    <span>{n.created}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </Container>
-      </div>
-    )
-  }
->>>>>>> 9295ff43769d8b03b6cf7645240ccc4ffe92491d
 }
 
 // export default DebtIssuance
