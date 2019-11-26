@@ -17,6 +17,7 @@ import { CreditLimits } from './CreditLimits'
 import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
+import DocuCert from './DocuCert'
 
 function MainModal() {
   const [lgShow, setLgShow] = useState(false)
@@ -82,7 +83,7 @@ function MainModal() {
                 <Documents />
               </Tab>
               <Tab eventKey='service' title='Service'>
-                Service
+                <DocuCert />
               </Tab>
               <Tab eventKey='audit' title='Audit'>
                 Audit
