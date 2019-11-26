@@ -23,6 +23,7 @@ import { CreditLimits } from './CreditLimits'
 import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
+import { Settlement } from './Settlement'
 
 export function DebtIssuance() {
   const [jsonData, setJsonData] = useState(JSONData)
@@ -154,7 +155,7 @@ export function DebtIssuance() {
             >
               <Modal.Header
                 style={{
-                  padding: '0',
+                  padding: '8px',
                   backgroundColor: 'rgb(245,245,245)'
                 }}
               >
@@ -174,15 +175,21 @@ export function DebtIssuance() {
                 <a
                   href=''
                   style={{
-                    fontSize: '0.5rem',
+                    fontSize: '0.7rem',
+                    fontWeight: 400,
                     textAlign: 'center',
                     margin: '0',
                     margin: 'auto',
                     width: '10%',
-                    textDecoration: 'none'
+                    textDecoration: 'none',
+                    color: 'rgb(58, 77, 150)'
                   }}
                 >
-                  Quick Startup >
+                  Quick Actions &nbsp;
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    style={{ fontSize: 12, color: 'rgb(58, 77, 150)' }}
+                  />
                 </a>
               </Modal.Header>
               <Modal.Body>
@@ -192,9 +199,17 @@ export function DebtIssuance() {
                   id='noanim-tab-example'
                   className='justify-content-center'
                   as='div'
-                  style={{ width: '668.8px', margin: 'auto' }}
+                  style={{
+                    width: '771px',
+                    margin: 'auto',
+                    backgroundColor: 'white'
+                  }}
                 >
-                  <Tab eventKey='maturity data' title='Maturity Data'>
+                  <Tab
+                    eventKey='maturity data'
+                    title='Maturity Data'
+                    style={{ color: 'green' }}
+                  >
                     <MaturityData />
                   </Tab>
                   <Tab eventKey='tranches' title='Tranches'>
@@ -214,6 +229,9 @@ export function DebtIssuance() {
                   </Tab>
                   <Tab eventKey='audit' title='Audit'>
                     Audit
+                  </Tab>
+                  <Tab eventKey='settlement' title='Settlement'>
+                    <Settlement />
                   </Tab>
                 </Tabs>
               </Modal.Body>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row, Modal, Tab, Tabs } from 'react-bootstrap'
 
 import '../App.css'
@@ -196,7 +196,7 @@ class OpsNotif1 extends Component {
         >
           <Modal.Header
             style={{
-              padding: '0',
+              padding: '8px',
               backgroundColor: 'rgb(245,245,245)'
             }}
           >
@@ -216,15 +216,21 @@ class OpsNotif1 extends Component {
             <a
               href=''
               style={{
-                fontSize: '0.5rem',
+                fontSize: '0.7rem',
+                fontWeight: 400,
                 textAlign: 'center',
                 margin: '0',
                 margin: 'auto',
                 width: '10%',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                color: 'rgb(58, 77, 150)'
               }}
             >
-              Quick Startup >
+              Quick Actions &nbsp;
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                style={{ fontSize: 12, color: 'rgb(58, 77, 150)' }}
+              />
             </a>
           </Modal.Header>
           <Modal.Body>
@@ -234,7 +240,7 @@ class OpsNotif1 extends Component {
               id='noanim-tab-example'
               className='justify-content-center'
               as='div'
-              style={{ width: '668.8px', margin: 'auto' }}
+              style={{ width: '771px', margin: 'auto' }}
             >
               <Tab eventKey='maturity data' title='Maturity Data' disabled>
                 {/* <MaturityData /> */}
@@ -256,6 +262,9 @@ class OpsNotif1 extends Component {
               </Tab>
               <Tab eventKey='audit' title='Audit' disabled>
                 Audit
+              </Tab>
+              <Tab eventKey='settlement' title='Settlement' disabled>
+                {/* <Settlement /> */}
               </Tab>
             </Tabs>
           </Modal.Body>

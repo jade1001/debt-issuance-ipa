@@ -16,8 +16,14 @@ function IPACert1() {
   return (
     <div>
       <ButtonToolbar style={{ justifyContent: 'center' }}>
-        <Button onClick={() => setLgShow(true)}>
-          <b style={{ fontSize: '12px' }}>
+        <Button
+          size='sm'
+          onClick={() => setLgShow(true)}
+          style={{
+            backgroundColor: '#33466B'
+          }}
+        >
+          <b style={{ fontSize: '10px' }}>
             Generate IPA Certificate and Submit for Review
           </b>
         </Button>

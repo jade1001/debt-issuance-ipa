@@ -18,6 +18,7 @@ import {
 
 function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
+  const [name, setName] = useState('')
   return (
     <div>
       <ButtonToolbar style={{ justifyContent: 'center' }}>
@@ -110,7 +111,10 @@ function DocuCert() {
                     </p>
                   </Col>
                   <Col xs={7} lg={1}>
-                    <Form.Check aria-label='option 1' />
+                    <Form.Check
+                      aria-label='option 1'
+                      onChange={() => setName('Kashinath Katakdhond')}
+                    />
                   </Col>
                 </Row>
                 <Row>
@@ -126,13 +130,23 @@ function DocuCert() {
                   <Col xs={6} lg={8}>
                     <Form style={{ textAlign: 'right' }}>
                       <Form.Group controlId='formBasicEmail'>
-                        <Form.Label style={{ fontSize: '12px' }}>
+                        <Form.Label
+                          style={{
+                            fontSize: '12px',
+                            color: 'rgb(58, 77, 150)'
+                          }}
+                        >
                           Please type your full name to sign the documents
                         </Form.Label>
                         <Form.Control
+                          value={name}
                           type='text'
                           size='sm'
-                          style={{ width: '60%', float: 'right' }}
+                          style={{
+                            width: '60%',
+                            float: 'right',
+                            color: 'black'
+                          }}
                         />
                       </Form.Group>
                     </Form>
