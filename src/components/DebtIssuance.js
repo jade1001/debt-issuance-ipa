@@ -54,7 +54,7 @@ export function DebtIssuance() {
       </Container>
       <Container id='sideBar'>
         <Col id='fMenu'>
-          Maturities ISIN &nbsp;
+          Maturities (ISIN) &nbsp;
           <FontAwesomeIcon icon={faChevronRight} />
         </Col>
         <Col id='dMenu'>
