@@ -38,7 +38,7 @@ export function DebtIssuance() {
 
   useEffect(() => {
     const filtered = jsonData.filter(data =>
-      data.name.toLowerCase().includes(searchTerm)
+      data.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
     setSearchResults(filtered)
   }, [searchTerm])
@@ -81,7 +81,6 @@ export function DebtIssuance() {
                 className=' mr-sm-2'
                 value={searchTerm}
                 onChange={handleChange}
-                // onChange={console.log(search)}
               />
               <Button
                 id='btnSearch'
