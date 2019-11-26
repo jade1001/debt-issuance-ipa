@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Table, Container, Dropdown } from 'react-bootstrap'
+import { Table, Container, Dropdown, Accordion, Button } from 'react-bootstrap'
 
 export class Allocations extends Component {
   render() {
@@ -42,7 +42,7 @@ export class Allocations extends Component {
               <td>08/07/2019</td>
               <td>09/07/2019</td>
               <td>50,00,00.000 INR</td>
-              <td>9.58</td>
+              <td style={{ textAlign: 'right' }}>9.58</td>
               <td>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle
@@ -71,7 +71,7 @@ export class Allocations extends Component {
               <td>08/07/2019</td>
               <td>09/07/2019</td>
               <td>50,00,00.000 INR</td>
-              <td>9.58</td>
+              <td style={{ textAlign: 'right' }}>9.58</td>
               <td>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle

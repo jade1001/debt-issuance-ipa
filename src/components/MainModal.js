@@ -17,6 +17,8 @@ import { CreditLimits } from './CreditLimits'
 import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
+import Tranches from './Tranches'
+import Redemption from './Redemption'
 
 function MainModal() {
   const [lgShow, setLgShow] = useState(false)
@@ -25,7 +27,7 @@ function MainModal() {
       <ButtonToolbar>
         <Button onClick={() => setLgShow(true)}>Large modal</Button>
         <Modal
-          size='lg'
+          size='xl'
           show={lgShow}
           onHide={() => setLgShow(false)}
           aria-labelledby='example-modal-sizes-title-lg'
@@ -62,15 +64,22 @@ function MainModal() {
           </Modal.Header>
           <Modal.Body>
             <Tabs
+              className='justify-content-center'
               defaultActiveKey='maturity data'
               transition={false}
               id='noanim-tab-example'
+              style={{
+                fontSize: '11px',
+                backgroundColor: 'transparent',
+                margin: 'auto',
+                width: '80%'
+              }}
             >
               <Tab eventKey='maturity data' title='Maturity Data'>
                 <MaturityData />
               </Tab>
               <Tab eventKey='tranches' title='Tranches'>
-                Tranches
+                <Tranches />
               </Tab>
               <Tab eventKey='allocations' title='Allocations'>
                 <Allocations />
@@ -85,7 +94,7 @@ function MainModal() {
                 Service
               </Tab>
               <Tab eventKey='audit' title='Audit'>
-                Audit
+                <Redemption />
               </Tab>
             </Tabs>
           </Modal.Body>
