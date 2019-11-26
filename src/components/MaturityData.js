@@ -5,7 +5,7 @@ export class MaturityData extends Component {
   render() {
     return (
       <Container>
-        <Table id='firstMainTable' responsive>
+        <Table id='firstMainTable'>
           <thead>
             <tr id='firstTable'>
               <th id='firstTableHeader'>ISIN</th>

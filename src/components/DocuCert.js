@@ -5,13 +5,18 @@ import {
   ButtonToolbar,
   Container,
   Row,
-  Col
+  Col,
+  Form
 } from 'react-bootstrap'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import {
+  faDownload,
+  faChevronRight,
+  faSquare
+} from '@fortawesome/free-solid-svg-icons'
 
-function IPACert1() {
+function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
   return (
     <div>
@@ -56,22 +61,13 @@ function IPACert1() {
                     textAlign: 'center'
                   }}
                 >
-                  IPA Certificate
+                  eSign (1 Document)
                 </h6>
                 <br />
                 <Row>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'left' }}>
-                    <p
-                      style={{
-                        color: '#7B7B7B',
-                        fontSize: '12px',
-                        marginBottom: '0'
-                      }}
-                    >
-                      An IPA Certificate has been automatically generated for
-                    </p>
                     <b style={{ fontSize: '12px', color: '#33466B' }}>
-                      MonetaGo
+                      IPA Certificate
                     </b>
                   </Col>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>
@@ -100,35 +96,60 @@ function IPACert1() {
                 <p
                   style={{
                     textAlign: 'left',
-                    marginLeft: '2%',
-                    fontSize: '12px',
-                    color: '#33466B'
+                    fontSize: '14px',
+                    color: '#182E58'
                   }}
                 >
-                  Upload a custom version of the Documents &nbsp;
-                  <FontAwesomeIcon icon={faChevronRight} />
+                  Document 1 of 1
                 </p>
                 <br />
-
                 <Row>
-                  <Col xs={6} sm={6} lg={6} style={{ textAlign: 'left' }}>
+                  <Col xs={5} lg={11}>
+                    <p style={{ textAlign: 'right', fontSize: '12px' }}>
+                      I have read and agree to sign this document digitally
+                    </p>
+                  </Col>
+                  <Col xs={7} lg={1}>
+                    <Form.Check aria-label='option 1' />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={3} sm={6} lg={2} style={{ textAlign: 'left' }}>
                     <button
                       type='button'
-                      style={{ backgroundColor: '#33466B' }}
-                      className='btn btn-primary btn-cert'
-                      id='cancel-btn'
+                      className='btn btn-primary'
+                      style={{ marginTop: '31%', backgroundColor: '#33466B' }}
                     >
                       Cancel
                     </button>
                   </Col>
-                  <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>
+                  <Col xs={6} lg={8}>
+                    <Form style={{ textAlign: 'right' }}>
+                      <Form.Group controlId='formBasicEmail'>
+                        <Form.Label style={{ fontSize: '12px' }}>
+                          Please type your full name to sign the documents
+                        </Form.Label>
+                        <Form.Control
+                          type='text'
+                          size='sm'
+                          style={{ width: '60%', float: 'right' }}
+                        />
+                      </Form.Group>
+                    </Form>
+                  </Col>
+                  <Col
+                    xs={3}
+                    sm={6}
+                    lg={2}
+                    style={{ textAlign: 'right', marginTop: '4%' }}
+                  >
                     <button
                       type='submit'
                       style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
                     >
-                      Submit
+                      Sign Docs
                     </button>
                   </Col>
                 </Row>
@@ -142,4 +163,4 @@ function IPACert1() {
   )
 }
 
-export default IPACert1
+export default DocuCert

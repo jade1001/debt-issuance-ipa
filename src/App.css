@@ -51,8 +51,11 @@
 /** Maturity Data **/
 
 #firstMainTable {
-  margin: auto;
-  width: 80%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 64%;
 }
 
 #firstTable {
@@ -83,7 +86,7 @@
 
 #secondMainTable {
   margin: auto;
-  width: 80%;
+  width: 64%;
 }
 
 #secondTable {
@@ -180,6 +183,15 @@ tbody tr td:last-child {
   border: none !important;
 }
 
+#recordpayment tbody tr {
+  border: hidden !important;
+}
+
+#recordpayment .form-inline .form-control {
+  border-radius: 0px;
+  margin-right: 0px !important;
+}
+
 .dropleft a {
   color: #0a3a94;
 }
@@ -227,11 +239,13 @@ tbody tr td:last-child {
 /** End of section **/
 
 /*Media queries for Debt issuance*/
+
 #pHeader {
   color: #182e58;
   border-bottom: 2px solid #182e58;
   width: 130px;
 }
+
 #sideBar {
   width: 15%;
   height: 100%;
@@ -239,17 +253,20 @@ tbody tr td:last-child {
   padding-left: 0;
   border-right: 1px solid #e5e5e5;
 }
+
 #fMenu {
   color: #182e58;
   font-size: 14px;
   cursor: pointer;
 }
+
 #dMenu {
   opacity: 0.4;
   margin-top: 7px;
   font-size: 14px;
   cursor: pointer;
 }
+
 #iconDL {
   cursor: pointer;
   width: 50px;
@@ -259,30 +276,36 @@ tbody tr td:last-child {
   background-color: #182e58;
   border-radius: 5px;
 }
+
 #searchBox {
   width: 220px;
   height: 30px;
 }
+
 #btnSearch {
   height: 30px;
   width: 30px;
   background-color: #182e58;
 }
+
 #colSearch {
   display: flex;
   float: right;
   margin-left: 23%;
 }
+
 #tableId {
   font-size: 12px;
   width: 100%;
 }
+
 #contFunctions {
   margin-left: 160px;
   margin-right: 0px;
 }
 
 /*Responsive for mobile 320px*/
+
 @media (min-width: 320px) {
   #pHeader {
     font-size: 10px;
@@ -336,7 +359,9 @@ tbody tr td:last-child {
     float: left;
   }
 }
+
 /*Responsive for mobile*/
+
 @media (min-width: 375px) {
   #pHeader {
     font-size: 12px;
@@ -390,7 +415,9 @@ tbody tr td:last-child {
     float: left;
   }
 }
+
 /*Responsive for tablet*/
+
 @media (min-width: 768px) {
   #pHeader {
     font-size: 14px;
@@ -425,7 +452,6 @@ tbody tr td:last-child {
     height: 12px;
     margin-bottom: 5px;
   }
-
   #colSearch {
     float: right;
   }
@@ -436,6 +462,7 @@ tbody tr td:last-child {
     margin-left: 20%;
   }
 }
+
 @media (min-width: 1024px) {
   #pHeader {
     color: #182e58;

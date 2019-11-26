@@ -9,7 +9,6 @@ import {
   FormLabel,
   InputGroup,
   Toast,
-  Spinner
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKey } from '@fortawesome/free-solid-svg-icons'
@@ -28,7 +27,6 @@ class Login extends Component {
       submitted: false,
       visibility: 'hidden',
       setShow: true,
-      animation: ''
     }
 
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
@@ -39,39 +37,28 @@ class Login extends Component {
   emailOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Email: event.target.value
+      Email: event.target.value,
     })
   }
 
   passOnChangeHandler(event) {
     this.setState({
       ...this.state,
-      Password: event.target.value
+      Password: event.target.value,
     })
   }
 
   Login(e) {
     e.preventDefault()
-    this.setState({ animation: 'border' })
+
     if (this.state.Email === 'samp@email.com' && this.state.Password === '1') {
-      setTimeout(
-        function() {
-          this.setState({ submitted: true, animation: '' })
-          const { Email, Password } = this.state
-          if (Email && Password) {
-            this.props.login(Email, Password)
-          }
-        }.bind(this),
-        2000
-      )
+      this.setState({ submitted: true })
+      const { Email, Password } = this.state
+      if (Email && Password) {
+        this.props.login(Email, Password)
+      }
     } else {
       this.setState({ visibility: '' })
-      setTimeout(
-        function() {
-          this.setState({ animation: '' })
-        }.bind(this),
-        500
-      )
       setTimeout(
         function() {
           this.setState({ visibility: 'hidden' })
@@ -108,7 +95,7 @@ class Login extends Component {
               fontSize: 30,
               marginTop: '8% ',
               color: '#182e58',
-              backgroundColor: ''
+              backgroundColor: '',
             }}
           >
             Treasury Debt Issuance
@@ -122,7 +109,7 @@ class Login extends Component {
           style={{
             width: 300,
             margin: 'auto',
-            marginTop: 10
+            marginTop: 10,
           }}
           onSubmit={this.Login}
         >
@@ -171,11 +158,10 @@ class Login extends Component {
               height: 30,
               marginLeft: 98,
               backgroundColor: '#919191',
-              border: 'none'
+              border: 'none',
             }}
           >
-            <Spinner animation={this.state.animation} size='sm' />
-            &nbsp; Sign In
+            Sign In
           </Button>
         </Form>
       </div>
@@ -189,7 +175,7 @@ function mapState(state) {
 }
 
 const actionCreators = {
-  login: userActions.login
+  login: userActions.login,
 }
 
 const connectedLoginPage = connect(mapState, actionCreators)(Login)
