@@ -30,7 +30,7 @@ const Container = styled.div`
   color: #919191;
   outline: none;
   transition: border 0.24s ease-in-out;
-  width: 50%;
+  width: 80%;
   margin: auto;
 `
 
@@ -48,17 +48,25 @@ function DropZone() {
   console.log(getInputProps())
   return (
     <div>
-      <FormLabel
-        align='center'
+      <div
         style={{
-          color: 'rgb(58, 77, 150)',
-          fontWeight: 400,
-          width: '58%',
-          margin: 'auto'
+          width: '80%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          marginTop: 'auto',
+          marginBottom: '-7px'
         }}
       >
-        BENPOS Report
-      </FormLabel>
+        <FormLabel
+          style={{
+            color: 'rgb(58, 77, 150)',
+            fontWeight: 400,
+            fontSize: 13
+          }}
+        >
+          BENPOS Report
+        </FormLabel>
+      </div>
       <Container
         {...getRootProps({ isDragActive, isDragAccept, isDragReject })}
       >

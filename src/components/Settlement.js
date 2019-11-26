@@ -10,6 +10,7 @@ import {
 } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import '../App.css'
+import DropZone from './DropZone'
 
 export class Settlement extends Component {
   render() {
@@ -248,7 +249,7 @@ export class Settlement extends Component {
     }
 
     function Redemption() {
-      return <h2>Redemption</h2>
+      return <DropZone />
     }
 
     return (
