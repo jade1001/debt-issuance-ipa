@@ -12,6 +12,7 @@ import {
 } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'
 import '../App.css'
+import DropZone from './DropZone'
 
 export class Settlement extends Component {
 	render() {

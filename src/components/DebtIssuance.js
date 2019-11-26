@@ -24,6 +24,7 @@ import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
 import { Settlement } from './Settlement'
+import Tranches from './Tranches.js'
 
 export function DebtIssuance() {
   const [jsonData, setJsonData] = useState(JSONData)
@@ -37,7 +38,7 @@ export function DebtIssuance() {
 
   useEffect(() => {
     const filtered = jsonData.filter(data =>
-      data.name.toLowerCase().includes(searchTerm)
+      data.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
     setSearchResults(filtered)
   }, [searchTerm])
@@ -54,7 +55,7 @@ export function DebtIssuance() {
       </Container>
       <Container id='sideBar'>
         <Col id='fMenu'>
-          Maturities ISIN &nbsp;
+          Maturities (ISIN) &nbsp;
           <FontAwesomeIcon icon={faChevronRight} />
         </Col>
         <Col id='dMenu'>
@@ -80,7 +81,6 @@ export function DebtIssuance() {
                 className=' mr-sm-2'
                 value={searchTerm}
                 onChange={handleChange}
-                // onChange={console.log(search)}
               />
               <Button
                 id='btnSearch'
@@ -213,7 +213,7 @@ export function DebtIssuance() {
                     <MaturityData />
                   </Tab>
                   <Tab eventKey='tranches' title='Tranches'>
-                    Tranches
+                    <Tranches />
                   </Tab>
                   <Tab eventKey='allocations' title='Allocations'>
                     <Allocations />

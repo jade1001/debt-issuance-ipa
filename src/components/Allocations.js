@@ -79,7 +79,7 @@ export class Allocations extends Component {
               <td style={{ border: 'none' }}>08/07/2019</td>
               <td style={{ border: 'none' }}>09/07/2019</td>
               <td style={{ border: 'none' }}>50,00,00.000 INR</td>
-              <td style={{ border: 'none' }}>9.58</td>
+              <td style={{ border: 'none', textAlign: 'right' }}>9.58</td>
               <td style={{ border: 'none' }}>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle

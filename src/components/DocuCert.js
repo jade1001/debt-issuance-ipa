@@ -68,7 +68,7 @@ function DocuCert() {
                 <Row>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'left' }}>
                     <b style={{ fontSize: '12px', color: '#33466B' }}>
-                      IPA Cert
+                      IPA Certificate
                     </b>
                   </Col>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>

@@ -17,7 +17,14 @@ class Tranches extends Component {
     ))
     return (
       <Container style={{ padding: '0' }}>
-        <Table responsive style={{ fontSize: '0.6rem', textAlign: 'left' }}>
+        <Table
+          style={{
+            fontSize: '0.6rem',
+            textAlign: 'left',
+            width: '70%',
+            margin: 'auto'
+          }}
+        >
           <thead>
             <tr>
               <th></th>
