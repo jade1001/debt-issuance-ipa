@@ -8,7 +8,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
-import MainModal from './MainModal.js'
 
 export class DebtIssuance extends Component {
   constructor(props) {
@@ -124,7 +123,6 @@ export class DebtIssuance extends Component {
                     lineHeight: '100%'
                   }}
                 >
-                  <MainModal />
                   <td style={{ border: 'none' }}>
                     <span>{n.name}</span>
                   </td>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Table, Dropdown } from 'react-bootstrap'
 import '../App.css'
 
-export class Documents extends Component {
+class Documents extends Component {
   render() {
     const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
       <a
@@ -246,3 +246,5 @@ export class Documents extends Component {
     )
   }
 }
+
+export default Documents
