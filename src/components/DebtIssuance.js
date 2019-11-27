@@ -24,7 +24,7 @@ import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
 import { Documents } from './Documents'
 import { Settlement } from './Settlement'
-import TranchesData from './TranchesData'
+import Tranches from './Tranches'
 
 export function DebtIssuance() {
   const [jsonData, setJsonData] = useState(JSONData)
@@ -213,7 +213,7 @@ export function DebtIssuance() {
                     <MaturityData />
                   </Tab>
                   <Tab eventKey='tranches' title='Tranches'>
-                    <TranchesData />
+                    <Tranches />
                   </Tab>
                   <Tab eventKey='allocations' title='Allocations'>
                     <Allocations />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import styled from 'styled-components'
 import { Button, FormLabel } from 'react-bootstrap'
@@ -35,6 +35,9 @@ const Container = styled.div`
 `
 
 function DropZone() {
+  const onDrop = useCallback(acceptedFiles => {
+    console.log(acceptedFiles)
+  }, [])
   const {
     getRootProps,
     getInputProps,
@@ -42,10 +45,10 @@ function DropZone() {
     isDragAccept,
     isDragReject
   } = useDropzone({
+    onDrop,
     accept:
       'application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
   })
-  console.log(getInputProps())
   return (
     <div>
       <div
