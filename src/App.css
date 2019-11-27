@@ -202,7 +202,30 @@ tbody tr#border-b-0:hover {
 
 #recordpayment .form-inline .form-control {
     border-radius: 0px;
+    font-size: 11px;
+    color: #0a3a94;
+    height: 25px;
+    padding: 2px 10px;
     margin-right: 0px !important;
+}
+
+#recordpayment .input-left {
+    border-right: 0;
+    border-radius: 0px;
+    padding: 0 5px 0px 0px;
+    font-size: 11px;
+    color: #0a3a94;
+}
+
+#recordpayment .input-span {
+    border-left: 0;
+    border-radius: 0px;
+    padding: 1px 10px 0px 0px;
+    font-size: 11px;
+}
+
+#recordpayment .btn-sm {
+    padding: 0rem 1rem;
 }
 
 .dropleft a {
