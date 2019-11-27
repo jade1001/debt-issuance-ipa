@@ -107,30 +107,27 @@ export function DebtIssuance() {
             <Tab.Content>
               <Tab.Pane eventKey='maturities'>
                 <Row>
-                  <Form inline id='formF'>
-                    <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
-                      <FontAwesomeIcon icon={faDownload} id='iconDL' />
-                    </Col>
-                    <Col id='colSearch' sm={4} align='right'>
-                      <FormControl
-                        id='searchBox'
-                        type='text'
-                        className=' mr-sm-2'
-                        value={searchTerm}
-                        onChange={handleChange}
-                      />
-                      <Button
-                        id='btnSearch'
-                        variant='secondary'
-                        size='sm'
-                        type='submit'
-                      >
-                        <FontAwesomeIcon icon={faSearch} id='iconSearch' />
-                      </Button>
-                    </Col>
-                  </Form>
+                  <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
+                    <FontAwesomeIcon icon={faDownload} id='iconDL' />
+                  </Col>
+                  <Col id='colSearch' sm={4} align='right'>
+                    <FormControl
+                      type='text'
+                      className=' mr-sm-2'
+                      value={searchTerm}
+                      onChange={handleChange}
+                    />
+                    <Button
+                      id='btnSearch'
+                      variant='secondary'
+                      size='sm'
+                      type='submit'
+                    >
+                      <FontAwesomeIcon icon={faSearch} id='iconSearch' />
+                    </Button>
+                  </Col>
                 </Row>
-
+                <br />
                 <table id='tableId' className='table table-hover table-content'>
                   <thead>
                     <tr style={{ lineHeight: '100%' }}>
