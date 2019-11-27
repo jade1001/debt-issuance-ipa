@@ -1,0 +1,255 @@
+#text {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+
+}
+
+#serialnumber {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#NoAlloc {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#redemp {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#redemp2 {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#net {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#avg {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#redemp3 {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#text2 {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 30px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#date1 {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 18px 0px 41px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#date2 {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 18px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#No {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 56px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#redem {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 32px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#redem2 {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 10px 0px 47px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#tot {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 65px;
+  font-size: 11px;
+  border: none;
+  text-align: center;
+}
+
+#text958 {
+  font-weight: bold;
+  font-family: Bahnschrift Light;
+  color: rgb(3, 58, 104);
+  padding: 7px 20px;
+  font-size: 11px;
+  border: none;
+  text-align: right;
+}
+
+#purpose {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 57px;
+}
+
+#funding {
+  color: rgb(3, 58, 104);
+  font-family: Bahnschrift Light;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 0px 42px;
+}
+
+#dropdown {
+  color: rgb(3, 58, 104);
+  font-family: Bahnschrift Light;
+  font-weight: bold;
+  font-size: 10px;
+  border: 0;
+  padding: 7px 0px;
+}
+
+#dropdowntext {
+  color: rgb(3, 58, 104);
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 12px;
+  border: 0;
+}
+
+#colmn {
+  height: 25%;
+}
+
+.right-arrow {
+  transform: rotate(0deg);
+}
+
+.right-arrow.open {
+  transform: rotate(90deg);
+}
+
+.accordion__icon {
+  margin-right: auto;
+  transition: transform 0.6s ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+#chev {
+  transition: transform 0.4s ease;
+  font-size: 24px;
+  padding: 0px 12px;
+  color: rgb(3, 58, 104);
+}
+
+tr #table-header {
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 1px;
+  border-radius: 0;
+  border-right: 0;
+  padding: 0;
+}
+
+#tdccord {
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  padding: 0;
+}
+
+#tdDrop {
+  border: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div.card-body {
+  padding: 0;
+}
+
+#th {
+  padding: 9px;
+}
+
+.btn {
+  padding: 0;
+}
