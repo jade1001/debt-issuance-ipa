@@ -132,6 +132,7 @@ function DropZone() {
             border: 'none',
             visibility: show
           }}
+          href='/debt-issuance'
         >
           Submit
         </Button>

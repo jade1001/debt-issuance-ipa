@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import {
   Table,
   Accordion,
@@ -7,21 +7,21 @@ import {
   Row,
   Col,
   Dropdown
-} from "react-bootstrap"
-import "./accordion.css"
+} from 'react-bootstrap'
+import './accordion.css'
 
 class TranchesData extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      setRotate: ""
+      setRotate: ''
     }
   }
 
   rotate() {
     const { setRotate } = this.state
-    this.setState({ setRotate: setRotate ? "" : "rotateZ(90deg)" })
+    this.setState({ setRotate: setRotate ? '' : 'rotateZ(90deg)' })
   }
 
   render() {
@@ -39,7 +39,7 @@ class TranchesData extends Component {
     ))
     return (
       <div>
-        <Table style={{ width: "60%", margin: " auto" }}>
+        <Table style={{ width: '60%', margin: ' auto' }}>
           <thead>
             <tr>
               <td id='table-header'>
