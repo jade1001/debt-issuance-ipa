@@ -322,7 +322,7 @@ export class Settlement extends Component {
     }
 
     function Redemption() {
-      return <h2>Redemption</h2>
+      return <DropZone />
     }
   }
 }
