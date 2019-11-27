@@ -8,7 +8,8 @@ import {
   Button,
   Modal,
   Tab,
-  Tabs
+  Tabs,
+  Nav
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -53,7 +54,7 @@ export function DebtIssuance() {
           </Col>
         </Row>
       </Container>
-      <Container id='sideBar'>
+      {/* <Container id='sideBar'>
         <Col id='fMenu'>
           Maturities (ISIN) &nbsp;
           <FontAwesomeIcon icon={faChevronRight} />
@@ -67,8 +68,230 @@ export function DebtIssuance() {
           <FontAwesomeIcon icon={faChevronRight} />
         </Col>
         <Col id='dMenu'>+ Start New</Col>
-      </Container>
-      <Container className='App container' id='contFunctions'>
+      </Container> */}
+      <Tab.Container defaultActiveKey='maturities'>
+        <Row>
+          <Col sm={2} style={{ borderRight: '1px solid #E5E5E5' }}>
+            <Nav className='flex-column'>
+              <Nav.Item>
+                <Nav.Link
+                  eventKey='maturities'
+                  style={{ backgroundColor: '#fff' }}
+                >
+                  Maturities (ISIN) &nbsp;
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='tranches' className='debtTabs' disabled>
+                  {' '}
+                  Tranches &nbsp;
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='allocations' className='debtTabs' disabled>
+                  {' '}
+                  Allocations &nbsp;
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='startnew' className='debtTabs' disabled>
+                  + Start New
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Col>
+          <Col sm={10}>
+            <Tab.Content>
+              <Tab.Pane eventKey='maturities'>
+                <Row>
+                  <Form inline id='formF'>
+                    <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
+                      <FontAwesomeIcon icon={faDownload} id='iconDL' />
+                    </Col>
+                    <Col id='colSearch' sm={4} align='right'>
+                      <FormControl
+                        id='searchBox'
+                        type='text'
+                        className=' mr-sm-2'
+                        value={searchTerm}
+                        onChange={handleChange}
+                      />
+                      <Button
+                        id='btnSearch'
+                        variant='secondary'
+                        size='sm'
+                        type='submit'
+                      >
+                        <FontAwesomeIcon icon={faSearch} id='iconSearch' />
+                      </Button>
+                    </Col>
+                  </Form>
+                </Row>
+
+                <table id='tableId' className='table table-hover table-content'>
+                  <thead>
+                    <tr style={{ lineHeight: '100%' }}>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Name
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        ISIN
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Status
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Total Redemption Value
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Tenor
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Maturity Date
+                      </th>
+                      <th scope='col' style={{ fontWeight: 'bold' }}>
+                        Created
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {searchResults.map((n, i) => (
+                      <tr
+                        key={i}
+                        id='tRow'
+                        style={{
+                          cursor: 'pointer',
+                          color: '#182E58',
+                          lineHeight: '100%',
+                          fontSize: 10,
+                          fontWeight: 650
+                        }}
+                        onClick={() => setLgShow(true)}
+                      >
+                        <td style={{ border: 'none' }}>{n.name}</td>
+                        <td style={{ border: 'none' }}>{n.isin}</td>
+                        <td style={{ border: 'none' }}>{n.status}</td>
+                        <td style={{ border: 'none' }}>{n.trvalue}</td>
+                        <td style={{ border: 'none' }}>{n.tenor}</td>
+                        <td style={{ border: 'none' }}>{n.mdate}</td>
+                        <td style={{ border: 'none' }}>{n.created}</td>
+                      </tr>
+                    ))}
+                    <Modal
+                      size='xl'
+                      show={lgShow}
+                      onHide={() => setLgShow(false)}
+                      aria-labelledby='example-modal-sizes-title-lg'
+                    >
+                      <Modal.Header
+                        style={{
+                          padding: '8px',
+                          backgroundColor: 'rgb(245,245,245)'
+                        }}
+                      >
+                        <Modal.Title
+                          className='mtitle'
+                          id='example-modal-sizes-title-lg '
+                          style={{
+                            backgroundColor: 'rgb(245,245,245)',
+                            width: '100%',
+                            textAlign: 'center',
+                            fontSize: '1rem',
+                            color: 'rgb(58, 77, 150)'
+                          }}
+                        >
+                          MonetaGo CP 100D 17/10/2019
+                        </Modal.Title>
+                        <a
+                          href=''
+                          style={{
+                            fontSize: '0.7rem',
+                            fontWeight: 400,
+                            textAlign: 'center',
+                            margin: '0',
+                            margin: 'auto',
+                            width: '10%',
+                            textDecoration: 'none',
+                            color: 'rgb(58, 77, 150)'
+                          }}
+                        >
+                          Quick Actions &nbsp;
+                          <FontAwesomeIcon
+                            icon={faChevronRight}
+                            style={{
+                              fontSize: 12,
+                              color: 'rgb(58, 77, 150)'
+                            }}
+                          />
+                        </a>
+                      </Modal.Header>
+                      <Modal.Body>
+                        <Tabs
+                          defaultActiveKey='maturity data'
+                          transition={false}
+                          id='noanim-tab-example'
+                          className='justify-content-center'
+                          as='div'
+                          style={{
+                            width: '771px',
+                            margin: 'auto',
+                            backgroundColor: 'white'
+                          }}
+                        >
+                          <Tab
+                            eventKey='maturity data'
+                            title='Maturity Data'
+                            style={{ color: 'green' }}
+                          >
+                            <MaturityData />
+                          </Tab>
+                          <Tab eventKey='tranches' title='Tranches'>
+                            <Tranches />
+                          </Tab>
+                          <Tab eventKey='allocations' title='Allocations'>
+                            <Allocations />
+                          </Tab>
+                          <Tab eventKey='credit' title='Credit Limits'>
+                            <CreditLimits />
+                          </Tab>
+                          <Tab eventKey='documents' title='Documents'>
+                            <Documents />
+                          </Tab>
+                          <Tab eventKey='service' title='Service'>
+                            Service
+                          </Tab>
+                          <Tab eventKey='audit' title='Audit'>
+                            Audit
+                          </Tab>
+                          <Tab eventKey='settlement' title='Settlement'>
+                            <Settlement />
+                          </Tab>
+                        </Tabs>
+                      </Modal.Body>
+                      <Modal.Footer
+                        style={{ border: 'none', height: '150px' }}
+                      ></Modal.Footer>
+                    </Modal>
+                  </tbody>
+                </table>
+              </Tab.Pane>
+              <Tab.Pane eventKey='tranches'>
+                <h1>Tranches</h1>
+              </Tab.Pane>
+              <Tab.Pane eventKey='allocations'>
+                <h1>Allocations</h1>
+              </Tab.Pane>
+              <Tab.Pane eventKey='startnew'>
+                <h1>Start new</h1>
+              </Tab.Pane>
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
+      {/* <Container className='App container' id='contFunctions'>
         <Row>
           <Form inline id='formF'>
             <Col sm={4} style={{ marginLeft: 35, marginTop: 10 }}>
@@ -241,7 +464,7 @@ export function DebtIssuance() {
             </Modal>
           </tbody>
         </table>
-      </Container>
+      </Container> */}
     </div>
   )
 }
