@@ -15,18 +15,8 @@ function IPACert1() {
   const [lgShow, setLgShow] = useState(false)
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center' }}>
-        <Button
-          size='sm'
-          onClick={() => setLgShow(true)}
-          style={{
-            backgroundColor: '#33466B'
-          }}
-        >
-          <b style={{ fontSize: '10px' }}>
-            Generate IPA Certificate and Submit for Review
-          </b>
-        </Button>
+      <ButtonToolbar>
+        <Button onClick={() => setLgShow(true)}>Large modal</Button>
         <Modal
           size='lg'
           show={lgShow}
@@ -62,7 +52,7 @@ function IPACert1() {
                     textAlign: 'center'
                   }}
                 >
-                  IPA Certificate
+                  Redemption Certificate
                 </h6>
                 <br />
                 <Row>
@@ -74,22 +64,16 @@ function IPACert1() {
                         marginBottom: '0'
                       }}
                     >
-                      An IPA Certificate has been automatically generated for
+                      An Redemption Certificate has been automatically generated
+                      for
                     </p>
-                    <b style={{ fontSize: '12px', color: '#33466B' }}>
-                      MonetaGo
-                    </b>
+                    <b style={{ fontSize: '12px' }}>MonetaGo</b>
                   </Col>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>
                     <p style={{ marginBottom: '0', fontSize: '12px' }}>
                       Download
                     </p>
-                    <Button
-                      variant='primary'
-                      style={{ backgroundColor: '#33466B' }}
-                      type='button'
-                      size='sm'
-                    >
+                    <Button variant='primary' type='button' size='sm'>
                       <FontAwesomeIcon icon={faDownload} />
                     </Button>
                   </Col>
@@ -103,38 +87,25 @@ function IPACert1() {
                     border: '1px solid #000000'
                   }}
                 ></div>
-                <p
-                  style={{
-                    textAlign: 'left',
-                    marginLeft: '2%',
-                    fontSize: '12px',
-                    color: '#33466B'
-                  }}
-                >
-                  Upload a custom version of the Documents &nbsp;
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </p>
                 <br />
 
                 <Row>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'left' }}>
                     <button
                       type='button'
-                      style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='cancel-btn'
                     >
-                      Cancel
+                      Reject
                     </button>
                   </Col>
                   <Col xs={6} sm={6} lg={6} style={{ textAlign: 'right' }}>
                     <button
                       type='submit'
-                      style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
                     >
-                      Submit
+                      Approve
                     </button>
                   </Col>
                 </Row>
