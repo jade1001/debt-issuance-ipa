@@ -1,8 +1,79 @@
+/**Media queries for Debt issuance**/
+
+#pHeader {
+    color: #182e58;
+    border-bottom: 2px solid #182e58;
+    width: 130px;
+}
+
+#sideBar {
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding-left: 0;
+    border-right: 1px solid #e5e5e5;
+}
+
+#fMenu {
+    color: #182e58;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#iconDL {
+    cursor: pointer;
+    width: 40px;
+    height: auto;
+    color: #fff;
+    background-color: #182e58;
+    border-radius: 3px;
+    vertical-align: text-top;
+    margin: 0px 10px;
+    padding: 5px 10px;
+}
+
+#colSearch .form-inline {
+    flex-flow: row;
+}
+
+#colSearch .search-box {
+    height: 32px;
+    border-radius: 0px;
+}
+
+#btnSearch {
+    background-color: #182e58;
+}
+
+#contFunctions {
+    margin-right: 0px;
+}
+
 #pHead {
     margin-top: 5px;
     margin-bottom: 15px;
     font-size: 11px;
     color: #615f5f;
+}
+
+#headerId .nav {
+    font-size: 11px;
+}
+
+#headerId .nav .nav-item a {
+    padding: 0.25rem 0.5rem;
+}
+
+#headerId .nav .nav-item a.active {
+    font-weight: 500 !important;
+    color: #3f33b1 !important;
 }
 
 #pHead1 {
@@ -43,8 +114,21 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+.table-content thead {
+    border-bottom: 1px solid #adadad;
+}
+
+.table-content tbody tr {
+    cursor: pointer;
+}
+
 .table-content th {
     font-weight: normal;
+}
+
+.debtTabs {
+    background-color: #fff;
+    color: #8b8b8b;
 }
 
 
@@ -302,72 +386,6 @@ tbody tr#border-b-0:hover {
 /** End of section **/
 
 
-/*Media queries for Debt issuance*/
-
-#pHeader {
-    color: #182e58;
-    border-bottom: 2px solid #182e58;
-    width: 130px;
-}
-
-#sideBar {
-    width: 15%;
-    height: 100%;
-    float: left;
-    padding-left: 0;
-    border-right: 1px solid #e5e5e5;
-}
-
-#fMenu {
-    color: #182e58;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#dMenu {
-    opacity: 0.4;
-    margin-top: 7px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#iconDL {
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    color: white;
-    border: 1px solid #182e58;
-    background-color: #182e58;
-    border-radius: 5px;
-}
-
-
-/* #searchBox {
-  width: 220px;
-  height: 30px;
-} */
-
-#btnSearch {
-    height: 70px;
-    background-color: #182e58;
-}
-
-#colSearch {
-    display: flex;
-    float: right;
-    margin-left: 23%;
-}
-
-#tableId {
-    font-size: 12px;
-    width: 100%;
-}
-
-#contFunctions {
-    margin-right: 0px;
-}
-
-
 /*Responsive for mobile 320px*/
 
 @media (min-width: 320px) {
@@ -391,36 +409,17 @@ tbody tr#border-b-0:hover {
         font-size: 10px;
         cursor: pointer;
     }
-    #iconDL {
-        width: 30px;
-        height: 15px;
-        border-radius: 2px;
-    }
-    #searchBox {
-        width: 120px;
-        height: 18px;
-        margin-left: 60%;
-    }
-    #btnSearch {
-        width: 20px;
-        height: 20px;
-    }
-    #iconSearch {
-        width: 8px;
-        height: 8px;
-        margin-bottom: 8px;
-        margin-left: -2px;
-    }
     #contFunctions {
         width: 700px;
     }
-    #colSearch {
-        float: right;
+    .icon-content {
+        text-align: center;
     }
-    #tableId {
-        font-size: 9px;
-        width: 82%;
-        float: left;
+    #headerId .nav {
+        text-align: center;
+    }
+    #headerId #iconChev {
+        visibility: hidden;
     }
 }
 
@@ -448,36 +447,8 @@ tbody tr#border-b-0:hover {
         font-size: 11px;
         cursor: pointer;
     }
-    #iconDL {
-        width: 35px;
-        height: 15px;
-        border-radius: 2px;
-    }
-    #searchBox {
-        width: 150px;
-        height: 21px;
-        margin-left: 60%;
-    }
-    #btnSearch {
-        width: 22px;
-        height: 21px;
-    }
-    #iconSearch {
-        width: 10px;
-        height: 10px;
-        margin-bottom: 7px;
-        margin-left: -2px;
-    }
     #contFunctions {
         width: 800px;
-    }
-    #colSearch {
-        float: right;
-    }
-    #tableId {
-        font-size: 10px;
-        width: 75%;
-        float: left;
     }
 }
 
@@ -505,27 +476,20 @@ tbody tr#border-b-0:hover {
         font-size: 14px;
         cursor: pointer;
     }
-    #searchBox {
-        width: 180px;
-        height: 25px;
-    }
-    #btnSearch {
-        width: 25px;
-        height: 25px;
-    }
-    #iconSearch {
-        width: 12px;
-        height: 12px;
-        margin-bottom: 5px;
-    }
-    #colSearch {
+    #colSearch .form-inline {
         float: right;
-    }
-    #tableId {
-        font-size: 12px;
     }
     #contFunctions {
         margin-left: 20%;
+    }
+    #headerId .nav {
+        text-align: left;
+    }
+    #headerId #iconChev {
+        visibility: visible;
+    }
+    #headerId .sideMenu {
+        border-right: 1px solid #dcdcdc;
     }
 }
 
@@ -553,48 +517,11 @@ tbody tr#border-b-0:hover {
         font-size: 14px;
         cursor: pointer;
     }
-    #iconDL {
-        cursor: pointer;
-        width: 50px;
-        height: 25px;
-        color: white;
-        border: 1px solid #182e58;
-        background-color: #182e58;
-        border-radius: 5px;
+    .icon-content {
+        text-align: left;
     }
-    #searchBox {
-        width: 220px;
-        height: 30px;
-    }
-    #btnSearch {
-        height: 35px;
-        width: 35px;
-        background-color: #182e58;
-    }
-    #iconSearch {
-        width: 12px;
-        height: 12px;
-        margin-top: 5px;
-        margin-left: 1px;
-    }
-    #colSearch {
-        display: flex;
-        float: right;
-    }
-    #tableId {
-        font-size: 12px;
-        width: 900px;
-    }
-    /* #formF {
-    width: 100%;
-  } */
     #contFunctions {
         margin-left: 160px;
         margin-right: 0px;
     }
-}
-
-.debtTabs {
-    background-color: #fff;
-    color: #8b8b8b;
 }
