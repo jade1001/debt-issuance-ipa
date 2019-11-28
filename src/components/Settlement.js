@@ -53,7 +53,7 @@ export class Settlement extends Component {
       <>
         {/* {console.log(this)} */}
         {this.state.test ? (
-          <RecordPayment />
+          <RecordPayment func={this.setTest} />
         ) : (
           <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
             <Row className='pt-3'>
@@ -253,7 +253,7 @@ export class Settlement extends Component {
       )
     }
 
-    function RecordPayment() {
+    function RecordPayment(props) {
       return (
         <Col xs={12} md={12}>
           <Table responsive size='sm' id='recordpayment'>
@@ -303,7 +303,13 @@ export class Settlement extends Component {
               </tr>
               <tr>
                 <td>
-                  <Button variant='primary' size='sm'>
+                  <Button
+                    variant='primary'
+                    size='sm'
+                    onClick={() => {
+                      props.func(false)
+                    }}
+                  >
                     Cancel
                   </Button>
                 </td>
