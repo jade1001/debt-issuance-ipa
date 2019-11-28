@@ -35,22 +35,22 @@ export class Allocations extends Component {
         >
           <thead>
             <tr>
-              <th></th>
-              <th>Investor</th>
-              <th>Scheme</th>
-              <th>Business Unit</th>
-              <th>Deal Date</th>
-              <th>Value Date</th>
-              <th>Redemption Value</th>
-              <th>Rate(%)</th>
-              <th></th>
+              <th style={{ paddingBottom: '0' }}></th>
+              <th style={{ paddingBottom: '0' }}>Investor</th>
+              <th style={{ paddingBottom: '0' }}>Scheme</th>
+              <th style={{ paddingBottom: '0' }}>Business Unit</th>
+              <th style={{ paddingBottom: '0' }}>Deal Date</th>
+              <th style={{ paddingBottom: '0' }}>Value Date</th>
+              <th style={{ paddingBottom: '0' }}>Redemption Value</th>
+              <th style={{ paddingBottom: '0' }}>Rate(%)</th>
+              <th style={{ paddingBottom: '0' }}></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                {/* <i class='fa fa-chevron-right'></i> */}
-                <Spinner animation='grow' size='sm' />
+                <i class='fa fa-chevron-right'></i>
+                {/* <Spinner animation='grow' size='sm' /> */}
               </td>
               <td>Mutual Fund of India</td>
               <td>Liquid Fund</td>
@@ -79,8 +79,8 @@ export class Allocations extends Component {
             </tr>
             <tr>
               <td style={{ border: 'none' }}>
-                {/* <i class='fa fa-chevron-right'></i> */}
-                <Spinner animation='grow' size='sm' />
+                <i class='fa fa-chevron-right'></i>
+                {/* <Spinner animation='grow' size='sm' /> */}
               </td>
               <td style={{ border: 'none' }}>Mutual Fund of India</td>
               <td style={{ border: 'none' }}></td>
