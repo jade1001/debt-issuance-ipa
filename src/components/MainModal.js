@@ -72,7 +72,7 @@ function MainModal(props) {
               className='bg-white'
               style={{
                 borderBottom: '2px solid transparent',
-                width: '71.4%',
+                width: '68.5%',
                 fontSize: '0.8rem',
                 borderBottom: '1px solid lightgrey',
                 margin: 'auto',
@@ -80,28 +80,68 @@ function MainModal(props) {
               }}
             >
               <Nav.Item>
-                <Nav.Link eventKey='maturity'>Maturity Data</Nav.Link>
+                <Nav.Link
+                  eventKey='maturity'
+                  style={{ padding: '0', margin: '0 16px 0 0' }}
+                >
+                  Maturity Data
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='tranches'>Tranches</Nav.Link>
+                <Nav.Link
+                  eventKey='tranches'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Tranches
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='allocation'>Allocations</Nav.Link>
+                <Nav.Link
+                  eventKey='allocation'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Allocations
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='credit'>Credit Limits</Nav.Link>
+                <Nav.Link
+                  eventKey='credit'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Credit Limits
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='document'>Documents</Nav.Link>
+                <Nav.Link
+                  eventKey='document'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Documents
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='service'>Service Provider</Nav.Link>
+                <Nav.Link
+                  eventKey='service'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Service Provider
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='audit'>Audit Trail</Nav.Link>
+                <Nav.Link
+                  eventKey='audit'
+                  style={{ padding: '0', margin: '0 16px' }}
+                >
+                  Audit Trail
+                </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey='settlement'>Settlement</Nav.Link>
+                <Nav.Link
+                  eventKey='settlement'
+                  style={{ padding: '0', margin: '0 0 0 16px' }}
+                >
+                  Settlement
+                </Nav.Link>
               </Nav.Item>
             </Nav>
             <Tab.Content>
