@@ -694,7 +694,15 @@ export class Documents extends Component {
                         <p style={{ marginBottom: '0', fontSize: '12px' }}>
                           Download
                         </p>
-                        <Button variant='primary' type='button' size='sm'>
+                        <Button
+                          variant='primary'
+                          type='button'
+                          size='sm'
+                          style={{
+                            backgroundColor: '#33466B',
+                            border: 'none'
+                          }}
+                        >
                           <FontAwesomeIcon icon={faDownload} />
                         </Button>
                       </Col>
@@ -717,6 +725,10 @@ export class Documents extends Component {
                           className='btn btn-primary btn-cert'
                           id='cancel-btn'
                           href='/debt-issuance'
+                          style={{
+                            backgroundColor: '#33466B',
+                            border: 'none'
+                          }}
                         >
                           Reject
                         </Button>
@@ -727,6 +739,10 @@ export class Documents extends Component {
                           className='btn btn-primary btn-cert'
                           id='submit-btn'
                           onClick={this.showRedempApproved}
+                          style={{
+                            backgroundColor: '#33466B',
+                            border: 'none'
+                          }}
                         >
                           Approve
                         </Button>
