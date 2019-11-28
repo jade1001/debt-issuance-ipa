@@ -1,14 +1,12 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Container,
   Row,
   Col,
-  Form,
   FormControl,
   Button,
   Modal,
   Tab,
-  Tabs,
   Nav
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -19,7 +17,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import JSONData from './data.json'
 import '../App.css'
-import MainModal from './MainModal.js'
 import { CreditLimits } from './CreditLimits'
 import { MaturityData } from './MaturityData'
 import { Allocations } from './Allocations'
