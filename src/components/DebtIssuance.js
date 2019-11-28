@@ -72,21 +72,19 @@ export function DebtIssuance() {
 							<Nav.Item>
 								<Nav.Link eventKey='maturities'>
 									Maturities (ISIN) &nbsp;
-									<FontAwesomeIcon icon={faChevronRight} id='iconChev'/>
+									<FontAwesomeIcon icon={faChevronRight} id='iconChev' />
 								</Nav.Link>
 							</Nav.Item>
 							<Nav.Item>
 								<Nav.Link eventKey='tranches' className='debtTabs' disabled>
-									{' '}
 									Tranches &nbsp;
-									<FontAwesomeIcon icon={faChevronRight} id='iconChev'/>
+									<FontAwesomeIcon icon={faChevronRight} id='iconChev' />
 								</Nav.Link>
 							</Nav.Item>
 							<Nav.Item>
 								<Nav.Link eventKey='allocations' className='debtTabs' disabled>
-									{' '}
 									Allocations &nbsp;
-									<FontAwesomeIcon icon={faChevronRight} id='iconChev'/>
+									<FontAwesomeIcon icon={faChevronRight} id='iconChev' />
 								</Nav.Link>
 							</Nav.Item>
 							<Nav.Item>
@@ -101,11 +99,11 @@ export function DebtIssuance() {
 							<Tab.Pane eventKey='maturities'>
 								<Row>
 									<Col xs={12} md={6} className='m-auto icon-content'>
-										<FontAwesomeIcon icon={faDownload} id='iconDL'/>
+										<FontAwesomeIcon icon={faDownload} id='iconDL' />
 									</Col>
 									<Col xs={12} md={6} id='colSearch'>
 										<Form inline onSubmit={handleSubmit}>
-											<FormControl type='text' className='mr-sm-2 search-box' value={searchTerm} onChange={handleChange}/>
+											<FormControl type='text' className='mr-sm-2 search-box' value={searchTerm} onChange={handleChange} />
 											<Button id='btnSearch' variant='secondary' size='sm' type='submit'>
 												<FontAwesomeIcon icon={faSearch} id='iconSearch' />
 											</Button>
@@ -170,7 +168,7 @@ export function DebtIssuance() {
 						MonetaGo CP 100D 17/10/2019
 					</Modal.Title>
 					<a href=''
-							style={{
+						style={{
 							fontSize: '0.7rem',
 							fontWeight: 400,
 							textAlign: 'center',
