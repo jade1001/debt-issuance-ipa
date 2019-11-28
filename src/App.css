@@ -547,3 +547,89 @@ tbody tr#border-b-0:hover {
   background-color: #fff;
   color: #8b8b8b;
 }
+
+/** Main Modal **/
+#left-tabs-example-tab-maturity {
+  color: grey;
+}
+#left-tabs-example-tab-tranches {
+  color: grey;
+}
+#left-tabs-example-tab-allocation {
+  color: grey;
+}
+#left-tabs-example-tab-credit {
+  color: grey;
+}
+#left-tabs-example-tab-document {
+  color: grey;
+}
+#left-tabs-example-tab-service {
+  color: grey;
+}
+#left-tabs-example-tab-audit {
+  color: grey;
+}
+#left-tabs-example-tab-settlement {
+  color: grey;
+}
+
+#left-tabs-example-tab-maturity:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-maturity.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-tranches:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-tranches.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-allocation:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-allocation.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-credit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-credit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-document:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-document.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-service:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-service.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-audit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-audit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-settlement:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-settlement.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
