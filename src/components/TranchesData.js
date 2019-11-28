@@ -9,6 +9,8 @@ import {
   Dropdown
 } from 'react-bootstrap'
 import './accordion.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight, faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 
 class TranchesData extends Component {
   constructor(props) {
@@ -70,11 +72,10 @@ class TranchesData extends Component {
                       eventKey='0'
                       onClick={this.rotate.bind(this)}
                     >
-                      <i
-                        class='fa fa-angle-right'
-                        id='chev'
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
                         style={{ transform: this.state.setRotate }}
-                      ></i>
+                      />
                     </Accordion.Toggle>
                   </td>
                   <td id='text2'>1</td>
@@ -92,7 +93,7 @@ class TranchesData extends Component {
                         as={CustomToggle}
                         id='dropdown-custom-components'
                       >
-                        <i className='fa fa-ellipsis-v' aria-hidden='true'></i>
+                        <FontAwesomeIcon icon={faEllipsisV} />
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
                         <Dropdown.Item eventKey='1' disabled id='dropdowntext'>

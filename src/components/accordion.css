@@ -8,77 +8,7 @@
   border: 0;
 }
 
-#serialnumber {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
-#valdate {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 15px 0px 25px;
-  text-align: center;
-  border: 0;
-}
-
-#NoAlloc {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
-#redemp {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
-#redemp2 {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
-#net {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
 #avg {
-  color: grey;
-  font-family: Bahnschrift Light;
-  font-weight: 1;
-  font-size: 13px;
-  padding: 0px 10px 0px 11px;
-  text-align: center;
-  border: 0;
-}
-
-#redemp3 {
   color: grey;
   font-family: Bahnschrift Light;
   font-weight: 1;
@@ -173,7 +103,7 @@
   font-family: Bahnschrift Light;
   font-weight: 1;
   font-size: 13px;
-  padding: 0px 57px;
+  margin-left: 6%;
 }
 
 #funding {
@@ -181,7 +111,7 @@
   font-family: Bahnschrift Light;
   font-weight: bold;
   font-size: 11px;
-  padding: 0px 42px;
+  margin-left: 4%;
 }
 
 #dropdown {
@@ -199,34 +129,6 @@
   font-weight: 1;
   font-size: 12px;
   border: 0;
-}
-
-#colmn {
-  height: 25%;
-}
-
-.right-arrow {
-  transform: rotate(0deg);
-}
-
-.right-arrow.open {
-  transform: rotate(90deg);
-}
-
-.accordion__icon {
-  margin-right: auto;
-  transition: transform 0.6s ease;
-}
-
-.rotate {
-  transform: rotate(90deg);
-}
-
-#chev {
-  transition: transform 0.4s ease;
-  font-size: 24px;
-  padding: 0px 12px;
-  color: rgb(3, 58, 104);
 }
 
 tr #table-header {
@@ -263,10 +165,6 @@ div.card-body {
 
 #btn {
   padding: 0;
-}
-
-#angle {
-  font-size: 24px;
 }
 
 #tdalloc {
