@@ -225,7 +225,7 @@ export function DebtIssuance() {
                           />
                         </a>
                       </Modal.Header>
-                      <Modal.Body>
+                      <Modal.Body id='modalContent'>
                         <Tabs
                           defaultActiveKey='maturity data'
                           transition={false}

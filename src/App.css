@@ -48,6 +48,10 @@
 
 /** Main Modal **/
 
+#modalContent {
+  height: 300px;
+}
+
 /** Maturity Data **/
 
 #firstMainTable {
