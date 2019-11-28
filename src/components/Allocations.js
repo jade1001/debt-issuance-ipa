@@ -45,14 +45,16 @@ export class Allocations extends Component {
               <td id='tdalloc'>
                 <i class='fa fa-angle-right' id='angle'></i>
               </td>
-              <td>Mutual Fund of India</td>
-              <td>Liquid Fund</td>
-              <td>Monetago India Pvt Ltd</td>
-              <td>08/07/2019</td>
-              <td>09/07/2019</td>
-              <td>50,00,00.000 INR</td>
-              <td style={{ textAlign: 'right' }}>9.58</td>
-              <td>
+              <td id='tdallocdata'>Mutual Fund of India</td>
+              <td id='tdallocdata'>Liquid Fund</td>
+              <td id='tdallocdata'>Monetago India Pvt Ltd</td>
+              <td id='tdallocdata'>08/07/2019</td>
+              <td id='tdallocdata'>09/07/2019</td>
+              <td id='tdallocdata'>50,00,00.000 INR</td>
+              <td id='tdallocdata' style={{ textAlign: 'right' }}>
+                9.58
+              </td>
+              <td id='tdallocdata'>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle
                     as={CustomToggle}
@@ -74,14 +76,28 @@ export class Allocations extends Component {
               <td id='tdalloc' style={{ border: 'none' }}>
                 <i class='fa fa-angle-right' id='angle'></i>
               </td>
-              <td style={{ border: 'none' }}>Mutual Fund of India</td>
-              <td style={{ border: 'none' }}></td>
-              <td style={{ border: 'none' }}>Monetago India Pvt Ltd</td>
-              <td style={{ border: 'none' }}>08/07/2019</td>
-              <td style={{ border: 'none' }}>09/07/2019</td>
-              <td style={{ border: 'none' }}>50,00,00.000 INR</td>
-              <td style={{ border: 'none', textAlign: 'right' }}>9.58</td>
-              <td style={{ border: 'none' }}>
+              <td style={{ border: 'none', paddingTop: '5px' }}>
+                Mutual Fund of India
+              </td>
+              <td style={{ border: 'none', paddingTop: '5px' }}></td>
+              <td style={{ border: 'none', paddingTop: '5px' }}>
+                Monetago India Pvt Ltd
+              </td>
+              <td style={{ border: 'none', paddingTop: '5px' }}>08/07/2019</td>
+              <td style={{ border: 'none', paddingTop: '5px' }}>09/07/2019</td>
+              <td style={{ border: 'none', paddingTop: '5px' }}>
+                50,00,00.000 INR
+              </td>
+              <td
+                style={{
+                  border: 'none',
+                  textAlign: 'right',
+                  paddingTop: '5px'
+                }}
+              >
+                9.58
+              </td>
+              <td style={{ border: 'none', paddingTop: '5px' }}>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle
                     as={CustomToggle}

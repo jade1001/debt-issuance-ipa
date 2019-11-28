@@ -270,9 +270,12 @@ div.card-body {
 }
 
 #tdalloc {
-  padding: 8px 0px 0px 15px;
+  padding: 0px 0px 0px 10px;
 }
 
+#tdallocdata {
+  padding: 5px 12px 5px 12px;
+}
 /* div.table-responsive {
   table-layout: auto;
   width: 50%

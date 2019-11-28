@@ -20,6 +20,13 @@ import '../App.css'
 import { Allocations } from './Allocations'
 import { CreditLimits } from './CreditLimits'
 import { Settlement } from './Settlement'
+import {
+  BrowserRouter as Router,
+  Switch,
+  NavLink,
+  Route,
+  Link
+} from 'react-router-dom'
 
 function MainModal(props) {
   const [smShow, setSmShow] = useState(false)
@@ -67,112 +74,111 @@ function MainModal(props) {
           </p>
         </Modal.Header>
         <Modal.Body>
-          <Tab.Container id='left-tabs-example' defaultActiveKey='maturity'>
-            <Navbar collapseOnSelect>
+          <Router>
+            <Navbar collapseOnSelect expand='lg'>
               <Navbar.Toggle aria-controls='responsive-navbar-nav' />
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav
-                  className='bg-white'
+                  className='mr-auto'
                   style={{
                     borderBottom: '2px solid transparent',
-                    width: '68.5%',
-                    fontSize: '0.8rem',
+                    width: '77.2%',
+                    fontSize: '0.9rem',
                     borderBottom: '1px solid lightgrey',
                     margin: 'auto',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    paddingBottom: '0'
                   }}
                 >
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='maturity'
-                      style={{ padding: '0', margin: '0 16px 0 0' }}
-                    >
-                      Maturity Data
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='tranches'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Tranches
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='allocation'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Allocations
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='credit'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Credit Limits
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='document'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Documents
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='service'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Service Provider
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='audit'
-                      style={{ padding: '0', margin: '0 16px' }}
-                    >
-                      Audit Trail
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link
-                      eventKey='settlement'
-                      style={{ padding: '0', margin: '0 0 0 16px' }}
-                    >
-                      Settlement
-                    </Nav.Link>
-                  </Nav.Item>
+                  <NavLink
+                    exact
+                    to='/'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px 0 0' }}
+                    id='MainModalNav'
+                  >
+                    Maturity Data
+                  </NavLink>
+                  <NavLink
+                    to='/tranches'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Tranches
+                  </NavLink>
+                  <NavLink
+                    to='/allocations'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Allocations
+                  </NavLink>
+                  <NavLink
+                    to='/credit-limits'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Credit Limits
+                  </NavLink>
+                  <NavLink
+                    to='/documents'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Documents
+                  </NavLink>
+                  <NavLink
+                    to='/service-providers'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Service Providers
+                  </NavLink>
+                  <NavLink
+                    to='/audit-trail'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Audit Trail
+                  </NavLink>
+                  <NavLink
+                    to='settlement'
+                    className='nav-link'
+                    activeClassName='active'
+                    style={{ padding: '0', margin: '0 0 0 16px' }}
+                    id='MainModalNav'
+                  >
+                    Settlement
+                  </NavLink>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
-            <Tab.Content>
-              <Tab.Pane eventKey='maturity'>
-                <MaturityData />
-              </Tab.Pane>
-              <Tab.Pane eventKey='tranches'>
-                <Tranches />
-              </Tab.Pane>
-              <Tab.Pane eventKey='allocation'>
-                <Allocations />
-              </Tab.Pane>
-              <Tab.Pane eventKey='credit'>
-                <CreditLimits />
-              </Tab.Pane>
-              <Tab.Pane eventKey='document'>
-                <Documents />
-              </Tab.Pane>
-              <Tab.Pane eventKey='service'></Tab.Pane>
-              <Tab.Pane eventKey='audit'></Tab.Pane>
-              <Tab.Pane eventKey='settlement'>
-                <Settlement />
-              </Tab.Pane>
-            </Tab.Content>
-          </Tab.Container>
+            <Switch>
+              <Route path='/' exact component={MaturityData} />
+              <Route path='/tranches' exact component={Tranches} />
+              <Route path='/allocations' exact component={Allocations} />
+              <Route path='/credit-limits' exact component={CreditLimits} />
+              <Route path='/documents' exact component={Documents} />
+              <Route path='/settlement' exact component={Settlement} />
+            </Switch>
+          </Router>
         </Modal.Body>
+        <Modal.Footer
+          style={{ height: '100%', borderTop: 'none' }}
+        ></Modal.Footer>
       </Modal>
     </ButtonToolbar>
   )
