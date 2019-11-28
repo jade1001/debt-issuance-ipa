@@ -10,17 +10,22 @@ import {
 } from 'react-bootstrap'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
   const [name, setName] = useState('')
+  const [btnDisable, setBtnDisable] = useState(true)
+  const [showSigned, setShowSigned] = useState(false)
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 120 }}>
+      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 100 }}>
         <Button
           size='sm'
-          onClick={() => setLgShow(true)}
+          onClick={() => {
+            setLgShow(true)
+            setBtnDisable('disabled')
+          }}
           style={{
             backgroundColor: '#33466B',
             border: 'none',
@@ -122,7 +127,10 @@ function DocuCert() {
                   <Col xs={7} lg={1}>
                     <Form.Check
                       aria-label='option 1'
-                      onChange={() => setName('Kashinath Katakdhond')}
+                      onChange={() => {
+                        setName('Kashinath Katakdhond')
+                        setBtnDisable(false)
+                      }}
                     />
                   </Col>
                 </Row>
@@ -170,20 +178,62 @@ function DocuCert() {
                     lg={2}
                     style={{ textAlign: 'right', marginTop: '4%' }}
                   >
-                    <button
+                    <Button
                       type='submit'
                       style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
                       onClick={() => {
                         setLgShow(false)
+                        setShowSigned(true)
                         setName('')
                       }}
+                      disabled={btnDisable}
                     >
                       Sign Docs
-                    </button>
+                    </Button>
                   </Col>
                 </Row>
+              </div>
+            </Container>
+          </Modal.Body>
+          <Modal.Footer style={{ border: 'none' }}></Modal.Footer>
+        </Modal>
+        <Modal
+          size='lg'
+          show={showSigned}
+          onHide={() => setShowSigned(false)}
+          aria-labelledby='contained-modal-title-vcenter'
+          centered
+        >
+          <Modal.Header
+            style={{ padding: '0', backgroundColor: 'rgb(245,245,245)' }}
+          >
+            <Modal.Title
+              id='contained-modal-title-vcenter'
+              style={{
+                backgroundColor: 'rgb(245,245,245)',
+                width: '100%',
+                textAlign: 'center',
+                fontSize: '20px',
+                color: 'rgb(58, 77, 150)'
+              }}
+            >
+              MonetaGo CP 100D 17/10/2019
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{ paddingTop: '5px' }}>
+            <Container>
+              <div id='approvedData'>
+                <h3 style={{ fontWeight: 'normal' }}>Success</h3>
+                <br />
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  style={{ fontSize: '80px' }}
+                />
+                <br />
+                <br />
+                <p>1 Document has been successfully signed</p>
               </div>
             </Container>
           </Modal.Body>
