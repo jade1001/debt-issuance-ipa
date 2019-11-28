@@ -10,27 +10,36 @@ import {
 } from 'react-bootstrap'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faDownload,
-  faChevronRight,
-  faSquare
-} from '@fortawesome/free-solid-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
   const [name, setName] = useState('')
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center' }}>
-        <Button onClick={() => setLgShow(true)}>
-          <b style={{ fontSize: '12px' }}>
-            Generate IPA Certificate and Submit for Review
-          </b>
+      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 120 }}>
+        <Button
+          size='sm'
+          onClick={() => setLgShow(true)}
+          style={{
+            backgroundColor: '#33466B',
+            border: 'none',
+            fontSize: '10px',
+            paddingLeft: 25,
+            paddingRight: 25,
+            paddingTop: 5,
+            paddingBottom: 5
+          }}
+        >
+          Generate IPA Certificate and Submit for Review
         </Button>
         <Modal
           size='lg'
           show={lgShow}
-          onHide={() => setLgShow(false)}
+          onHide={() => {
+            setLgShow(false)
+            setName('')
+          }}
           aria-labelledby='example-modal-sizes-title-lg'
         >
           <Modal.Header
@@ -123,6 +132,10 @@ function DocuCert() {
                       type='button'
                       className='btn btn-primary'
                       style={{ marginTop: '31%', backgroundColor: '#33466B' }}
+                      onClick={() => {
+                        setLgShow(false)
+                        setName('')
+                      }}
                     >
                       Cancel
                     </button>
@@ -162,6 +175,10 @@ function DocuCert() {
                       style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
+                      onClick={() => {
+                        setLgShow(false)
+                        setName('')
+                      }}
                     >
                       Sign Docs
                     </button>

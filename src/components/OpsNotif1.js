@@ -233,7 +233,7 @@ class OpsNotif1 extends Component {
               />
             </a>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body id='modalContent'>
             <Tabs
               defaultActiveKey='documents'
               transition={false}

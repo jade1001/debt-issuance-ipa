@@ -341,14 +341,14 @@ tbody tr#border-b-0:hover {
     border-radius: 5px;
 }
 
-#searchBox {
-    width: 220px;
-    height: 30px;
-}
+
+/* #searchBox {
+  width: 220px;
+  height: 30px;
+} */
 
 #btnSearch {
-    height: 30px;
-    width: 30px;
+    height: 70px;
     background-color: #182e58;
 }
 
@@ -364,7 +364,6 @@ tbody tr#border-b-0:hover {
 }
 
 #contFunctions {
-    margin-left: 160px;
     margin-right: 0px;
 }
 
@@ -568,8 +567,8 @@ tbody tr#border-b-0:hover {
         height: 30px;
     }
     #btnSearch {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
         background-color: #182e58;
     }
     #iconSearch {
@@ -586,11 +585,16 @@ tbody tr#border-b-0:hover {
         font-size: 12px;
         width: 900px;
     }
-    #formF {
-        width: 100%;
-    }
+    /* #formF {
+    width: 100%;
+  } */
     #contFunctions {
         margin-left: 160px;
         margin-right: 0px;
     }
+}
+
+.debtTabs {
+    background-color: #fff;
+    color: #8b8b8b;
 }

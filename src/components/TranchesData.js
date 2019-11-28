@@ -51,8 +51,7 @@ class TranchesData extends Component {
                 <th id='text'>Total Redemption Value</th>
                 <th id='text'>Allocated Redemption Value</th>
                 <th id='text'>Total Net Proceeds</th>
-                <th id='text'>Avg. Rate (%)</th>
-                <th id='text'></th>
+                <th id='avg'>Avg. Rate (%)</th>
 
                 <tr></tr>
               </td>
@@ -66,6 +65,7 @@ class TranchesData extends Component {
                   <td id='tdDrop'>
                     <Accordion.Toggle
                       as={Button}
+                      id='btn'
                       variant='link'
                       eventKey='0'
                       onClick={this.rotate.bind(this)}
