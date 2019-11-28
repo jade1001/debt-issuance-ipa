@@ -25,14 +25,15 @@ export class Documents extends Component {
           hover
           size='sm'
           style={{
-            width: '70%',
+            maxWidth: '771px',
             marginTop: 20,
             marginLeft: 'auto',
             marginRight: 'auto',
             marginBottom: 'auto'
           }}
+          responsive
         >
-          <thead>
+          <thead className='text-center'>
             <tr>
               <th>Document Type</th>
               <th>Last Filename</th>
