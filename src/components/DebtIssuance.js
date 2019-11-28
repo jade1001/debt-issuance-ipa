@@ -197,7 +197,7 @@ export function DebtIssuance() {
                   defaultActiveKey='maturity data'
                   transition={false}
                   id='noanim-tab-example'
-                  className='justify-content-center'
+                  className='justify-content-center main-content'
                   as='div'
                   style={{
                     width: '771px',

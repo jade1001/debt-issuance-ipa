@@ -50,6 +50,16 @@
 
 /** Main Modal **/
 
+.main-content .nav-link.active {
+    font-weight: 500 !important;
+    color: #3f33b1 !important;
+}
+
+.main-content .nav-link {
+    font-size: 12px !important;
+    color: #a1aca9;
+}
+
 
 /** Maturity Data **/
 
@@ -262,6 +272,15 @@ tbody tr#border-b-0:hover {
 #settle-menu a.active {
     font-weight: 500 !important;
     color: #3f33b1 !important;
+}
+
+#settle-table .dropleft a {
+    background-color: #fff;
+}
+
+#settle-table .dropleft .dropdown-item {
+    padding: 2px 1.5rem;
+    font-size: 12px;
 }
 
 @media (max-width: 381) {
