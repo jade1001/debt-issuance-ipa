@@ -34,7 +34,7 @@ class OpsNotif1 extends Component {
           style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
           onClick={() => this.show(true)}
         >
-          <Col xs={1}>
+          <Col xs={0.5}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
@@ -42,7 +42,7 @@ class OpsNotif1 extends Component {
               />
             </span>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b
               style={{
                 color: '#505050',
@@ -53,13 +53,13 @@ class OpsNotif1 extends Component {
               MonetaGo 92D 03/10/2019
             </b>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             {' '}
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               IPA certificate has been issued
             </b>
           </Col>
-          <Col xs={4}>
+          <Col xs={3}>
             {' '}
             <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
               07/07/2019 12:23:03
@@ -71,7 +71,7 @@ class OpsNotif1 extends Component {
           style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
           onClick={() => this.show(true)}
         >
-          <Col xs={1}>
+          <Col xs={0.5}>
             <span style={{ float: 'right' }}>
               <FontAwesomeIcon
                 icon={faCircle}
@@ -79,17 +79,17 @@ class OpsNotif1 extends Component {
               />
             </span>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               MonetaGo 120D 1/11/2019
             </b>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b style={{ color: '#505050', float: 'left', fontSize: '12px' }}>
               New Issuance Approved
             </b>
           </Col>
-          <Col xs={4}>
+          <Col xs={3}>
             <b style={{ color: '#505050', float: 'right', fontSize: '12px' }}>
               07/07/2019 12:15:49
             </b>
@@ -100,10 +100,19 @@ class OpsNotif1 extends Component {
           style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
           onClick={() => this.show(true)}
         >
-          <Col xs={1}>
-            <span style={{ float: 'right' }}></span>
+          <Col xs={0.5}>
+            <span style={{ float: 'right' }}>
+              <FontAwesomeIcon
+                icon={faCircle}
+                style={{
+                  color: 'orange',
+                  fontSize: '12px',
+                  visibility: 'hidden'
+                }}
+              />
+            </span>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b
               style={{
                 color: '#505050',
@@ -115,7 +124,7 @@ class OpsNotif1 extends Component {
               MonetaGo 92D 03/10/2019
             </b>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             {' '}
             <b
               style={{
@@ -128,7 +137,7 @@ class OpsNotif1 extends Component {
               IPA certificate has been issued
             </b>
           </Col>
-          <Col xs={4}>
+          <Col xs={3}>
             {' '}
             <b
               style={{
@@ -147,10 +156,19 @@ class OpsNotif1 extends Component {
           style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }}
           onClick={() => this.show(true)}
         >
-          <Col xs={1}>
-            <span style={{ float: 'right' }}></span>
+          <Col xs={0.5}>
+            <span style={{ float: 'right' }}>
+              <FontAwesomeIcon
+                icon={faCircle}
+                style={{
+                  color: 'orange',
+                  fontSize: '12px',
+                  visibility: 'hidden'
+                }}
+              />
+            </span>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b
               style={{
                 color: '#505050',
@@ -162,7 +180,7 @@ class OpsNotif1 extends Component {
               MonetaGo 120D 1/11/2019
             </b>
           </Col>
-          <Col xs={3}>
+          <Col xs={4}>
             <b
               style={{
                 color: '#505050',
@@ -174,7 +192,7 @@ class OpsNotif1 extends Component {
               New Issuance Approved
             </b>
           </Col>
-          <Col xs={4}>
+          <Col xs={3}>
             <b
               style={{
                 color: '#505050',
