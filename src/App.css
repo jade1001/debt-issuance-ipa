@@ -1,295 +1,507 @@
 #pHead {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    font-size: 11px;
-    color: #615f5f;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #615f5f;
 }
 
 #pHead1 {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    font-size: 10px;
-    color: #615f5f;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 10px;
+  color: #615f5f;
 }
 
 #pBody {
-    color: #192f59;
-    font-size: 20px;
-    margin-bottom: 35px;
+  color: #192f59;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 #pFooter {
-    font-size: 12px;
-    color: #615f5f;
+  font-size: 12px;
+  color: #615f5f;
 }
 
 .App-link {
-    color: #09d3ac;
+  color: #09d3ac;
 }
-
 
 /* Main Nav CSS **/
 
 .nav {
-    color: #a2a2a2;
-    text-decoration-style: none;
-    background-color: rgb(245, 245, 245);
-    font-size: 14px;
-    margin-left: 8px;
+  color: #a2a2a2;
+  text-decoration-style: none;
+  background-color: rgb(245, 245, 245);
+  font-size: 14px;
+  margin-left: 8px;
 }
 
 #cards:hover {
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .table-content th {
-    font-weight: normal;
+  font-weight: normal;
 }
 
-
 /** Main Modal **/
-
 
 /** Maturity Data **/
 
 #firstMainTable {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    width: 64%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 64%;
 }
 
 #firstTable {
-    border-top-style: hidden !important;
-    border-bottom-style: hidden !important;
-    font-size: 10px;
-    color: grey;
-    font-weight: normal;
-    text-align: left !important;
-    margin: auto;
+  border-top-style: hidden !important;
+  border-bottom-style: hidden !important;
+  font-size: 10px;
+  color: grey;
+  font-weight: normal;
+  text-align: left !important;
+  margin: auto;
 }
 
 #firstTableData {
-    font-size: 12px;
-    color: grey;
-    font-weight: bold;
-    color: rgb(58, 77, 150);
-    text-align: left !important;
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+  color: rgb(58, 77, 150);
+  text-align: left !important;
 }
 
 #firstTableHeader {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 #firstData {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 #secondMainTable {
-    margin: auto;
-    width: 64%;
+  margin: auto;
+  width: 64%;
 }
 
 #secondTable {
-    border-bottom-style: hidden !important;
-    font-size: 10px;
-    color: grey;
-    font-weight: normal;
-    text-align: left !important;
-    margin: auto;
+  border-bottom-style: hidden !important;
+  font-size: 10px;
+  color: grey;
+  font-weight: normal;
+  text-align: left !important;
+  margin: auto;
 }
 
 #secondTableHeader {
-    padding-bottom: 1%;
-    border-top: 1px solid rgb(225, 225, 225) !important;
+  padding-bottom: 1%;
+  border-top: 1px solid rgb(225, 225, 225) !important;
 }
 
 #secondTableData {
-    font-size: 12px;
-    color: grey;
-    font-weight: bold;
-    color: rgb(58, 77, 150);
-    text-align: left !important;
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+  color: rgb(58, 77, 150);
+  text-align: left !important;
 }
 
 #secondData {
-    padding-top: 0;
-    text-align: left !important;
+  padding-top: 0;
+  text-align: left !important;
 }
 
 #btntd {
-    border-top: none;
-    border-bottom: 1px solid rgb(225, 225, 225) !important;
+  border-top: none;
+  border-bottom: 1px solid rgb(225, 225, 225) !important;
 }
 
 #btnadd {
-    background-color: rgb(25, 47, 89);
-    border: none;
-    font-size: 8px;
-    color: white;
-    border-radius: 2px;
+  background-color: rgb(25, 47, 89);
+  border: none;
+  font-size: 8px;
+  color: white;
+  border-radius: 2px;
 }
-
 
 /** Maturity Data **/
 
 #text-center {
-    text-align: center;
+  text-align: center;
 }
 
 #text-right {
-    text-align: right;
+  text-align: right;
 }
 
 #text-left {
-    text-align: left;
+  text-align: left;
 }
 
 #float-left {
-    float: left;
+  float: left;
 }
 
 #float-right {
-    float: right;
+  float: right;
 }
 
 #border-b-0 {
-    border-bottom: hidden;
+  border-bottom: hidden;
 }
 
 #border-b-1 {
-    border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid #adadad;
 }
 
 #border-r-1 {
-    border-right: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
 }
 
 #d-block {
-    display: block;
+  display: block;
 }
 
 table {
-    font-size: 0.7rem;
+  font-size: 0.7rem;
 }
-
 
 /** CSS for CreditLimits, Documents, Settlement section **/
 
 table thead tr th {
-    font-weight: normal;
-    color: grey;
+  font-weight: normal;
+  color: grey;
 }
 
 table tbody {
-    color: #0a3a94;
+  color: #0a3a94;
 }
 
 thead tr th,
 tbody tr td:last-child {
-    border: none !important;
+  border: none !important;
 }
 
 tbody tr#border-b-0:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #recordpayment tbody tr {
-    border: hidden !important;
+  border: hidden !important;
 }
 
 #recordpayment .form-inline .form-control {
-    border-radius: 0px;
-    margin-right: 0px !important;
+  border-radius: 0px;
+  margin-right: 0px !important;
 }
 
 .dropleft a {
-    color: #0a3a94;
+  color: #0a3a94;
 }
 
 #pdf-logo {
-    color: #ff0000;
-    text-align: center;
+  color: #ff0000;
+  text-align: center;
 }
 
 #verify {
-    text-align: center;
-    color: #adadad;
-    /*color: #398a25;*/
+  text-align: center;
+  color: #adadad;
+  /*color: #398a25;*/
 }
-
 
 /*#verify i{
     visibility: hidden !important;
 }*/
 
 #settle-menu a {
-    background-color: #fff;
-    text-decoration: none;
-    padding-left: 3rem;
-    color: #a1aca9;
+  background-color: #fff;
+  text-decoration: none;
+  padding-left: 3rem;
+  color: #a1aca9;
 }
 
 #settle-menu a:hover {
-    color: #3f33b1;
+  color: #3f33b1;
 }
 
 #settle-menu a.active {
-    font-weight: 500 !important;
-    color: #3f33b1 !important;
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
 }
 
 @media (max-width: 381) {
-    span {
-        float: left;
-    }
+  span {
+    float: left;
+  }
 }
 
 #approvedData {
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    padding-top: inherit;
-    margin-bottom: 0;
-    height: 100%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding-top: inherit;
+  margin-bottom: 0;
+  height: 100%;
 }
 
-
 /** End of section **/
-
 
 /*Media queries for Debt issuance*/
 
 #pHeader {
-    color: #182e58;
-    border-bottom: 2px solid #182e58;
-    width: 130px;
+  color: #182e58;
+  border-bottom: 2px solid #182e58;
+  width: 130px;
 }
 
 #sideBar {
+  width: 15%;
+  height: 100%;
+  float: left;
+  padding-left: 0;
+  border-right: 1px solid #e5e5e5;
+}
+
+#fMenu {
+  color: #182e58;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#dMenu {
+  opacity: 0.4;
+  margin-top: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#iconDL {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  color: white;
+  border: 1px solid #182e58;
+  background-color: #182e58;
+  border-radius: 5px;
+}
+
+#searchBox {
+  width: 220px;
+  height: 30px;
+}
+
+#btnSearch {
+  height: 30px;
+  width: 30px;
+  background-color: #182e58;
+}
+
+#colSearch {
+  display: flex;
+  float: right;
+  margin-left: 23%;
+}
+
+#tableId {
+  font-size: 12px;
+  width: 100%;
+}
+
+#contFunctions {
+  margin-left: 160px;
+  margin-right: 0px;
+}
+
+/*Responsive for mobile 320px*/
+
+@media (min-width: 320px) {
+  #pHeader {
+    font-size: 10px;
+    border-bottom: 1px solid #182e58;
+    width: 85px;
+  }
+  #sideBar {
+    width: 45%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #iconDL {
+    width: 30px;
+    height: 15px;
+    border-radius: 2px;
+  }
+  #searchBox {
+    width: 120px;
+    height: 18px;
+    margin-left: 60%;
+  }
+  #btnSearch {
+    width: 20px;
+    height: 20px;
+  }
+  #iconSearch {
+    width: 8px;
+    height: 8px;
+    margin-bottom: 8px;
+    margin-left: -2px;
+  }
+  #contFunctions {
+    width: 700px;
+  }
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 9px;
+    width: 82%;
+    float: left;
+  }
+}
+
+/*Responsive for mobile*/
+
+@media (min-width: 375px) {
+  #pHeader {
+    font-size: 12px;
+    border-bottom: 1px solid #182e58;
+    width: 100px;
+  }
+  #sideBar {
+    width: 45%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  #iconDL {
+    width: 35px;
+    height: 15px;
+    border-radius: 2px;
+  }
+  #searchBox {
+    width: 150px;
+    height: 21px;
+    margin-left: 60%;
+  }
+  #btnSearch {
+    width: 22px;
+    height: 21px;
+  }
+  #iconSearch {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 7px;
+    margin-left: -2px;
+  }
+  #contFunctions {
+    width: 800px;
+  }
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 10px;
+    width: 75%;
+    float: left;
+  }
+}
+
+/*Responsive for tablet*/
+
+@media (min-width: 768px) {
+  #pHeader {
+    font-size: 14px;
+    border-bottom: 2px solid #182e58;
+    width: 118px;
+  }
+  #sideBar {
+    width: 25%;
+    float: left;
+  }
+  #fMenu {
+    color: #182e58;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #dMenu {
+    opacity: 0.4;
+    margin-top: 7px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #searchBox {
+    width: 180px;
+    height: 25px;
+  }
+  #btnSearch {
+    width: 25px;
+    height: 25px;
+  }
+  #iconSearch {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 5px;
+  }
+  #colSearch {
+    float: right;
+  }
+  #tableId {
+    font-size: 12px;
+  }
+  #contFunctions {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #pHeader {
+    color: #182e58;
+    border-bottom: 2px solid #182e58;
+    width: 130px;
+  }
+  #sideBar {
     width: 15%;
     height: 100%;
     float: left;
     padding-left: 0;
     border-right: 1px solid #e5e5e5;
-}
-
-#fMenu {
+  }
+  #fMenu {
     color: #182e58;
     font-size: 14px;
     cursor: pointer;
-}
-
-#dMenu {
+  }
+  #dMenu {
     opacity: 0.4;
     margin-top: 7px;
     font-size: 14px;
     cursor: pointer;
-}
-
-#iconDL {
+  }
+  #iconDL {
     cursor: pointer;
     width: 50px;
     height: 25px;
@@ -297,258 +509,121 @@ tbody tr#border-b-0:hover {
     border: 1px solid #182e58;
     background-color: #182e58;
     border-radius: 5px;
-}
-
-#searchBox {
+  }
+  #searchBox {
     width: 220px;
     height: 30px;
-}
-
-#btnSearch {
+  }
+  #btnSearch {
     height: 30px;
     width: 30px;
     background-color: #182e58;
-}
-
-#colSearch {
+  }
+  #iconSearch {
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    margin-left: 1px;
+  }
+  #colSearch {
     display: flex;
     float: right;
-    margin-left: 23%;
-}
-
-#tableId {
+  }
+  #tableId {
     font-size: 12px;
+    width: 900px;
+  }
+  #formF {
     width: 100%;
-}
-
-#contFunctions {
+  }
+  #contFunctions {
     margin-left: 160px;
     margin-right: 0px;
+  }
 }
 
-
-/*Responsive for mobile 320px*/
-
-@media (min-width: 320px) {
-    #pHeader {
-        font-size: 10px;
-        border-bottom: 1px solid #182e58;
-        width: 85px;
-    }
-    #sideBar {
-        width: 45%;
-        float: left;
-    }
-    #fMenu {
-        color: #182e58;
-        font-size: 10px;
-        cursor: pointer;
-    }
-    #dMenu {
-        opacity: 0.4;
-        margin-top: 7px;
-        font-size: 10px;
-        cursor: pointer;
-    }
-    #iconDL {
-        width: 30px;
-        height: 15px;
-        border-radius: 2px;
-    }
-    #searchBox {
-        width: 120px;
-        height: 18px;
-        margin-left: 60%;
-    }
-    #btnSearch {
-        width: 20px;
-        height: 20px;
-    }
-    #iconSearch {
-        width: 8px;
-        height: 8px;
-        margin-bottom: 8px;
-        margin-left: -2px;
-    }
-    #contFunctions {
-        width: 700px;
-    }
-    #colSearch {
-        float: right;
-    }
-    #tableId {
-        font-size: 9px;
-        width: 82%;
-        float: left;
-    }
+/** Main Modal **/
+#left-tabs-example-tab-maturity {
+  color: grey;
+}
+#left-tabs-example-tab-tranches {
+  color: grey;
+}
+#left-tabs-example-tab-allocation {
+  color: grey;
+}
+#left-tabs-example-tab-credit {
+  color: grey;
+}
+#left-tabs-example-tab-document {
+  color: grey;
+}
+#left-tabs-example-tab-service {
+  color: grey;
+}
+#left-tabs-example-tab-audit {
+  color: grey;
+}
+#left-tabs-example-tab-settlement {
+  color: grey;
 }
 
-
-/*Responsive for mobile*/
-
-@media (min-width: 375px) {
-    #pHeader {
-        font-size: 12px;
-        border-bottom: 1px solid #182e58;
-        width: 100px;
-    }
-    #sideBar {
-        width: 45%;
-        float: left;
-    }
-    #fMenu {
-        color: #182e58;
-        font-size: 11px;
-        cursor: pointer;
-    }
-    #dMenu {
-        opacity: 0.4;
-        margin-top: 7px;
-        font-size: 11px;
-        cursor: pointer;
-    }
-    #iconDL {
-        width: 35px;
-        height: 15px;
-        border-radius: 2px;
-    }
-    #searchBox {
-        width: 150px;
-        height: 21px;
-        margin-left: 60%;
-    }
-    #btnSearch {
-        width: 22px;
-        height: 21px;
-    }
-    #iconSearch {
-        width: 10px;
-        height: 10px;
-        margin-bottom: 7px;
-        margin-left: -2px;
-    }
-    #contFunctions {
-        width: 800px;
-    }
-    #colSearch {
-        float: right;
-    }
-    #tableId {
-        font-size: 10px;
-        width: 75%;
-        float: left;
-    }
+#left-tabs-example-tab-maturity:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-maturity.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-tranches:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-tranches.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-allocation:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-allocation.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-credit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-credit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+#left-tabs-example-tab-document:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-document.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
 }
 
-
-/*Responsive for tablet*/
-
-@media (min-width: 768px) {
-    #pHeader {
-        font-size: 14px;
-        border-bottom: 2px solid #182e58;
-        width: 118px;
-    }
-    #sideBar {
-        width: 25%;
-        float: left;
-    }
-    #fMenu {
-        color: #182e58;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    #dMenu {
-        opacity: 0.4;
-        margin-top: 7px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    #searchBox {
-        width: 180px;
-        height: 25px;
-    }
-    #btnSearch {
-        width: 25px;
-        height: 25px;
-    }
-    #iconSearch {
-        width: 12px;
-        height: 12px;
-        margin-bottom: 5px;
-    }
-    #colSearch {
-        float: right;
-    }
-    #tableId {
-        font-size: 12px;
-    }
-    #contFunctions {
-        margin-left: 20%;
-    }
+#left-tabs-example-tab-service:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-service.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
 }
 
-@media (min-width: 1024px) {
-    #pHeader {
-        color: #182e58;
-        border-bottom: 2px solid #182e58;
-        width: 130px;
-    }
-    #sideBar {
-        width: 15%;
-        height: 100%;
-        float: left;
-        padding-left: 0;
-        border-right: 1px solid #e5e5e5;
-    }
-    #fMenu {
-        color: #182e58;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    #dMenu {
-        opacity: 0.4;
-        margin-top: 7px;
-        font-size: 14px;
-        cursor: pointer;
-    }
-    #iconDL {
-        cursor: pointer;
-        width: 50px;
-        height: 25px;
-        color: white;
-        border: 1px solid #182e58;
-        background-color: #182e58;
-        border-radius: 5px;
-    }
-    #searchBox {
-        width: 220px;
-        height: 30px;
-    }
-    #btnSearch {
-        height: 30px;
-        width: 30px;
-        background-color: #182e58;
-    }
-    #iconSearch {
-        width: 12px;
-        height: 12px;
-        margin-top: 5px;
-        margin-left: 1px;
-    }
-    #colSearch {
-        display: flex;
-        float: right;
-    }
-    #tableId {
-        font-size: 12px;
-        width: 900px;
-    }
-    #formF {
-        width: 100%;
-    }
-    #contFunctions {
-        margin-left: 160px;
-        margin-right: 0px;
-    }
+#left-tabs-example-tab-audit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-audit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-settlement:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+#left-tabs-example-tab-settlement.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
 }

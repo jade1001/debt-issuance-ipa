@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
-import { Table, Container, Dropdown, Accordion, Button } from 'react-bootstrap'
+import {
+  Table,
+  Container,
+  Dropdown,
+  Accordion,
+  Button,
+  Spinner
+} from 'react-bootstrap'
 
 export class Allocations extends Component {
   render() {
@@ -19,7 +26,7 @@ export class Allocations extends Component {
       <Container>
         <Table
           style={{
-            width: '70%',
+            width: '80%',
             marginTop: 15,
             marginLeft: 'auto',
             marginRight: 'auto',
@@ -42,7 +49,8 @@ export class Allocations extends Component {
           <tbody>
             <tr>
               <td>
-                <i class='fa fa-chevron-right'></i>
+                {/* <i class='fa fa-chevron-right'></i> */}
+                <Spinner animation='grow' size='sm' />
               </td>
               <td>Mutual Fund of India</td>
               <td>Liquid Fund</td>
@@ -71,7 +79,8 @@ export class Allocations extends Component {
             </tr>
             <tr>
               <td style={{ border: 'none' }}>
-                <i class='fa fa-chevron-right'></i>
+                {/* <i class='fa fa-chevron-right'></i> */}
+                <Spinner animation='grow' size='sm' />
               </td>
               <td style={{ border: 'none' }}>Mutual Fund of India</td>
               <td style={{ border: 'none' }}></td>

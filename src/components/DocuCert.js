@@ -21,7 +21,7 @@ function DocuCert() {
   const [name, setName] = useState('')
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center' }}>
+      <ButtonToolbar style={{ justifyContent: 'center', marginTop: '10%' }}>
         <Button onClick={() => setLgShow(true)}>
           <b style={{ fontSize: '12px' }}>
             Generate IPA Certificate and Submit for Review

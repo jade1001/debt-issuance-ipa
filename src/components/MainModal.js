@@ -1,89 +1,136 @@
-// import React, { useState } from 'react'
-// import { Modal, Tab, Tabs } from 'react-bootstrap'
-// import { MaturityData } from './MaturityData'
-// import { Documents } from './Documents'
-// import Tranches from './Tranches'
-// import Redemption from './Redemption'
+import React, { useState } from 'react'
+import {
+  Modal,
+  Tab,
+  Tabs,
+  ButtonToolbar,
+  Button,
+  Navbar,
+  Nav,
+  NavDropdown,
+  TabContainer
+} from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { MaturityData } from './MaturityData'
+import { Documents } from './Documents'
+import Tranches from './Tranches'
+import Redemption from './Redemption'
+import '../App.css'
+import { Allocations } from './Allocations'
+import { CreditLimits } from './CreditLimits'
+import { Settlement } from './Settlement'
 
-// function MainModal(props) {
-//   const [smShow, setSmShow] = useState(false)
-//   const [lgShow, setLgShow] = useState(false)
+function MainModal(props) {
+  const [smShow, setSmShow] = useState(false)
+  const [lgShow, setLgShow] = useState(false)
 
-//   return (
-//     <>
-//       {/* <Button onClick={() => setLgShow(true)}>Large modal</Button> */}
-//       {/* {setLgShow(true)} */}
-//       <Modal
-//         size='lg'
-//         show={lgShow}
-//         onHide={() => setLgShow(false)}
-//         aria-labelledby='example-modal-sizes-title-lg'
-//       >
-//         <Modal.Header
-//           style={{ padding: '0', backgroundColor: 'rgb(245,245,245)' }}
-//         >
-//           <Modal.Title
-//             className='mtitle'
-//             id='example-modal-sizes-title-lg '
-//             style={{
-//               backgroundColor: 'rgb(245,245,245)',
-//               width: '100%',
-//               textAlign: 'center',
-//               fontSize: '1rem',
-//               color: 'rgb(58, 77, 150)'
-//             }}
-//           >
-//             MonetaGo CP 100D 17/10/2019
-//           </Modal.Title>
-//           <a
-//             href=''
-//             style={{
-//               fontSize: '0.5rem',
-//               textAlign: 'center',
-//               margin: '0',
-//               margin: 'auto',
-//               width: '10%',
-//               textDecoration: 'none'
-//             }}
-//           >
-//             Quick Startup >
-//           </a>
-//         </Modal.Header>
-//         <Modal.Body>
-//           <Tabs
-//             defaultActiveKey='maturity data'
-//             transition={false}
-//             id='noanim-tab-example'
-//           >
-//             <Tab eventKey='maturity data' title='Maturity Data'>
-//               <MaturityData />
-//             </Tab>
-//             <Tab eventKey='tranches' title='Tranches'>
-//               Tranches
-//             </Tab>
-//             <Tab eventKey='allocations' title='Allocations'>
-//               <Allocations />
-//             </Tab>
-//             <Tab eventKey='credit' title='Credit Limits'>
-//               <CreditLimits />
-//             </Tab>
-//             <Tab eventKey='documents' title='Documents'>
-//               <Documents />
-//             </Tab>
-//             <Tab eventKey='service' title='Service'>
-//               Service
-//             </Tab>
-//             <Tab eventKey='audit' title='Audit'>
-//               Audit
-//             </Tab>
-//           </Tabs>
-//         </Modal.Body>
-//         <Modal.Footer
-//           style={{ border: 'none', height: '150px' }}
-//         ></Modal.Footer>
-//       </Modal>
-//     </>
-//   )
-// }
+  return (
+    <ButtonToolbar>
+      <Button onClick={() => setLgShow(true)}>Large modal</Button>
 
-// export default MainModal
+      <Modal
+        size='xl'
+        show={lgShow}
+        onHide={() => setLgShow(false)}
+        aria-labelledby='example-modal-sizes-title-xl'
+      >
+        <Modal.Header
+          style={{ backgroundColor: 'rgb(245,245,245', padding: '0' }}
+        >
+          <Modal.Title
+            id='example-modal-sizes-title-xl'
+            style={{
+              width: '90%',
+              textAlign: 'center',
+              backgroundColor: 'rgb(245,245,245)',
+              color: 'darkblue',
+              fontSize: '1.2rem'
+            }}
+          >
+            MonetaGo CP 100D 17/10/2019
+          </Modal.Title>
+          <p
+            style={{
+              fontSize: '0.7rem',
+              margin: 'auto',
+              width: '10%',
+              textAlign: 'center',
+              color: 'rgb(58, 77, 150)'
+            }}
+          >
+            Quick Action &nbsp;
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ fontSize: 12, color: 'rgb(58, 77, 150)' }}
+            />
+          </p>
+        </Modal.Header>
+        <Modal.Body>
+          <Tab.Container id='left-tabs-example' defaultActiveKey='maturity'>
+            <Nav
+              className='bg-white'
+              style={{
+                borderBottom: '2px solid transparent',
+                width: '71.4%',
+                fontSize: '0.8rem',
+                borderBottom: '1px solid lightgrey',
+                margin: 'auto',
+                justifyContent: 'center'
+              }}
+            >
+              <Nav.Item>
+                <Nav.Link eventKey='maturity'>Maturity Data</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='tranches'>Tranches</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='allocation'>Allocations</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='credit'>Credit Limits</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='document'>Documents</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='service'>Service Provider</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='audit'>Audit Trail</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey='settlement'>Settlement</Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <Tab.Content>
+              <Tab.Pane eventKey='maturity'>
+                <MaturityData />
+              </Tab.Pane>
+              <Tab.Pane eventKey='tranches'>
+                <Tranches />
+              </Tab.Pane>
+              <Tab.Pane eventKey='allocation'>
+                <Allocations />
+              </Tab.Pane>
+              <Tab.Pane eventKey='credit'>
+                <CreditLimits />
+              </Tab.Pane>
+              <Tab.Pane eventKey='document'>
+                <Documents />
+              </Tab.Pane>
+              <Tab.Pane eventKey='service'></Tab.Pane>
+              <Tab.Pane eventKey='audit'></Tab.Pane>
+              <Tab.Pane eventKey='settlement'>
+                <Settlement />
+              </Tab.Pane>
+            </Tab.Content>
+          </Tab.Container>
+        </Modal.Body>
+      </Modal>
+    </ButtonToolbar>
+  )
+}
+
+export default MainModal

@@ -11,6 +11,7 @@ import MainNavBar from './components/MainNavBar'
 import { Alert } from 'react-bootstrap'
 import { DebtIssuance } from './components/DebtIssuance'
 import { ProtectedRoute } from './components/ProtectedRoute'
+import MainModal from './components/MainModal'
 
 class App extends Component {
   constructor(props) {
@@ -23,26 +24,27 @@ class App extends Component {
   render() {
     const { alert } = this.props
     return (
-      <div className='App'>
-        {alert.message && (
-          <Alert
-            className={`alert ${alert.type}`}
-            style={{ width: '20%', textAlign: 'center' }}
-          >
-            {alert.message}
-          </Alert>
-        )}
-        <Router history={history}>
-          <Switch>
-            <ProtectedRoute exact path='/login' component={Login} />
-            <PrivateRoute exact path='/' component={MainNavBar} />
-            <PrivateRoute exact path='/debt-issuance' component={MainNavBar} />
-            <PrivateRoute exact path='/credit-limits' component={MainNavBar} />
-            <PrivateRoute exact path='/identities' component={MainNavBar} />
-            <PrivateRoute exact path='/settings' component={MainNavBar} />
-          </Switch>
-        </Router>
-      </div>
+      // <div className='App'>
+      //   {alert.message && (
+      //     <Alert
+      //       className={`alert ${alert.type}`}
+      //       style={{ width: '20%', textAlign: 'center' }}
+      //     >
+      //       {alert.message}
+      //     </Alert>
+      //   )}
+      //   <Router history={history}>
+      //     <Switch>
+      //       <ProtectedRoute exact path='/login' component={Login} />
+      //       <PrivateRoute exact path='/' component={MainNavBar} />
+      //       <PrivateRoute exact path='/debt-issuance' component={MainNavBar} />
+      //       <PrivateRoute exact path='/credit-limits' component={MainNavBar} />
+      //       <PrivateRoute exact path='/identities' component={MainNavBar} />
+      //       <PrivateRoute exact path='/settings' component={MainNavBar} />
+      //     </Switch>
+      //   </Router>
+      // </div>
+      <MainModal />
     )
   }
 }
@@ -53,6 +55,6 @@ function mapState(state) {
 }
 
 const actionCreators = {
-  clearAlerts: alertActions.clear,
+  clearAlerts: alertActions.clear
 }
 export default connect(mapState, actionCreators)(App)
