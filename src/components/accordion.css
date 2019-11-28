@@ -6,7 +6,6 @@
   padding: 0px 10px 0px 11px;
   text-align: center;
   border: 0;
-
 }
 
 #serialnumber {
@@ -15,6 +14,16 @@
   font-weight: 1;
   font-size: 13px;
   padding: 0px 10px 0px 11px;
+  text-align: center;
+  border: 0;
+}
+
+#valdate {
+  color: grey;
+  font-family: Bahnschrift Light;
+  font-weight: 1;
+  font-size: 13px;
+  padding: 0px 15px 0px 25px;
   text-align: center;
   border: 0;
 }
@@ -83,7 +92,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 30px;
+  padding: 7px 30px 0px 33px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -93,7 +102,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 18px 0px 41px;
+  padding: 7px 12px 0px 17px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -103,7 +112,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 18px;
+  padding: 7px 25px 0px 0px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -113,7 +122,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 56px;
+  padding: 7px 55px 0px 20px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -123,7 +132,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 32px;
+  padding: 7px 43px 0px 2px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -133,7 +142,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 10px 0px 47px;
+  padding: 7px 10px 0px 27px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -143,7 +152,7 @@
   font-weight: bold;
   font-family: Bahnschrift Light;
   color: rgb(3, 58, 104);
-  padding: 7px 65px;
+  padding: 7px 40px 0px 31px;
   font-size: 11px;
   border: none;
   text-align: center;
@@ -226,7 +235,9 @@ tr #table-header {
   border-bottom: 1px;
   border-radius: 0;
   border-right: 0;
-  padding: 0;
+  padding-bottom: 0%;
+  padding-top: 15px;
+  width: 60%;
 }
 
 #tdccord {
@@ -250,6 +261,24 @@ div.card-body {
   padding: 9px;
 }
 
-.btn {
+#btn {
   padding: 0;
 }
+
+#angle {
+  font-size: 24px;
+}
+
+#tdalloc {
+  padding: 8px 0px 0px 15px;
+}
+
+/* div.table-responsive {
+  table-layout: auto;
+  width: 50%
+}
+
+#maindiv {
+  table-layout: auto;
+  width: 50%
+} */

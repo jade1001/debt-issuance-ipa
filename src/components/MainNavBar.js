@@ -32,7 +32,7 @@ class MainNavBar extends Component {
             expand='lg'
             style={{
               backgroundColor: 'rgb(245, 245, 245)',
-              fontSize: '14px',
+              fontSize: '14px'
             }}
             variant='light'
           >
@@ -142,7 +142,7 @@ function mapState(state) {
 }
 
 const actionCreators = {
-  logout: userActions.logout,
+  logout: userActions.logout
 }
 
 export default connect(mapState, actionCreators)(MainNavBar)

@@ -21,6 +21,20 @@ import '../App.css'
 import DropZone from './DropZone'
 
 export class Settlement extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      test: false
+    }
+
+    this.setTest = this.setTest.bind(this)
+  }
+
+  setTest(bool) {
+    this.setState({ test: bool })
+  }
+
   render() {
     const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
       <a
@@ -34,35 +48,42 @@ export class Settlement extends Component {
         {children}
       </a>
     ))
-
+    // const samp = this.state
     return (
-      <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
-        <Row className='pt-3'>
-          <Col sm={2} id='border-r-1'>
-            <Nav variant='pills' className='flex-column'>
-              <Nav.Item id='settle-menu'>
-                <Nav.Link eventKey='first'>Placement</Nav.Link>
-              </Nav.Item>
-              <Nav.Item id='settle-menu'>
-                <Nav.Link eventKey='second'>Redemption</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-          <Col sm={10}>
-            <Tab.Content>
-              <Tab.Pane eventKey='first'>
-                <Placement />
-              </Tab.Pane>
-              <Tab.Pane eventKey='second'>
-                <Redemption />
-              </Tab.Pane>
-            </Tab.Content>
-          </Col>
-        </Row>
-      </Tab.Container>
+      <>
+        {/* {console.log(this)} */}
+        {this.state.test ? (
+          <RecordPayment func={this.setTest} />
+        ) : (
+          <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
+            <Row className='pt-3'>
+              <Col sm={2} id='border-r-1'>
+                <Nav variant='pills' className='flex-column'>
+                  <Nav.Item id='settle-menu'>
+                    <Nav.Link eventKey='first'>Placement</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item id='settle-menu'>
+                    <Nav.Link eventKey='second'>Redemption</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Col>
+              <Col sm={10}>
+                <Tab.Content>
+                  <Tab.Pane eventKey='first'>
+                    <Placement func={this.setTest} />
+                  </Tab.Pane>
+                  <Tab.Pane eventKey='second'>
+                    <Redemption />
+                  </Tab.Pane>
+                </Tab.Content>
+              </Col>
+            </Row>
+          </Tab.Container>
+        )}
+      </>
     )
 
-    function Placement() {
+    function Placement(props) {
       return (
         <Table responsive hover size='sm' className='overflow-hidden'>
           <thead>
@@ -99,7 +120,12 @@ export class Settlement extends Component {
                     <Dropdown.Item onSelect={() => alert('View')}>
                       View Full Details
                     </Dropdown.Item>
-                    <Dropdown.Item href='/recordpayment'>
+                    <Dropdown.Item
+                      onClick={() => {
+                        // console.log(props.func(true))
+                        props.func(true)
+                      }}
+                    >
                       Record Payment
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -130,7 +156,12 @@ export class Settlement extends Component {
                     <Dropdown.Item onSelect={() => alert('View')}>
                       View Full Details
                     </Dropdown.Item>
-                    <Dropdown.Item href='/recordpayment'>
+                    <Dropdown.Item
+                      onClick={() => {
+                        // console.log(props.func(true))
+                        props.func(true)
+                      }}
+                    >
                       Record Payment
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -161,7 +192,12 @@ export class Settlement extends Component {
                     <Dropdown.Item onSelect={() => alert('View')}>
                       View Full Details
                     </Dropdown.Item>
-                    <Dropdown.Item href='/recordpayment'>
+                    <Dropdown.Item
+                      onClick={() => {
+                        // console.log(props.func(true))
+                        props.func(true)
+                      }}
+                    >
                       Record Payment
                     </Dropdown.Item>
                   </Dropdown.Menu>
@@ -217,7 +253,7 @@ export class Settlement extends Component {
       )
     }
 
-    function RecordPayment() {
+    function RecordPayment(props) {
       return (
         <Col xs={12} md={12}>
           <Table responsive size='sm' id='recordpayment'>
@@ -267,7 +303,13 @@ export class Settlement extends Component {
               </tr>
               <tr>
                 <td>
-                  <Button variant='primary' size='sm'>
+                  <Button
+                    variant='primary'
+                    size='sm'
+                    onClick={() => {
+                      props.func(false)
+                    }}
+                  >
                     Cancel
                   </Button>
                 </td>

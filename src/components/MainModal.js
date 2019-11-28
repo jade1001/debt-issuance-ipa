@@ -68,82 +68,87 @@ function MainModal(props) {
         </Modal.Header>
         <Modal.Body>
           <Tab.Container id='left-tabs-example' defaultActiveKey='maturity'>
-            <Nav
-              className='bg-white'
-              style={{
-                borderBottom: '2px solid transparent',
-                width: '68.5%',
-                fontSize: '0.8rem',
-                borderBottom: '1px solid lightgrey',
-                margin: 'auto',
-                justifyContent: 'center'
-              }}
-            >
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='maturity'
-                  style={{ padding: '0', margin: '0 16px 0 0' }}
+            <Navbar collapseOnSelect>
+              <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+              <Navbar.Collapse id='responsive-navbar-nav'>
+                <Nav
+                  className='bg-white'
+                  style={{
+                    borderBottom: '2px solid transparent',
+                    width: '68.5%',
+                    fontSize: '0.8rem',
+                    borderBottom: '1px solid lightgrey',
+                    margin: 'auto',
+                    justifyContent: 'center'
+                  }}
                 >
-                  Maturity Data
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='tranches'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Tranches
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='allocation'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Allocations
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='credit'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Credit Limits
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='document'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Documents
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='service'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Service Provider
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='audit'
-                  style={{ padding: '0', margin: '0 16px' }}
-                >
-                  Audit Trail
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link
-                  eventKey='settlement'
-                  style={{ padding: '0', margin: '0 0 0 16px' }}
-                >
-                  Settlement
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='maturity'
+                      style={{ padding: '0', margin: '0 16px 0 0' }}
+                    >
+                      Maturity Data
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='tranches'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Tranches
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='allocation'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Allocations
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='credit'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Credit Limits
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='document'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Documents
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='service'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Service Provider
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='audit'
+                      style={{ padding: '0', margin: '0 16px' }}
+                    >
+                      Audit Trail
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey='settlement'
+                      style={{ padding: '0', margin: '0 0 0 16px' }}
+                    >
+                      Settlement
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
             <Tab.Content>
               <Tab.Pane eventKey='maturity'>
                 <MaturityData />

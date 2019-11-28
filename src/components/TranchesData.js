@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import {
   Table,
   Accordion,
@@ -7,21 +7,21 @@ import {
   Row,
   Col,
   Dropdown
-} from "react-bootstrap"
-import "./accordion.css"
+} from 'react-bootstrap'
+import './accordion.css'
 
 class TranchesData extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      setRotate: ""
+      setRotate: ''
     }
   }
 
   rotate() {
     const { setRotate } = this.state
-    this.setState({ setRotate: setRotate ? "" : "rotateZ(90deg)" })
+    this.setState({ setRotate: setRotate ? '' : 'rotateZ(90deg)' })
   }
 
   render() {
@@ -39,7 +39,7 @@ class TranchesData extends Component {
     ))
     return (
       <div>
-        <Table responsive striped bordered hover className='overflow-hidden'>
+        <Table style={{ width: '60%', margin: ' auto' }}>
           <thead>
             <tr>
               <td id='table-header'>
@@ -51,8 +51,7 @@ class TranchesData extends Component {
                 <th id='text'>Total Redemption Value</th>
                 <th id='text'>Allocated Redemption Value</th>
                 <th id='text'>Total Net Proceeds</th>
-                <th id='text'>Avg. Rate (%)</th>
-                <th id='text'></th>
+                <th id='avg'>Avg. Rate (%)</th>
 
                 <tr></tr>
               </td>
@@ -66,6 +65,7 @@ class TranchesData extends Component {
                   <td id='tdDrop'>
                     <Accordion.Toggle
                       as={Button}
+                      id='btn'
                       variant='link'
                       eventKey='0'
                       onClick={this.rotate.bind(this)}
