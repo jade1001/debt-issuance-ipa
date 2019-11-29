@@ -171,7 +171,7 @@ function Redemption2(props) {
               <td></td>
               <td></td>
             </tr>
-            <tr id='border-b-0' style={{ height: 200 }}>
+            <tr id='border-b-0' style={{ height: 150 }}>
               <td></td>
               <td></td>
               <td></td>

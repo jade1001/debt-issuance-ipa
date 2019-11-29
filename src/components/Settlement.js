@@ -5,10 +5,12 @@ import {
   Row,
   Col,
   Form,
-  ButtonToolbar,
+  FormControl,
+  InputGroup,
   Button,
   Tab,
-  Nav
+  Nav,
+  Container
 } from 'react-bootstrap'
 import {
   BrowserRouter as Router,
@@ -98,14 +100,20 @@ export class Settlement extends Component {
 
     function Placement(props) {
       return (
-        <Table responsive hover size='sm' className='overflow-hidden'>
+        <Table
+          responsive
+          hover
+          size='sm'
+          className='overflow-hidden table-borderless'
+          id='settle-table'
+        >
           <thead>
             <tr>
               <th>Investor</th>
               <th>Deal Date</th>
               <th>Value Data</th>
-              <th id='text-right'>Total Face Value</th>
-              <th id='text-right'>Total Net Proceeds</th>
+              <th className='text-right'>Total Face Value</th>
+              <th className='text-right'>Total Net Proceeds</th>
               <th id='text-center'>Settled</th>
               <th> </th>
             </tr>
@@ -115,8 +123,8 @@ export class Settlement extends Component {
               <td>Mutual Fund Of India</td>
               <td>08/07/2019</td>
               <td>09/07/2019</td>
-              <td id='text-right'>50,00,00,000 INR</td>
-              <td id='text-right'>48,72,12,500 INR</td>
+              <td className='text-right'>50,00,00,000 INR</td>
+              <td className='text-right'>48,72,12,500 INR</td>
               <td id='verify'>
                 <i className='fa fa-circle' aria-hidden='true'></i>
               </td>
@@ -149,8 +157,8 @@ export class Settlement extends Component {
               <td>UTI</td>
               <td>08/07/2019</td>
               <td>09/07/2019</td>
-              <td id='text-right'>20,00,00,000 INR</td>
-              <td id='text-right'>19,48,85,000 INR</td>
+              <td className='text-right'>20,00,00,000 INR</td>
+              <td className='text-right'>19,48,85,000 INR</td>
               <td id='verify'>
                 <i className='fa fa-circle' aria-hidden='true'></i>
               </td>
@@ -185,8 +193,8 @@ export class Settlement extends Component {
               <td>Capital Partners</td>
               <td>08/07/2019</td>
               <td>09/07/2019</td>
-              <td id='text-right'>30,00,00,000 INR</td>
-              <td id='text-right'>29,23,27,500 INR</td>
+              <td className='text-right'>30,00,00,000 INR</td>
+              <td className='text-right'>29,23,27,500 INR</td>
               <td id='verify'>
                 <i className='fa fa-circle' aria-hidden='true'></i>
               </td>
@@ -217,25 +225,25 @@ export class Settlement extends Component {
                 </Dropdown>
               </td>
             </tr>
-            <tr id='border-b-0'>
+            <tr className='bg-white'>
               <td></td>
               <td></td>
               <td></td>
-              <td id='text-right'>1,00,00,00,000 INR</td>
-              <td id='text-right'>97,44,25,000 INR</td>
-              <td></td>
+              <td className='border-top text-right'>1,00,00,00,000 INR</td>
+              <td className='border-top text-right'>97,44,25,000 INR</td>
+              <td className='border-top'></td>
               <td></td>
             </tr>
-            <tr id='border-b-0'>
+            <tr className='bg-white'>
               <td></td>
               <td></td>
               <td>IPA Fee Rate</td>
-              <td id='text-right'>IPA Fees</td>
-              <td id='text-right'>Final Proceeds</td>
-              <td></td>
+              <td className='border-bottom text-right'>IPA Fees</td>
+              <td className='border-bottom text-right'>Final Proceeds</td>
+              <td className='border-bottom'></td>
               <td></td>
             </tr>
-            <tr id='border-b-0'>
+            <tr className='bg-white'>
               <td></td>
               <td></td>
               <td>

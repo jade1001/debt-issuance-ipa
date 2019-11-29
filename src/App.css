@@ -1,8 +1,186 @@
+#iconDL {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  color: #fff;
+  background-color: #182e58;
+  border-radius: 3px;
+  vertical-align: text-top;
+  margin: 0px 10px;
+  padding: 5px 10px;
+}
+
+#colSearch .form-inline {
+  flex-flow: row;
+}
+
+#colSearch .search-box {
+  height: 32px;
+  border-radius: 0px;
+}
+
+#btnSearch {
+  background-color: #182e58;
+}
+
+#contFunctions {
+  margin-right: 0px;
+}
+
+#headerId .nav {
+  font-size: 11px;
+}
+
+#headerId .nav .nav-item a {
+  padding: 0.25rem 0.5rem;
+}
+
+#headerId .nav .nav-item a.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
+}
+
+.table-content thead {
+  border-bottom: 1px solid #adadad;
+}
+
+.debtTabs {
+  background-color: #fff;
+  color: #8b8b8b;
+}
+
+.main-content .nav-link.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
+}
+
+.main-content .nav-link {
+  font-size: 12px !important;
+  color: #a1aca9;
+}
+
+#left-tabs-example-tab-maturity {
+  color: grey;
+}
+
+#left-tabs-example-tab-tranches {
+  color: grey;
+}
+
+#left-tabs-example-tab-allocation {
+  color: grey;
+}
+
+#left-tabs-example-tab-credit {
+  color: grey;
+}
+
+#left-tabs-example-tab-document {
+  color: grey;
+}
+
+#left-tabs-example-tab-service {
+  color: grey;
+}
+
+#left-tabs-example-tab-audit {
+  color: grey;
+}
+
+#left-tabs-example-tab-settlement {
+  color: grey;
+}
+
+#left-tabs-example-tab-maturity:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-maturity.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-tranches:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-tranches.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-allocation:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-allocation.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-credit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-credit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-document:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-document.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-service:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-service.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-audit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-audit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-settlement:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-settlement.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
 #pHead {
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 11px;
   color: #615f5f;
+}
+
+#headerId .nav {
+  font-size: 11px;
+}
+
+#headerId .nav .nav-item a {
+  padding: 0.25rem 0.5rem;
+}
+
+#headerId .nav .nav-item a.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
 }
 
 #pHead1 {
@@ -42,15 +220,136 @@
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+.table-content thead {
+  border-bottom: 1px solid #adadad;
+}
+
 .table-content th {
   font-weight: normal;
 }
 
+.debtTabs {
+  background-color: #fff;
+  color: #8b8b8b;
+}
+
 /** Main Modal **/
 
-#modalContent {
-  height: 420px;
+.main-content .nav-link.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
 }
+
+.main-content .nav-link {
+  font-size: 12px !important;
+  color: #a1aca9;
+}
+
+#left-tabs-example-tab-maturity {
+  color: grey;
+}
+
+#left-tabs-example-tab-tranches {
+  color: grey;
+}
+
+#left-tabs-example-tab-allocation {
+  color: grey;
+}
+
+#left-tabs-example-tab-credit {
+  color: grey;
+}
+
+#left-tabs-example-tab-document {
+  color: grey;
+}
+
+#left-tabs-example-tab-service {
+  color: grey;
+}
+
+#left-tabs-example-tab-audit {
+  color: grey;
+}
+
+#left-tabs-example-tab-settlement {
+  color: grey;
+}
+
+#left-tabs-example-tab-maturity:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-maturity.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-tranches:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-tranches.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-allocation:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-allocation.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-credit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-credit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-document:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-document.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-service:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-service.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-audit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-audit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-settlement:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-settlement.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+/** End of Main Modal **/
 
 /** Maturity Data **/
 
@@ -201,7 +500,39 @@ tbody tr#border-b-0:hover {
 
 #recordpayment .form-inline .form-control {
   border-radius: 0px;
+  font-size: 11px;
+  color: #0a3a94;
+  height: 25px;
+  padding: 2px 10px;
   margin-right: 0px !important;
+}
+
+#recordpayment .input-left {
+  border-right: 0;
+  border-radius: 0px;
+  padding: 0 5px 0px 0px;
+  font-size: 11px;
+  color: #0a3a94;
+}
+
+#recordpayment .input-span {
+  border-left: 0;
+  border-radius: 0px;
+  padding: 1px 10px 0px 0px;
+  font-size: 11px;
+}
+
+#recordpayment .btn-sm {
+  padding: 0rem 1rem;
+}
+
+#settle-table .dropleft a {
+  background-color: #fff;
+}
+
+#settle-table .dropleft .dropdown-item {
+  padding: 2px 1.5rem;
+  font-size: 12px;
 }
 
 .dropleft a {
@@ -217,11 +548,6 @@ tbody tr#border-b-0:hover {
   text-align: center;
   color: #adadad;
   /*color: #398a25;*/
-}
-
-.redemption2 tbody tr td .btn-primary {
-  background-color: #0a3a94;
-  border-color: #0a3a94;
 }
 
 /*#verify i{
@@ -244,11 +570,24 @@ tbody tr#border-b-0:hover {
   color: #3f33b1 !important;
 }
 
-@media (max-width: 381) {
-  span {
-    float: left;
-  }
+#settle-table .dropleft a {
+  background-color: #fff;
 }
+
+#settle-table .dropleft .dropdown-item {
+  padding: 2px 1.5rem;
+  font-size: 12px;
+}
+
+/* #iconDL {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  color: white;
+  border: 1px solid #182e58;
+  background-color: #182e58;
+  border-radius: 5px;
+} */
 
 #approvedData {
   text-align: center;
@@ -260,70 +599,6 @@ tbody tr#border-b-0:hover {
 }
 
 /** End of section **/
-
-/*Media queries for Debt issuance*/
-
-#pHeader {
-  color: #182e58;
-  border-bottom: 2px solid #182e58;
-  width: 130px;
-}
-
-#sideBar {
-  width: 15%;
-  height: 100%;
-  float: left;
-  padding-left: 0;
-  border-right: 1px solid #e5e5e5;
-}
-
-#fMenu {
-  color: #182e58;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#dMenu {
-  opacity: 0.4;
-  margin-top: 7px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#iconDL {
-  cursor: pointer;
-  width: 50px;
-  height: 25px;
-  color: white;
-  border: 1px solid #182e58;
-  background-color: #182e58;
-  border-radius: 5px;
-}
-
-/* #searchBox {
-  width: 220px;
-  height: 30px;
-} */
-
-#btnSearch {
-  height: 70px;
-  background-color: #182e58;
-}
-
-#colSearch {
-  display: flex;
-  float: right;
-  margin-left: 23%;
-}
-
-#tableId {
-  font-size: 12px;
-  width: 100%;
-}
-
-#contFunctions {
-  margin-right: 0px;
-}
 
 /*Responsive for mobile 320px*/
 
@@ -348,7 +623,7 @@ tbody tr#border-b-0:hover {
     font-size: 10px;
     cursor: pointer;
   }
-  #iconDL {
+  /* #iconDL {
     width: 30px;
     height: 15px;
     border-radius: 2px;
@@ -367,17 +642,18 @@ tbody tr#border-b-0:hover {
     height: 8px;
     margin-bottom: 8px;
     margin-left: -2px;
-  }
+  } */
   #contFunctions {
     width: 700px;
   }
-  #colSearch {
-    float: right;
+  .icon-content {
+    text-align: center;
   }
-  #tableId {
-    font-size: 9px;
-    width: 82%;
-    float: left;
+  #headerId .nav {
+    text-align: center;
+  }
+  #headerId #iconChev {
+    visibility: hidden;
   }
 }
 
@@ -404,7 +680,7 @@ tbody tr#border-b-0:hover {
     font-size: 11px;
     cursor: pointer;
   }
-  #iconDL {
+  /* #iconDL {
     width: 35px;
     height: 15px;
     border-radius: 2px;
@@ -426,15 +702,15 @@ tbody tr#border-b-0:hover {
   }
   #contFunctions {
     width: 800px;
-  }
-  #colSearch {
+  } */
+  /* #colSearch {
     float: right;
   }
   #tableId {
     font-size: 10px;
     width: 75%;
     float: left;
-  }
+  } */
 }
 
 /*Responsive for tablet*/
@@ -460,18 +736,21 @@ tbody tr#border-b-0:hover {
     font-size: 14px;
     cursor: pointer;
   }
+  #colSearch .form-inline {
+    float: right;
+  }
   #searchBox {
     width: 180px;
     height: 25px;
   }
-  #btnSearch {
-    width: 25px;
-    height: 25px;
+  #headerId .nav {
+    text-align: left;
   }
-  #iconSearch {
-    width: 12px;
-    height: 12px;
-    margin-bottom: 5px;
+  #headerId #iconChev {
+    visibility: visible;
+  }
+  #headerId .sideMenu {
+    border-right: 1px solid #dcdcdc;
   }
   #colSearch {
     float: right;
@@ -508,16 +787,10 @@ tbody tr#border-b-0:hover {
     font-size: 14px;
     cursor: pointer;
   }
-  #iconDL {
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    color: white;
-    border: 1px solid #182e58;
-    background-color: #182e58;
-    border-radius: 5px;
+  .icon-content {
+    text-align: left;
   }
-  #searchBox {
+  /* #searchBox {
     width: 220px;
     height: 30px;
   }
@@ -536,45 +809,54 @@ tbody tr#border-b-0:hover {
     display: flex;
     float: right;
   }
-  #tableId {
-    font-size: 12px;
-    width: 900px;
-  }
+   */
   /* #formF {
     width: 100%;
   } */
+  #tableId {
+    font-size: 12px;
+  }
   #contFunctions {
     margin-left: 160px;
     margin-right: 0px;
   }
 }
+
 .debtTabs {
   background-color: #fff;
   color: #8b8b8b;
 }
 
 /** Main Modal **/
+
 #left-tabs-example-tab-maturity {
   color: grey;
 }
+
 #left-tabs-example-tab-tranches {
   color: grey;
 }
+
 #left-tabs-example-tab-allocation {
   color: grey;
 }
+
 #left-tabs-example-tab-credit {
   color: grey;
 }
+
 #left-tabs-example-tab-document {
   color: grey;
 }
+
 #left-tabs-example-tab-service {
   color: grey;
 }
+
 #left-tabs-example-tab-audit {
   color: grey;
 }
+
 #left-tabs-example-tab-settlement {
   color: grey;
 }
@@ -582,34 +864,43 @@ tbody tr#border-b-0:hover {
 #left-tabs-example-tab-maturity:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-maturity.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
 }
+
 #left-tabs-example-tab-tranches:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-tranches.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
 }
+
 #left-tabs-example-tab-allocation:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-allocation.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
 }
+
 #left-tabs-example-tab-credit:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-credit.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
 }
+
 #left-tabs-example-tab-document:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-document.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
@@ -618,6 +909,7 @@ tbody tr#border-b-0:hover {
 #left-tabs-example-tab-service:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-service.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
@@ -626,6 +918,7 @@ tbody tr#border-b-0:hover {
 #left-tabs-example-tab-audit:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-audit.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;
@@ -634,6 +927,7 @@ tbody tr#border-b-0:hover {
 #left-tabs-example-tab-settlement:hover {
   color: rgba(0, 0, 0, 0.7);
 }
+
 #left-tabs-example-tab-settlement.active {
   color: darkblue;
   border-bottom: 2px solid darkblue !important;

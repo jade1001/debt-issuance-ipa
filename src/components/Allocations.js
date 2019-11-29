@@ -27,6 +27,7 @@ export class Allocations extends Component {
             marginBottom: 'auto'
           }}
           className='Modal-Allocation-Table'
+          responsive
         >
           <thead>
             <tr>

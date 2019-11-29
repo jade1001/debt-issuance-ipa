@@ -227,7 +227,7 @@ class OpsNotif1 extends Component {
               />
             </p>
           </Modal.Header>
-          <Modal.Body id='modalContent'>
+          <Modal.Body style={{ height: '100%' }}>
             <Tab.Container id='left-tabs-example' defaultActiveKey='document'>
               <Nav
                 className='bg-white'
@@ -340,6 +340,10 @@ class OpsNotif1 extends Component {
           show={this.state.lgShow}
           onHide={() => this.show(false)}
           aria-labelledby='example-modal-sizes-title-lg'
+          // dialogClassName='modal-90w'
+          // aria-labelledby='example-custom-modal-styling-title'
+          // className='h-100'
+          // scrollable
         >
           <Modal.Header
             style={{
@@ -380,27 +384,28 @@ class OpsNotif1 extends Component {
               />
             </a>
           </Modal.Header>
-          <Modal.Body id='modalContent'>
+          <Modal.Body id='modalContent' className=' h-100'>
             <Tabs
               defaultActiveKey='documents'
               transition={false}
               id='noanim-tab-example'
               className='justify-content-center'
-              as='div'
-              style={{ width: '771px', margin: 'auto' }}
+              // as='div'
+              style={{
+                maxWidth: '771px',
+                margin: 'auto'
+              }}
             >
-              <Tab eventKey='maturity data' title='Maturity Data' disabled>
-                <MaturityData />
-              </Tab>
+              <Tab
+                eventKey='maturity data'
+                title='Maturity Data'
+                disabled
+              ></Tab>
               <Tab eventKey='tranches' title='Tranches' disabled>
                 Tranches
               </Tab>
-              <Tab eventKey='allocations' title='Allocations' disabled>
-                <Allocations />
-              </Tab>
-              <Tab eventKey='credit' title='Credit Limits' disabled>
-                <CreditLimits />
-              </Tab>
+              <Tab eventKey='allocations' title='Allocations' disabled></Tab>
+              <Tab eventKey='credit' title='Credit Limits' disabled></Tab>
               <Tab eventKey='documents' title='Documents'>
                 <Documents />
               </Tab>
