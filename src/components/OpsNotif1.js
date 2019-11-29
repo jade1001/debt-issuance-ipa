@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { Col, Container, Row, Modal, Tab, Tabs } from 'react-bootstrap'
+import { Col, Container, Row, Modal, Tab, Tabs, Nav } from 'react-bootstrap'
 
 import '../App.css'
 import { Documents } from './Documents'
@@ -187,12 +187,163 @@ class OpsNotif1 extends Component {
             </b>
           </Col>
         </Row>
-
         <Modal
           size='xl'
           show={this.state.lgShow}
           onHide={() => this.show(false)}
+          aria-labelledby='example-modal-sizes-title-xl'
+        >
+          <Modal.Header
+            style={{
+              backgroundColor: 'rgb(245,245,245',
+              padding: '0'
+            }}
+          >
+            <Modal.Title
+              id='example-modal-sizes-title-xl'
+              style={{
+                width: '90%',
+                textAlign: 'center',
+                backgroundColor: 'rgb(245,245,245)',
+                color: 'darkblue',
+                fontSize: '1.2rem'
+              }}
+            >
+              MonetaGo CP 100D 17/10/2019
+            </Modal.Title>
+            <p
+              style={{
+                fontSize: '0.7rem',
+                margin: 'auto',
+                width: '10%',
+                textAlign: 'center',
+                color: 'rgb(58, 77, 150)'
+              }}
+            >
+              Quick Action &nbsp;
+              <FontAwesomeIcon
+                icon={faChevronRight}
+                style={{ fontSize: 12, color: 'rgb(58, 77, 150)' }}
+              />
+            </p>
+          </Modal.Header>
+          <Modal.Body style={{ height: '100%' }}>
+            <Tab.Container id='left-tabs-example' defaultActiveKey='document'>
+              <Nav
+                className='bg-white'
+                style={{
+                  borderBottom: '2px solid transparent',
+                  width: '68.5%',
+                  fontSize: '0.8rem',
+                  borderBottom: '1px solid lightgrey',
+                  margin: 'auto',
+                  justifyContent: 'center'
+                }}
+              >
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='maturity'
+                    style={{ padding: '0', margin: '0 16px 0 0' }}
+                    disabled
+                  >
+                    Maturity Data
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='tranches'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    disabled
+                  >
+                    Tranches
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='allocation'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    disabled
+                  >
+                    Allocations
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='credit'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    disabled
+                  >
+                    Credit Limits
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='document'
+                    style={{ padding: '0', margin: '0 16px' }}
+                  >
+                    Documents
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='service'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    disabled
+                  >
+                    Service Provider
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='audit'
+                    style={{ padding: '0', margin: '0 16px' }}
+                    disabled
+                  >
+                    Audit Trail
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey='settlement'
+                    style={{ padding: '0', margin: '0 0 0 16px' }}
+                    disabled
+                  >
+                    Settlement
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Tab.Content>
+                <Tab.Pane eventKey='maturity'>
+                  {/* <MaturityData /> */}
+                </Tab.Pane>
+                <Tab.Pane eventKey='tranches'>
+                  {/* <TranchesData /> */}
+                </Tab.Pane>
+                <Tab.Pane eventKey='allocation'>
+                  {/* <Allocations /> */}
+                </Tab.Pane>
+                <Tab.Pane eventKey='credit'>{/* <CreditLimits /> */}</Tab.Pane>
+                <Tab.Pane eventKey='document'>
+                  <Documents />
+                </Tab.Pane>
+                <Tab.Pane eventKey='service'></Tab.Pane>
+                <Tab.Pane eventKey='audit'></Tab.Pane>
+                <Tab.Pane eventKey='settlement'>
+                  {/* <Settlement /> */}
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
+          </Modal.Body>
+        </Modal>
+        {/* <Modal
+          size='xl'
+          show={this.state.lgShow}
+          onHide={() => this.show(false)}
           aria-labelledby='example-modal-sizes-title-lg'
+          // dialogClassName='modal-90w'
+          // aria-labelledby='example-custom-modal-styling-title'
+          // className='h-100'
+          // scrollable
         >
           <Modal.Header
             style={{
@@ -233,27 +384,28 @@ class OpsNotif1 extends Component {
               />
             </a>
           </Modal.Header>
-          <Modal.Body id='modalContent'>
+          <Modal.Body id='modalContent' className=' h-100'>
             <Tabs
               defaultActiveKey='documents'
               transition={false}
               id='noanim-tab-example'
               className='justify-content-center'
-              as='div'
-              style={{ width: '771px', margin: 'auto' }}
+              // as='div'
+              style={{
+                maxWidth: '771px',
+                margin: 'auto'
+              }}
             >
-              <Tab eventKey='maturity data' title='Maturity Data' disabled>
-                {/* <MaturityData /> */}
-              </Tab>
+              <Tab
+                eventKey='maturity data'
+                title='Maturity Data'
+                disabled
+              ></Tab>
               <Tab eventKey='tranches' title='Tranches' disabled>
                 Tranches
               </Tab>
-              <Tab eventKey='allocations' title='Allocations' disabled>
-                {/* <Allocations /> */}
-              </Tab>
-              <Tab eventKey='credit' title='Credit Limits' disabled>
-                {/* <CreditLimits /> */}
-              </Tab>
+              <Tab eventKey='allocations' title='Allocations' disabled></Tab>
+              <Tab eventKey='credit' title='Credit Limits' disabled></Tab>
               <Tab eventKey='documents' title='Documents'>
                 <Documents />
               </Tab>
@@ -264,14 +416,14 @@ class OpsNotif1 extends Component {
                 Audit
               </Tab>
               <Tab eventKey='settlement' title='Settlement' disabled>
-                {/* <Settlement /> */}
+                <Settlement />
               </Tab>
             </Tabs>
           </Modal.Body>
           <Modal.Footer
             style={{ border: 'none', height: '150px' }}
           ></Modal.Footer>
-        </Modal>
+        </Modal> */}
       </Container>
     )
   }
