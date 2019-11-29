@@ -19,7 +19,7 @@ function DocuCert() {
   const [showSigned, setShowSigned] = useState(false)
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 100 }}>
+      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 20 }}>
         <Button
           size='sm'
           onClick={() => {

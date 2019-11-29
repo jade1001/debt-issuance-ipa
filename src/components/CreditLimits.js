@@ -47,6 +47,7 @@ export class CreditLimits extends Component {
           marginRight: 'auto',
           marginBottom: 'auto'
         }}
+        responsive
       >
         <thead>
           <tr>
