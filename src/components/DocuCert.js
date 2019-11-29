@@ -16,6 +16,8 @@ function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
   const [name, setName] = useState('')
   const [btnDisable, setBtnDisable] = useState(true)
+
+  const [inputDisable, setInputDisable] = useState(true)
   const [showSigned, setShowSigned] = useState(false)
   return (
     <div>
@@ -43,7 +45,7 @@ function DocuCert() {
           show={lgShow}
           onHide={() => {
             setLgShow(false)
-            setName('')
+            setInputDisable(true)
           }}
           aria-labelledby='example-modal-sizes-title-lg'
         >
@@ -128,8 +130,7 @@ function DocuCert() {
                     <Form.Check
                       aria-label='option 1'
                       onChange={() => {
-                        setName('Kashinath Katakdhond')
-                        setBtnDisable(false)
+                        setInputDisable(false)
                       }}
                     />
                   </Col>
@@ -142,7 +143,7 @@ function DocuCert() {
                       style={{ marginTop: '31%', backgroundColor: '#33466B' }}
                       onClick={() => {
                         setLgShow(false)
-                        setName('')
+                        setInputDisable(true)
                       }}
                     >
                       Cancel
@@ -160,13 +161,20 @@ function DocuCert() {
                           Please type your full name to sign the documents
                         </Form.Label>
                         <Form.Control
-                          value={name}
+                          disabled={inputDisable}
+                          onChange={e => {
+                            setName(e.target.value)
+                            if (e.target.value === 'Kashinath Katakdhond') {
+                              setBtnDisable(false)
+                            }
+                          }}
                           type='text'
                           size='sm'
                           style={{
                             width: '60%',
                             float: 'right',
-                            color: 'black'
+                            color: 'black',
+                            textTransform: 'capitalize'
                           }}
                         />
                       </Form.Group>
@@ -186,7 +194,7 @@ function DocuCert() {
                       onClick={() => {
                         setLgShow(false)
                         setShowSigned(true)
-                        setName('')
+                        setInputDisable(true)
                       }}
                       disabled={btnDisable}
                     >

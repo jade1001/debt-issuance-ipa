@@ -38,7 +38,7 @@ export class Allocations extends Component {
               <th>Deal Date</th>
               <th>Value Date</th>
               <th>Redemption Value</th>
-              <th>Rate(%)</th>
+              <th style={{ textAlign: 'right' }}>Rate(%)</th>
               <th></th>
             </tr>
           </thead>
@@ -83,7 +83,7 @@ export class Allocations extends Component {
               <td style={{ border: 'none' }}>09/07/2019</td>
               <td style={{ border: 'none' }}>50,00,00.000 INR</td>
               <td style={{ border: 'none', textAlign: 'right' }}>9.58</td>
-              <td style={{ border: 'none' }}>
+              <td style={{ border: 'none', height: 100 }}>
                 <Dropdown drop='left'>
                   <Dropdown.Toggle
                     as={CustomToggle}

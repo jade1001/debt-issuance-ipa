@@ -39,7 +39,7 @@ class TranchesData extends Component {
     ))
     return (
       <div>
-        <Table style={{ width: '60%', margin: ' auto' }}>
+        <Table responsive style={{ width: '60%', margin: ' auto' }}>
           <thead>
             <tr>
               <td id='table-header'>

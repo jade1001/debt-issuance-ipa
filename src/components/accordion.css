@@ -274,7 +274,10 @@ div.card-body {
   padding: 0px 0px 0px 15px;
 }
 .Modal-Allocation-Table tbody tr td {
-  padding: 5px 5px 0 0;
+  padding: 5px 10px 0 0;
+}
+.Modal-Allocation-Table thead tr th {
+  padding: 5px 10px 0 0;
 }
 /* div.table-responsive {
   table-layout: auto;
