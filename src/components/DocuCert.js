@@ -10,27 +10,41 @@ import {
 } from 'react-bootstrap'
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faDownload,
-  faChevronRight,
-  faSquare
-} from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 function DocuCert() {
   const [lgShow, setLgShow] = useState(false)
   const [name, setName] = useState('')
+  const [btnDisable, setBtnDisable] = useState(true)
+  const [showSigned, setShowSigned] = useState(false)
   return (
     <div>
-      <ButtonToolbar style={{ justifyContent: 'center' }}>
-        <Button onClick={() => setLgShow(true)}>
-          <b style={{ fontSize: '12px' }}>
-            Generate IPA Certificate and Submit for Review
-          </b>
+      <ButtonToolbar style={{ justifyContent: 'center', marginTop: 100 }}>
+        <Button
+          size='sm'
+          onClick={() => {
+            setLgShow(true)
+            setBtnDisable('disabled')
+          }}
+          style={{
+            backgroundColor: '#33466B',
+            border: 'none',
+            fontSize: '10px',
+            paddingLeft: 25,
+            paddingRight: 25,
+            paddingTop: 5,
+            paddingBottom: 5
+          }}
+        >
+          Generate IPA Certificate and Submit for Review
         </Button>
         <Modal
           size='lg'
           show={lgShow}
-          onHide={() => setLgShow(false)}
+          onHide={() => {
+            setLgShow(false)
+            setName('')
+          }}
           aria-labelledby='example-modal-sizes-title-lg'
         >
           <Modal.Header
@@ -113,7 +127,10 @@ function DocuCert() {
                   <Col xs={7} lg={1}>
                     <Form.Check
                       aria-label='option 1'
-                      onChange={() => setName('Kashinath Katakdhond')}
+                      onChange={() => {
+                        setName('Kashinath Katakdhond')
+                        setBtnDisable(false)
+                      }}
                     />
                   </Col>
                 </Row>
@@ -123,6 +140,10 @@ function DocuCert() {
                       type='button'
                       className='btn btn-primary'
                       style={{ marginTop: '31%', backgroundColor: '#33466B' }}
+                      onClick={() => {
+                        setLgShow(false)
+                        setName('')
+                      }}
                     >
                       Cancel
                     </button>
@@ -157,16 +178,62 @@ function DocuCert() {
                     lg={2}
                     style={{ textAlign: 'right', marginTop: '4%' }}
                   >
-                    <button
+                    <Button
                       type='submit'
                       style={{ backgroundColor: '#33466B' }}
                       className='btn btn-primary btn-cert'
                       id='submit-btn'
+                      onClick={() => {
+                        setLgShow(false)
+                        setShowSigned(true)
+                        setName('')
+                      }}
+                      disabled={btnDisable}
                     >
                       Sign Docs
-                    </button>
+                    </Button>
                   </Col>
                 </Row>
+              </div>
+            </Container>
+          </Modal.Body>
+          <Modal.Footer style={{ border: 'none' }}></Modal.Footer>
+        </Modal>
+        <Modal
+          size='lg'
+          show={showSigned}
+          onHide={() => setShowSigned(false)}
+          aria-labelledby='contained-modal-title-vcenter'
+          centered
+        >
+          <Modal.Header
+            style={{ padding: '0', backgroundColor: 'rgb(245,245,245)' }}
+          >
+            <Modal.Title
+              id='contained-modal-title-vcenter'
+              style={{
+                backgroundColor: 'rgb(245,245,245)',
+                width: '100%',
+                textAlign: 'center',
+                fontSize: '20px',
+                color: 'rgb(58, 77, 150)'
+              }}
+            >
+              MonetaGo CP 100D 17/10/2019
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{ paddingTop: '5px' }}>
+            <Container>
+              <div id='approvedData'>
+                <h3 style={{ fontWeight: 'normal' }}>Success</h3>
+                <br />
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  style={{ fontSize: '80px' }}
+                />
+                <br />
+                <br />
+                <p>1 Document has been successfully signed</p>
               </div>
             </Container>
           </Modal.Body>

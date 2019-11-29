@@ -28,12 +28,22 @@ class Login extends Component {
       submitted: false,
       visibility: 'hidden',
       setShow: true,
-      spinner: ''
+      spinner: '',
+      color: ''
     }
 
     this.emailOnChangeHandler = this.emailOnChangeHandler.bind(this)
     this.passOnChangeHandler = this.passOnChangeHandler.bind(this)
+    this.change = this.change.bind(this)
     this.Login = this.Login.bind(this)
+  }
+
+  change() {
+    if (this.email.value.length > 0 && this.pass.value.length > 0) {
+      this.setState({ color: '#192f59' })
+    } else if (this.pass.value.length === 0 && this.pass.value.length === 0) {
+      this.setState({ color: '' })
+    }
   }
 
   emailOnChangeHandler(event) {
@@ -53,7 +63,10 @@ class Login extends Component {
   Login(e) {
     e.preventDefault()
     this.setState({ spinner: 'border' })
-    if (this.state.Email === 'samp@email.com' && this.state.Password === '1') {
+    if (
+      this.state.Email === 'ipa.ops@ipabank.com' &&
+      this.state.Password === 'password'
+    ) {
       this.setState({ submitted: true })
       setTimeout(
         function() {
@@ -126,6 +139,7 @@ class Login extends Component {
             marginTop: 10
           }}
           onSubmit={this.Login}
+          onChange={this.change}
         >
           <Form.Group controlId='formBasicEmail'>
             <InputGroup.Prepend>
@@ -133,10 +147,12 @@ class Login extends Component {
                 <FontAwesomeIcon icon={faIdCardAlt} />
               </InputGroup.Text>
               <Form.Control
+                required
                 type='email'
                 placeholder='User ID / Email'
                 style={{ width: '300px', color: '#182e58' }}
                 onChange={this.emailOnChangeHandler}
+                ref={email => (this.email = email)}
               />
             </InputGroup.Prepend>
           </Form.Group>
@@ -147,10 +163,12 @@ class Login extends Component {
                 <FontAwesomeIcon icon={faKey} />
               </InputGroup.Text>
               <Form.Control
+                required
                 type='password'
                 placeholder='Password'
                 style={{ width: '300px', color: '#182e58' }}
                 onChange={this.passOnChangeHandler}
+                ref={pass => (this.pass = pass)}
               />
             </InputGroup.Prepend>
           </Form.Group>
@@ -171,7 +189,7 @@ class Login extends Component {
               width: 82,
               height: 30,
               marginLeft: 98,
-              backgroundColor: '#919191',
+              backgroundColor: this.state.color,
               border: 'none'
             }}
           >
