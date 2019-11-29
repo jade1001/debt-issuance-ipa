@@ -3,11 +3,11 @@
 
 export const userService = {
   login,
-  logout,
+  logout
 }
 
 function login(Email, Password) {
-  if (Email === 'samp@email.com' && Password === '1') {
+  if (Email === 'ipa.ops@ipabank.com' && Password === 'password') {
     localStorage.setItem('user', Email)
     return true
   } else return false
