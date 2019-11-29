@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import {
   Table,
   Dropdown,
@@ -19,23 +19,33 @@ import {
 } from 'react-router-dom'
 import '../App.css'
 import DropZone from './DropZone'
+import Redemption2 from './Redemption2'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Record from './Record'
 
 export class Settlement extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      test: false
+      test: 1,
+      openRedemp2: false
     }
 
     this.setTest = this.setTest.bind(this)
+    this.setopenRedemp2 = this.setopenRedemp2.bind(this)
   }
 
   setTest(bool) {
     this.setState({ test: bool })
   }
+  setopenRedemp2(bool) {
+    this.setState({ openRedemp2: bool })
+  }
 
   render() {
+    const dataPassed = this.setopenRedemp2
     const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
       <a
         href='# '
@@ -51,10 +61,7 @@ export class Settlement extends Component {
     // const samp = this.state
     return (
       <>
-        {/* {console.log(this)} */}
-        {this.state.test ? (
-          <RecordPayment func={this.setTest} />
-        ) : (
+        {(this.state.test == 1 && (
           <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
             <Row className='pt-3'>
               <Col sm={2} id='border-r-1'>
@@ -73,13 +80,19 @@ export class Settlement extends Component {
                     <Placement func={this.setTest} />
                   </Tab.Pane>
                   <Tab.Pane eventKey='second'>
-                    <Redemption />
+                    {this.state.openRedemp2 ? (
+                      <Redemption2 func={this.setTest} />
+                    ) : (
+                      <Redemption />
+                    )}
                   </Tab.Pane>
                 </Tab.Content>
               </Col>
             </Row>
           </Tab.Container>
-        )}
+        )) ||
+          (this.state.test == 2 && <RecordPayment func={this.setTest} />) ||
+          (this.state.test == 3 && <Record func={this.setTest} />)}
       </>
     )
 
@@ -123,7 +136,7 @@ export class Settlement extends Component {
                     <Dropdown.Item
                       onClick={() => {
                         // console.log(props.func(true))
-                        props.func(true)
+                        props.func(2)
                       }}
                     >
                       Record Payment
@@ -159,7 +172,7 @@ export class Settlement extends Component {
                     <Dropdown.Item
                       onClick={() => {
                         // console.log(props.func(true))
-                        props.func(true)
+                        props.func(2)
                       }}
                     >
                       Record Payment
@@ -195,7 +208,7 @@ export class Settlement extends Component {
                     <Dropdown.Item
                       onClick={() => {
                         // console.log(props.func(true))
-                        props.func(true)
+                        props.func(2)
                       }}
                     >
                       Record Payment
@@ -241,7 +254,6 @@ export class Settlement extends Component {
               <td id='text-right'>10,00,00,000 INR</td>
               <td id='text-right'>97,44,25,000 INR</td>
               <td id='text-center'>
-                {/*<Button variant="primary">Finalise</Button>*/}
                 <Button variant='secondary' size='sm' disabled>
                   Finalise
                 </Button>
@@ -307,7 +319,7 @@ export class Settlement extends Component {
                     variant='primary'
                     size='sm'
                     onClick={() => {
-                      props.func(false)
+                      props.func(1)
                     }}
                   >
                     Cancel
@@ -326,9 +338,8 @@ export class Settlement extends Component {
         </Col>
       )
     }
-
     function Redemption() {
-      return <DropZone />
+      return <DropZone data={dataPassed} />
     }
   }
 }

@@ -35,7 +35,7 @@ const Cont = styled.div`
   margin: auto;
 `
 
-function DropZone() {
+function DropZone(props) {
   const [listOfFiles, setListOfFiles] = useState({ files: [] })
   const [show, setShow] = useState('hidden')
   const [data, showData] = useState('')
@@ -132,7 +132,7 @@ function DropZone() {
             border: 'none',
             visibility: show
           }}
-          href='/debt-issuance'
+          onClick={() => props.data(true)}
         >
           Submit
         </Button>
