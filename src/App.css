@@ -219,6 +219,11 @@ tbody tr#border-b-0:hover {
   /*color: #398a25;*/
 }
 
+.redemption2 tbody tr td .btn-primary {
+  background-color: #0a3a94;
+  border-color: #0a3a94;
+}
+
 /*#verify i{
     visibility: hidden !important;
 }*/
