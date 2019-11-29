@@ -1,3 +1,172 @@
+#iconDL {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+  color: #fff;
+  background-color: #182e58;
+  border-radius: 3px;
+  vertical-align: text-top;
+  margin: 0px 10px;
+  padding: 5px 10px;
+}
+
+#colSearch .form-inline {
+  flex-flow: row;
+}
+
+#colSearch .search-box {
+  height: 32px;
+  border-radius: 0px;
+}
+
+#btnSearch {
+  background-color: #182e58;
+}
+
+#contFunctions {
+  margin-right: 0px;
+}
+
+#headerId .nav {
+  font-size: 11px;
+}
+
+#headerId .nav .nav-item a {
+  padding: 0.25rem 0.5rem;
+}
+
+#headerId .nav .nav-item a.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
+}
+
+.table-content thead {
+  border-bottom: 1px solid #adadad;
+}
+
+.table-content tbody tr {
+  cursor: pointer;
+}
+
+.debtTabs {
+  background-color: #fff;
+  color: #8b8b8b;
+}
+
+.main-content .nav-link.active {
+  font-weight: 500 !important;
+  color: #3f33b1 !important;
+}
+
+.main-content .nav-link {
+  font-size: 12px !important;
+  color: #a1aca9;
+}
+
+#left-tabs-example-tab-maturity {
+  color: grey;
+}
+
+#left-tabs-example-tab-tranches {
+  color: grey;
+}
+
+#left-tabs-example-tab-allocation {
+  color: grey;
+}
+
+#left-tabs-example-tab-credit {
+  color: grey;
+}
+
+#left-tabs-example-tab-document {
+  color: grey;
+}
+
+#left-tabs-example-tab-service {
+  color: grey;
+}
+
+#left-tabs-example-tab-audit {
+  color: grey;
+}
+
+#left-tabs-example-tab-settlement {
+  color: grey;
+}
+
+#left-tabs-example-tab-maturity:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-maturity.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-tranches:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-tranches.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-allocation:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-allocation.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-credit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-credit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-document:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-document.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-service:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-service.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-audit:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-audit.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
+#left-tabs-example-tab-settlement:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#left-tabs-example-tab-settlement.active {
+  color: darkblue;
+  border-bottom: 2px solid darkblue !important;
+}
+
 #pHead {
   margin-top: 5px;
   margin-bottom: 15px;
@@ -201,7 +370,39 @@ tbody tr#border-b-0:hover {
 
 #recordpayment .form-inline .form-control {
   border-radius: 0px;
+  font-size: 11px;
+  color: #0a3a94;
+  height: 25px;
+  padding: 2px 10px;
   margin-right: 0px !important;
+}
+
+#recordpayment .input-left {
+  border-right: 0;
+  border-radius: 0px;
+  padding: 0 5px 0px 0px;
+  font-size: 11px;
+  color: #0a3a94;
+}
+
+#recordpayment .input-span {
+  border-left: 0;
+  border-radius: 0px;
+  padding: 1px 10px 0px 0px;
+  font-size: 11px;
+}
+
+#recordpayment .btn-sm {
+  padding: 0rem 1rem;
+}
+
+#settle-table .dropleft a {
+  background-color: #fff;
+}
+
+#settle-table .dropleft .dropdown-item {
+  padding: 2px 1.5rem;
+  font-size: 12px;
 }
 
 .dropleft a {
@@ -285,7 +486,7 @@ tbody tr#border-b-0:hover {
   cursor: pointer;
 }
 
-#iconDL {
+/* #iconDL {
   cursor: pointer;
   width: 50px;
   height: 25px;
@@ -293,7 +494,7 @@ tbody tr#border-b-0:hover {
   border: 1px solid #182e58;
   background-color: #182e58;
   border-radius: 5px;
-}
+} */
 
 /* #searchBox {
   width: 220px;
@@ -343,7 +544,7 @@ tbody tr#border-b-0:hover {
     font-size: 10px;
     cursor: pointer;
   }
-  #iconDL {
+  /* #iconDL {
     width: 30px;
     height: 15px;
     border-radius: 2px;
@@ -362,17 +563,18 @@ tbody tr#border-b-0:hover {
     height: 8px;
     margin-bottom: 8px;
     margin-left: -2px;
-  }
+  } */
   #contFunctions {
     width: 700px;
   }
-  #colSearch {
-    float: right;
+  .icon-content {
+    text-align: center;
   }
-  #tableId {
-    font-size: 9px;
-    width: 82%;
-    float: left;
+  #headerId .nav {
+    text-align: center;
+  }
+  #headerId #iconChev {
+    visibility: hidden;
   }
 }
 
@@ -399,7 +601,7 @@ tbody tr#border-b-0:hover {
     font-size: 11px;
     cursor: pointer;
   }
-  #iconDL {
+  /* #iconDL {
     width: 35px;
     height: 15px;
     border-radius: 2px;
@@ -421,15 +623,15 @@ tbody tr#border-b-0:hover {
   }
   #contFunctions {
     width: 800px;
-  }
-  #colSearch {
+  } */
+  /* #colSearch {
     float: right;
   }
   #tableId {
     font-size: 10px;
     width: 75%;
     float: left;
-  }
+  } */
 }
 
 /*Responsive for tablet*/
@@ -455,9 +657,21 @@ tbody tr#border-b-0:hover {
     font-size: 14px;
     cursor: pointer;
   }
+  #colSearch .form-inline {
+    float: right;
+  }
   #searchBox {
     width: 180px;
     height: 25px;
+  }
+  #headerId .nav {
+    text-align: left;
+  }
+  #headerId #iconChev {
+    visibility: visible;
+  }
+  #headerId .sideMenu {
+    border-right: 1px solid #dcdcdc;
   }
   #btnSearch {
     width: 25px;
@@ -503,16 +717,10 @@ tbody tr#border-b-0:hover {
     font-size: 14px;
     cursor: pointer;
   }
-  #iconDL {
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    color: white;
-    border: 1px solid #182e58;
-    background-color: #182e58;
-    border-radius: 5px;
+  .icon-content {
+    text-align: left;
   }
-  #searchBox {
+  /* #searchBox {
     width: 220px;
     height: 30px;
   }
@@ -534,7 +742,7 @@ tbody tr#border-b-0:hover {
   #tableId {
     font-size: 12px;
     width: 900px;
-  }
+  } */
   /* #formF {
     width: 100%;
   } */
