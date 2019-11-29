@@ -63,7 +63,10 @@ class Login extends Component {
   Login(e) {
     e.preventDefault()
     this.setState({ spinner: 'border' })
-    if (this.state.Email === 'samp@email.com' && this.state.Password === '1') {
+    if (
+      this.state.Email === 'ipa.ops@ipabank.com' &&
+      this.state.Password === 'password'
+    ) {
       this.setState({ submitted: true })
       setTimeout(
         function() {
