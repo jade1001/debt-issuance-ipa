@@ -143,14 +143,21 @@ class Login extends Component {
         >
           <Form.Group controlId='formBasicEmail'>
             <InputGroup.Prepend>
-              <InputGroup.Text id='basic-addon1'>
-                <FontAwesomeIcon icon={faIdCardAlt} />
+              <InputGroup.Text id='basic-addon1' style={{ borderRadius: 0 }}>
+                <FontAwesomeIcon
+                  icon={faIdCardAlt}
+                  style={{ color: '#919191' }}
+                />
               </InputGroup.Text>
               <Form.Control
                 required
                 type='email'
                 placeholder='User ID / Email'
-                style={{ width: '300px', color: '#182e58' }}
+                style={{
+                  width: '300px',
+                  color: '#182e58',
+                  borderRadius: '0 0 0 0'
+                }}
                 onChange={this.emailOnChangeHandler}
                 ref={email => (this.email = email)}
               />
@@ -159,14 +166,21 @@ class Login extends Component {
 
           <Form.Group controlId='formBasicPassword'>
             <InputGroup.Prepend>
-              <InputGroup.Text id='basic-addon1'>
-                <FontAwesomeIcon icon={faKey} />
+              <InputGroup.Text
+                id='basic-addon1'
+                style={{ borderRadius: 0, paddingRight: 14 }}
+              >
+                <FontAwesomeIcon icon={faKey} style={{ color: '#919191' }} />
               </InputGroup.Text>
               <Form.Control
                 required
                 type='password'
                 placeholder='Password'
-                style={{ width: '300px', color: '#182e58' }}
+                style={{
+                  width: '300px',
+                  color: '#182e58',
+                  borderRadius: '0 0 0 0'
+                }}
                 onChange={this.passOnChangeHandler}
                 ref={pass => (this.pass = pass)}
               />
@@ -175,7 +189,12 @@ class Login extends Component {
           <Form.Group controlId='formBasicCheckbox'>
             <Nav.Link
               href='#forgot'
-              style={{ fontSize: 13, marginLeft: -15, float: 'left' }}
+              style={{
+                fontSize: 13,
+                marginLeft: -15,
+                float: 'left',
+                marginTop: -12
+              }}
             >
               Forgot Password?
             </Nav.Link>
