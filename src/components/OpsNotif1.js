@@ -24,11 +24,11 @@ class OpsNotif1 extends Component {
 
 	render() {
 		return (
-			<Container>
-				<p style={{ color: '#505050', fontSize: '12px', margin: '0 -15px 1rem -15px' }}>
+			<Container style={{ color: '#505050', fontSize: '12px'}}>
+				<p style={{ margin: '0 -15px 1rem -15px' }}>
 					Notifications
 				</p>
-				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
+				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer'}} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
 						<span className='float-right'>
 							<FontAwesomeIcon icon={faCircle} style={{ color: 'orange'}}/>
@@ -47,7 +47,7 @@ class OpsNotif1 extends Component {
 					</Col>
 				</Row>
 
-				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
+				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer'}} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
 						<span className='float-right'>
 							<FontAwesomeIcon icon={faCircle} style={{ color: 'orange'}}/>
@@ -66,7 +66,7 @@ class OpsNotif1 extends Component {
 					</Col>
 				</Row>
 
-				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
+				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer'}} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
 						<span className='float-right'></span>
 					</Col>
@@ -83,7 +83,7 @@ class OpsNotif1 extends Component {
 					</Col>
 				</Row>
 
-				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
+				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer'}} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
 						<span className='float-right'></span>
 					</Col>
@@ -99,6 +99,7 @@ class OpsNotif1 extends Component {
 						</span>
 					</Col>
 				</Row>
+
 				<Modal size='xl' show={this.state.lgShow} onHide={() => this.show(false)} aria-labelledby='example-modal-sizes-title-xl'>
 					<Modal.Header style={{backgroundColor: 'rgb(245,245,245',padding: '0'}}>
 						<Modal.Title id='example-modal-sizes-title-xl' style={{width: '90%',textAlign: 'center',backgroundColor: 'rgb(245,245,245)',color: 'darkblue',fontSize: '1.2rem'}}>
