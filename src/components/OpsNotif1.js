@@ -25,44 +25,44 @@ class OpsNotif1 extends Component {
 	render() {
 		return (
 			<Container>
-				<p style={{color: '#505050', fontSize: '12px' }}>
+				<p style={{ color: '#505050', fontSize: '12px', margin: '0 -15px 1rem -15px' }}>
 					Notifications
 				</p>
 				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
-						<span style={{ float: 'right' }}>
+						<span className='float-right'>
 							<FontAwesomeIcon icon={faCircle} style={{ color: 'orange'}}/>
 						</span>
 					</Col>
 					<Col xs={3} md={3}>
-						<b>MonetaGo 92D 03/10/2019</b>
+						<strong>MonetaGo 92D 03/10/2019</strong>
 					</Col>
 					<Col xs={3} md={3}>
-						<b>IPA certificate has been issued</b>
+						<strong>IPA certificate has been issued</strong>
 					</Col>
 					<Col xs={4} md={5}>
-						<b style={{ float: 'right'}}>
+						<strong className='float-right'>
 							07/07/2019 12:23:03
-						</b>
+						</strong>
 					</Col>
 				</Row>
 
 				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
 					<Col xs={1} md={1}>
-						<span style={{ float: 'right' }}>
+						<span className='float-right'>
 							<FontAwesomeIcon icon={faCircle} style={{ color: 'orange'}}/>
 						</span>
 					</Col>
 					<Col xs={3} md={3}>
-						<b>MonetaGo 120D 1/11/2019</b>
+						<strong>MonetaGo 120D 1/11/2019</strong>
 					</Col>
 					<Col xs={3} md={3}>
-						<b>New Issuance Approved</b>
+						<strong>New Issuance Approved</strong>
 					</Col>
 					<Col xs={4} md={5}>
-						<b style={{float: 'right'}}>
+						<strong className='float-right'>
 							07/07/2019 12:15:49
-						</b>
+						</strong>
 					</Col>
 				</Row>
 
@@ -83,24 +83,20 @@ class OpsNotif1 extends Component {
 					</Col>
 				</Row>
 
-				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer' }} onClick={() => this.show(true)}>
-					<Col xs={1}>
-						<span style={{ float: 'right' }}></span>
+				<Row style={{ borderBottom: '1px solid #F3F3F3', cursor: 'pointer', color: '#505050', fontSize: '12px' }} onClick={() => this.show(true)}>
+					<Col xs={1} md={1}>
+						<span className='float-right'></span>
 					</Col>
-					<Col xs={3}>
-						<b style={{color: '#505050',float: 'left',fontWeight: 'normal',fontSize: '12px'}}>
-							MonetaGo 120D 1/11/2019
-						</b>
+					<Col xs={3} md={3}>
+						<span>MonetaGo 120D 1/11/2019</span>
 					</Col>
-					<Col xs={3}>
-						<b style={{color: '#505050',float: 'left',fontWeight: 'normal',fontSize: '12px'}}>
-							New Issuance Approved
-						</b>
+					<Col xs={3} md={3}>
+						<span>New Issuance Approved</span>
 					</Col>
-					<Col xs={5}>
-						<b style={{color: '#505050',float: 'right',fontWeight: 'normal',fontSize: '12px'}}>
+					<Col xs={4} md={5}>
+						<span className='float-right'>
 							07/07/2019 12:15:49
-						</b>
+						</span>
 					</Col>
 				</Row>
 				<Modal size='xl' show={this.state.lgShow} onHide={() => this.show(false)} aria-labelledby='example-modal-sizes-title-xl'>

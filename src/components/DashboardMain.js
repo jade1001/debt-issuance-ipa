@@ -14,9 +14,8 @@ const Cards = styled.div`
 	background-color: rgb(245, 245, 245);
 	transition: all 0.2s ease-in -out;
 	text-align: center;
-	width: 100%;
-	height: 100%;
-	margin-top: 10px;
+	padding: 2px 0px;
+	margin-top: 1.5rem;
 `
 
 class DashboardMain extends Component {
@@ -32,7 +31,7 @@ class DashboardMain extends Component {
 					</Col>
 				</Row>
 
-				<Row>
+				<Row style={{marginTop: '-15px'}}>
 					<Col xs={12} md={6} lg={4} xl={2}>
 						<Cards id='cards'>
 							<p id='pHead'>Total Client CP Outstanding</p>
@@ -77,7 +76,7 @@ class DashboardMain extends Component {
 					</Col>
 				</Row>
 
-				<Row className='mt-4'>
+				<Row>
 					<Col xs={12} md={6} lg={4} xl={2}>
 						<Cards id='cards'>
 							<p id='pHead'>Client ISINs Outstanding</p>
@@ -115,7 +114,7 @@ class DashboardMain extends Component {
 					</Col>
 					<Col xs={12} md={6} lg={4} xl={2}>
 						<Cards id='cards'>
-							<p id='pHead1'>Total Market ISINs Outstanding</p>
+							<p id='pHead'>Total Market ISINs Outstanding</p>
 							<p id='pBody'>398</p>
 							<p id='pFooter'>INR</p>
 						</Cards>

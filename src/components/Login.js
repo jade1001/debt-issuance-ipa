@@ -153,7 +153,7 @@ class Login extends Component {
 							</InputGroup.Prepend>
 						</Form.Group>
 						<Form.Group controlId='formBasicCheckbox'>
-							<Nav.Link href='#forgot' style={{fontSize: 13, marginLeft: -15, float: 'left', marginTop: -12}}>
+							<Nav.Link href='#forgot' className='float-left' style={{ fontSize: 13, padding: '.5rem 0', lineHeight: '10px'}}>
 								Forgot Password?
 							</Nav.Link>
 						</Form.Group>
@@ -161,11 +161,10 @@ class Login extends Component {
 							variant='secondary'
 							size='sm'
 							type='submit'
+							className='float-right'
 							style={{
 							fontSize: 13,
-							width: 82,
-							height: 30,
-							marginLeft: 98,
+							width: 80,
 							backgroundColor: this.state.color,
 							border: 'none'
 							}}
