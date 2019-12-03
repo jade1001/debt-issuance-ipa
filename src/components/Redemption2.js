@@ -181,7 +181,7 @@ function Redemption2(props) {
                 {/*<Button variant="primary">Finalise</Button>*/}
                 <Button
                   size='sm'
-                  style={{ visibility: button }}
+                  style={{ visibility: button, backgroundColor: '#33466B' }}
                   onClick={() => {
                     setText('')
                     setButton('hidden')
