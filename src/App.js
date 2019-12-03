@@ -1,58 +1,51 @@
-import React, { Component } from 'react'
-import { Router, Route, Switch, Redirect } from 'react-router-dom'
-import { connect } from 'react-redux'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { history } from './Redux/_helpers/history'
-import { alertActions } from './Redux/_actions/alert.actions'
-import { PrivateRoute } from './components/PrivateRoute'
-import { Login } from './components/Login'
-import MainNavBar from './components/MainNavBar'
-import { Alert } from 'react-bootstrap'
-import { DebtIssuance } from './components/DebtIssuance'
-import { ProtectedRoute } from './components/ProtectedRoute'
+import React, { Component } from "react";
+import { createStore, applyMiddleware, compose } from "redux";
+import { Provider } from "react-redux";
+import { createBrowserHistory } from "history";
+import { Route, Switch, Redirect } from "react-router";
+import { ConnectedRouter, routerMiddleware } from "connected-react-router";
+import thunk from "redux-thunk";
+import rootReducer from "./redux/reducers";
+
+import Login from "./screens/Login/Login";
+import "./App.scss";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const history = createBrowserHistory();
+const store = createStore(
+  rootReducer(history),
+  composeEnhancers(applyMiddleware(routerMiddleware(history), thunk))
+);
+
+const ProtectedRoute = props =>
+  props.isAllowed ? <Route {...props} /> : <Redirect to="/login" />;
+const LoginRoute = props =>
+  !localStorage.getItem("token") ? (
+    <Route {...props} />
+  ) : (
+    <Redirect to="/index" />
+  );
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    history.listen((location, action) => {
-      this.props.clearAlerts()
-    })
-  }
-
   render() {
-    const { alert } = this.props
     return (
-      <div className='App'>
-        {alert.message && (
-          <Alert
-            className={`alert ${alert.type}`}
-            style={{ width: '20%', textAlign: 'center' }}
-          >
-            {alert.message}
-          </Alert>
-        )}
-        <Router history={history}>
-          <Switch>
-            <ProtectedRoute exact path='/login' component={Login} />
-            <PrivateRoute exact path='/' component={MainNavBar} />
-            <PrivateRoute exact path='/debt-issuance' component={MainNavBar} />
-            <PrivateRoute exact path='/credit-limits' component={MainNavBar} />
-            <PrivateRoute exact path='/identities' component={MainNavBar} />
-            <PrivateRoute exact path='/settings' component={MainNavBar} />
-          </Switch>
-        </Router>
-      </div>
-    )
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <div className="App">
+            <Switch>
+              <LoginRoute path="/login" component={Login} />
+              {/* <ProtectedRoute
+                isAllowed={localStorage.getItem("token")}
+                path="/"
+                component={IndexPage}
+              /> */}
+              <Redirect from="/" exact to="/index" />
+            </Switch>
+          </div>
+        </ConnectedRouter>
+      </Provider>
+    );
   }
 }
 
-function mapState(state) {
-  const { alert } = state
-  return { alert }
-}
-
-const actionCreators = {
-  clearAlerts: alertActions.clear,
-}
-export default connect(mapState, actionCreators)(App)
+export default App;

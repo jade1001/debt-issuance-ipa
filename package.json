@@ -1,26 +1,44 @@
 {
-  "name": "debt-issuance-ipa",
+  "name": "ipa",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
+    "connected-react-router": "^6.6.1",
+    "dotenv": "^8.2.0",
+    "history": "^4.10.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
-    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
-    "react-dropzone": "^10.2.1",
+    "react-flexbox-grid": "^2.1.2",
     "react-redux": "^7.1.3",
-    "react-responsive": "^8.0.1",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "react-sidebar": "^3.0.2",
+    "reactstrap": "^8.1.1",
     "redux": "^4.0.4",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.4.1"
+    "serve": "^11.2.0",
+    "styled-components": "^4.4.1",
+    "sweetalert2": "^9.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.1.0",
+    "install": "^0.13.0",
+    "npm": "^6.13.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +47,31 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "jsxSingleQuote": false,
+          "trailingComma": "none",
+          "bracketSpacing": true,
+          "jsxBracketSameLine": true,
+          "arrowParens": "avoid",
+          "proseWrap": "preserve",
+          "printWidth": 150
+        },
+        {
+          "usePrettierrc": false
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -42,5 +84,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
